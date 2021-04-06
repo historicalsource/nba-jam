@@ -1,0 +1,611 @@
+********************************
+* Macro defines, include after mproc.equ
+* 11 June 91 SPL
+*.Last mod - 1/31/93 1:00
+
+;-----------------------------------------------------------------------------
+; This macro is just a convience...
+;
+;     Destroys A3
+;-----------------------------------------------------------------------------
+snd_req	.macro	snd_ptr
+	push	a2,a3
+	movi	:snd_ptr:,a2
+	move	*a2+,a3			;a3=sound code
+	calla	SNDSND
+	pull	a2,a3
+	.endm
+
+
+BSSX	.macro	n,s
+	.def	:n:
+	.bss	:n:,:s:
+	.endm
+
+SUBR	.macro	p1
+	.def	:p1:
+	.even
+:p1:
+	.endm
+
+SUBRP	.macro	p1
+	.even
+:p1:
+	.endm
+
+STRUCT	.macro	o
+	.asg	:o:,SOFF
+	.endm
+STRUCTPD .macro
+	.asg	PDATA,SOFF
+	.endm
+STRUC	.macro	n,s
+:n:	.set	SOFF
+	.eval	SOFF+:s:,SOFF
+	.endm
+WORD	.macro	n
+:n:	.set	SOFF
+	.eval	SOFF+16,SOFF
+	.endm
+LONG	.macro	n
+:n:	.set	SOFF
+	.eval	SOFF+32,SOFF
+	.endm
+APTR	.macro	n
+:n:	.set	SOFF
+	.eval	SOFF+32,SOFF
+	.endm
+LABEL	.macro	n
+:n:	.set	SOFF
+	.endm
+
+FLAG	.macro	n
+:n:_B	.equ	SOFF
+:n:_M	.equ	1<<SOFF
+	.eval	SOFF+1,SOFF
+	.endm
+
+W0	.macro
+	.word	0
+	.endm
+WWL	.macro	w,w2,l
+	.word	:w:,:w2:
+	.long	:l:
+	.endm
+WL	.macro	w,l
+	.word	:w:
+	.long	:l:
+	.endm
+WLW	.macro	w,l,w2
+	.word	:w:
+	.long	:l:
+	.word	:w2:
+	.endm
+WLWWWW	.macro	w,l,w2,w3,w4,w5
+	.word	:w:
+	.long	:l:
+	.word	:w2:,:w3:,:w4:,:w5:
+	.endm
+WLL	.macro	w,l,l2
+	.word	:w:
+	.long	:l:,:l2:
+	.endm
+WLLW	.macro	w,l,l2,w2
+	.word	:w:
+	.long	:l:,:l2:
+	.word	:w2:
+	.endm
+LW	.macro	l,w
+	.long	:l:
+	.word	:w:
+	.endm
+LWW	.macro	l,w,w2
+	.long	:l:
+	.word	:w:,:w2:
+	.endm
+LWWW	.macro	l,w,w2,w3
+	.long	:l:
+	.word	:w:,:w2:,:w3:
+	.endm
+LWWWW	.macro	l,w,w2,w3,w4
+	.long	:l:
+	.word	:w:,:w2:,:w3:,:w4:
+	.endm
+LWWWWW	.macro	l,w,w2,w3,w4,w5
+	.long	:l:
+	.word	:w:,:w2:,:w3:,:w4:,:w5:
+	.endm
+LWWWWWW	.macro	l,w,w2,w3,w4,w5,w6
+	.long	:l:
+	.word	:w:,:w2:,:w3:,:w4:,:w5:,:w6:
+	.endm
+LWL	.macro	l,w,l2
+	.long	:l:
+	.word	:w:
+	.long	:l2:
+	.endm
+LWLW	.macro	l,w,l2,w2
+	.long	:l:
+	.word	:w:
+	.long	:l2:
+	.word	:w2:
+	.endm
+LWL0	.macro	l,w
+	.long	:l:
+	.word	:w:
+	.long	0
+	.endm
+
+COLORW	.macro	r1,g1,b1,r2,g2,b2,r3,g3,b3,r4,g4,b4
+	.word	:r1:*32*32+:g1:*32+:b1:
+	.if	$symlen(r2)
+	.word	:r2:*32*32+:g2:*32+:b2:
+	.endif
+	.if	$symlen(r3)
+	.word	:r3:*32*32+:g3:*32+:b3:
+	.endif
+	.if	$symlen(r4)
+	.word	:r4:*32*32+:g4:*32+:b4:
+	.endif
+	.endm
+
+* Push 1-10 registers onto the stack, overrides mproc.equ version
+PUSH	.macro	r1,r2,r3,r4,r5,r6,r7,r8,r9,r10
+	.if	$isreg(r10)
+	mmtm	sp,:r1:,:r2:,:r3:,:r4:,:r5:,:r6:,:r7:,:r8:,:r9:,:r10:
+	.elseif	$isreg(r9)
+	mmtm	sp,:r1:,:r2:,:r3:,:r4:,:r5:,:r6:,:r7:,:r8:,:r9:
+	.elseif	$isreg(r8)
+	mmtm	sp,:r1:,:r2:,:r3:,:r4:,:r5:,:r6:,:r7:,:r8:
+	.elseif	$isreg(r7)
+	mmtm	sp,:r1:,:r2:,:r3:,:r4:,:r5:,:r6:,:r7:
+	.elseif	$isreg(r6)
+	mmtm	sp,:r1:,:r2:,:r3:,:r4:,:r5:,:r6:
+	.elseif	$isreg(r5)
+	mmtm	sp,:r1:,:r2:,:r3:,:r4:,:r5:
+	.elseif	$isreg(r4)
+	mmtm	sp,:r1:,:r2:,:r3:,:r4:
+	.elseif	$isreg(r3)
+	mmtm	sp,:r1:,:r2:,:r3:
+	.elseif	$isreg(r2)
+	move	:r1:,-*sp,1
+	move	:r2:,-*sp,1
+	.else
+	move	:r1:,-*sp,1
+	.endif
+	.endm
+
+* Pull registers off of the stack, ^
+PULL	.macro	r1,r2,r3,r4,r5,r6,r7,r8,r9,r10
+	.if	$isreg(r10)
+	mmfm	sp,:r1:,:r2:,:r3:,:r4:,:r5:,:r6:,:r7:,:r8:,:r9:,:r10:
+	.elseif	$isreg(r9)
+	mmfm	sp,:r1:,:r2:,:r3:,:r4:,:r5:,:r6:,:r7:,:r8:,:r9:
+	.elseif	$isreg(r8)
+	mmfm	sp,:r1:,:r2:,:r3:,:r4:,:r5:,:r6:,:r7:,:r8:
+	.elseif	$isreg(r7)
+	mmfm	sp,:r1:,:r2:,:r3:,:r4:,:r5:,:r6:,:r7:
+	.elseif	$isreg(r6)
+	mmfm	sp,:r1:,:r2:,:r3:,:r4:,:r5:,:r6:
+	.elseif	$isreg(r5)
+	mmfm	sp,:r1:,:r2:,:r3:,:r4:,:r5:
+	.elseif	$isreg(r4)
+	mmfm	sp,:r1:,:r2:,:r3:,:r4:
+	.elseif	$isreg(r3)
+	mmfm	sp,:r1:,:r2:,:r3:
+	.elseif	$isreg(r2)
+	move	*sp+,:r2:,1
+	move	*sp+,:r1:,1
+	.else
+	move	*sp+,:r1:,1
+	.endif
+	.endm
+
+* Push low word of register on to stack, ^
+PUSHW	.macro	r1,r2,r3
+	.if	:r3:
+	ERROR:PUSHW
+	.else
+	.if	:r2:
+	move	:r1:,-*sp,0
+	move	:r2:,-*sp,0
+	.else
+	move	:r1:,-*sp,0
+	.endif
+	.endif
+	.endm
+
+* Pull low word of register off of stack, ^
+PULLW	.macro	r1,r2,r3
+	.if	:r3:
+	ERROR:PULLW
+	.else
+	.if	:r2:
+	move	*sp+,:r2:,0
+	move	*sp+,:r1:,0
+	.else
+	move	*sp+,:r1:,0
+	.endif
+	.endif
+	.endm
+
+* Push 1-5 registers onto the process stack, overrides mproc.equ version
+PUSHP	.macro	r1,r2,r3,r4,r5
+	.if	$isreg(r5)
+	mmtm	a12,:r1:,:r2:,:r3:,:r4:,:r5:
+	.elseif	$isreg(r4)
+	mmtm	a12,:r1:,:r2:,:r3:,:r4:
+	.elseif	$isreg(r3)
+	mmtm	a12,:r1:,:r2:,:r3:
+	.elseif	$isreg(r2)
+	move	:r1:,-*a12,1
+	move	:r2:,-*a12,1
+	.else
+	move	:r1:,-*a12,1
+	.endif
+	.endm
+* Pull 1-5 registers off the process stack, overrides mproc.equ version
+PULLP	.macro	r1,r2,r3,r4,r5
+	.if	$isreg(r5)
+	mmfm	a12,:r1:,:r2:,:r3:,:r4:,:r5:
+	.elseif	$isreg(r4)
+	mmfm	a12,:r1:,:r2:,:r3:,:r4:
+	.elseif	$isreg(r3)
+	mmfm	a12,:r1:,:r2:,:r3:
+	.elseif	$isreg(r2)
+	move	*a12+,:r2:,1
+	move	*a12+,:r1:,1
+	.else
+	move	*a12+,:r1:,1
+	.endif
+	.endm
+
+* And 1-32 to register. Trashes A14
+ANDK	.macro	r1,r2
+	movk	:r1:,a14
+	and	a14,:r2:
+	.endm
+
+* Or 1-32 to register. Trashes A14
+ORK	.macro	r1,r2
+	movk	:r1:,a14
+	or	a14,:r2:
+	.endm
+
+* Xor 1-32 to register. Trashes A14
+XORK	.macro	r1,r2
+	movk	:r1:,a14
+	xor	a14,:r2:
+	.endm
+
+XYTXT	.macro	f,x,y,c,s
+	.word	:f:,:x:,:y:,:c:
+	.byte	":s:",0
+	.endm
+XYNUM	.macro	f,x,y,c,p
+	.word	:f:,:x:,:y:,:c:
+	.long	:p:
+	.endm
+XYOBJ	.macro	f,x,y,z,i
+	.word	:f:,:x:,:y:,:z:
+	.long	:i:
+	.endm
+
+	.asg	.if	0,NOTINUSE
+
+
+;RINR	.macro	a,b
+;	.if	(:b:-:a:)<33
+;	movk	:b:-:a:,a0
+;	.else
+;	movi	:b:-:a:,a0
+;	.endif
+;	callr	rndrng0
+;	.endm
+
+* Prt_xy
+
+PRTF15	.equ	1		;Font15
+PRTF8	.equ	2		;Font8 MultiColor
+PRTDEC	.equ	4		;Decimal
+PRTBCD	.equ	8		;BCD (Long)
+PRTL	.equ	16		;Long data
+PRTOBJ	.equ	32		;Object format
+PRTE	.equ	8000h		;Stop on this header
+
+PRTF15B	.equ	0
+PRTF8B	.equ	1
+PRTDECB	.equ	2
+PRTBCDB	.equ	3
+PRTLB	.equ	4
+PRTOBJB	.equ	5
+
+
+********************************
+* Animation script defines/macros
+			;AnimScript commands
+AsNEW	.equ	0	;
+AsDEL	.equ	1*32	;ID
+AsDELM	.equ	2*32	;ID
+AsFRA	.equ	3*32	;ID or Last
+AsANI	.equ	4*32	;ID
+AsHIDE	.equ	5*32	;ID
+AsSHOW	.equ	6*32	;ID
+AsPAL	.equ	7*32	;ID or Last
+AsXY	.equ	8*32	;ID
+AsXYRNG	.equ	9*32	;ID or Last
+AsYA	.equ	10*32	;ID
+AsXYV	.equ	11*32	;ID
+AsXYVA	.equ	12*32	;ID
+AsXYV0	.equ	13*32	;Last
+AsZ	.equ	14*32	;ID
+AsBXY	.equ	15*32	;
+AsSLP	.equ	16*32	;
+AsSLP1	.equ	17*32	;
+AsSLPR	.equ	18*32	;
+AsWAIT	.equ	19*32	;
+AsTXT	.equ	20*32	;
+AsTXTR	.equ	21*32	;
+AsTXTK	.equ	22*32	;
+AsLAB	.equ	23*32	;
+AsLABR	.equ	24*32	;
+AsDSJ	.equ	25*32	;
+AsDSJS1	.equ	26*32	;
+AsJMP	.equ	27*32	;
+AsJMPR	.equ	28*32	;
+AsJMPEQ	.equ	29*32	;
+AsJMPNE	.equ	30*32	;
+AsRUN	.equ	31*32	;
+AsRUNI	.equ	32*32	;
+AsCRE	.equ	33*32	;
+AsKIL	.equ	34*32	;
+AsASM	.equ	35*32	;
+AsSND	.equ	36*32	;
+AsSNDD	.equ	37*32	;
+AsADDW	.equ	38*32	;
+AsADDWO	.equ	39*32	;Last
+AsADDLO	.equ	40*32	;Last
+AsADLVO	.equ	41*32	;Last
+AsSVRL	.equ	42*32	;
+AsSVRLT	.equ	43*32	;
+AsSVL	.equ	44*32	;
+
+ASITEMN	.macro	a,b,c,d,e,f
+	.long	:c:
+	.word	:a:,:b:,:d:,:e:,:f:
+	.endm
+
+ASNEW	.macro	a
+	.word	AsNEW
+	.long	:a:
+	.endm
+ASDEL	.macro	a
+	.word	AsDEL,:a:
+	.endm
+ASDELM	.macro	a,b
+	.word	AsDELM,:a:,:b:
+	.endm
+ASFRA	.macro	a,b,c
+	.word	AsFRA
+	.long	:a:
+	.word	:b:,:c:
+	.endm
+ASANI	.macro	a,b
+	.word	AsANI
+	.long	:a:
+	.word	:b:
+	.endm
+ASHIDE	.macro	a
+	.word	AsHIDE,:a:
+	.endm
+ASSHOW	.macro	a
+	.word	AsSHOW,:a:
+	.endm
+ASPAL	.macro	a
+	.word	AsPAL,:a:
+	.endm
+ASXY	.macro	a,b,c,d
+	.word	AsXY,:a:,:b:,:c:,:d:
+	.endm
+ASXYRNG	.macro	a,b,c,d,e,f
+	.word	AsXYRNG,:c:,:d:,:e:,:f:,:a:,:b:
+	.endm
+ASYA	.macro	a,b,c
+	.word	AsYA,:a:,:b:,:c:
+	.endm
+ASXYV	.macro	a,b,c,d
+	.word	AsXYV
+	.long	:c:,:d:
+	.word	:a:,:b:
+	.endm
+ASXYVA	.macro	a,b,c,d
+	.word	AsXYVA
+	.long	:c:,:d:
+	.word	:a:,:b:
+	.endm
+ASXYV0	.macro
+	.word	AsXYV0
+	.endm
+ASZ	.macro	a,b,c
+	.word	AsZ,:a:,:b:,:c:
+	.endm
+ASBXY	.macro	a,b
+	.word	AsBXY,:a:,:b:
+	.endm
+ASSLP	.macro	a
+	.word	AsSLP,:a:
+	.endm
+ASSLP1	.macro
+	.word	AsSLP1
+	.endm
+ASSLPR	.macro	a,b
+	.word	AsSLPR,:a:,:b:
+	.endm
+ASWAIT	.macro
+	.word	AsWAIT
+	.endm
+ASTXT	.macro	a
+	.word	AsTXT
+	.long	:a:
+	.endm
+ASTXTR	.macro	a
+	.word	AsTXTR
+	.long	:a:
+	.endm
+ASTXTK	.macro
+	.word	AsTXTK
+	.endm
+ASLAB	.macro	a
+	.word	AsLAB,:a:
+	.endm
+ASLABR	.macro	a,b
+	.word	AsLABR,:a:,:b:
+	.endm
+ASDSJ	.macro
+	.word	AsDSJ
+	.endm
+ASDSJS1	.macro
+	.word	AsDSJS1
+	.endm
+ASJMP	.macro	a
+	.word	AsJMP
+	.long	:a:
+	.endm
+ASJMPR	.macro	a,b
+	.word	AsJMPR
+	.long	:b:
+	.word	:a:
+	.endm
+ASJMPEQ	.macro	a,b,c
+	.word	AsJMPEQ
+	.long	:b:,:c:
+	.word	:a:
+	.endm
+ASJMPNE	.macro	a,b,c
+	.word	AsJMPNE
+	.long	:b:,:c:
+	.word	:a:
+	.endm
+ASRUN	.macro	a
+	.word	AsRUN
+	.long	:a:
+	.endm
+ASRUNI	.macro	a,b
+	.word	AsRUNI
+	.long	:a:
+	.word	:b:
+	.endm
+ASCRE	.macro	a,b
+	.word	AsCRE
+	.long	:a:,:b:
+	.endm
+ASKIL	.macro	a,b
+	.word	AsKIL,:a:,:b:
+	.endm
+ASASM	.macro
+	.word	AsASM
+	.endm
+ASENDASM .macro
+	exgpc	a8
+	.endm
+ASSND	.macro	a
+	.word	AsSND
+	.long	:a:
+	.endm
+ASSNDD	.macro	a
+	.word	AsSNDD
+	.long	:a:
+	.endm
+ASADDW	.macro	a,b
+	.word	AsADDW
+	.long	:b:
+	.word	:a:
+	.endm
+ASADDWO	.macro	a,b
+	.word	AsADDWO,:a:,:b:
+	.endm
+ASADDLO	.macro	a,b
+	.word	AsADDLO
+	.long	:a:
+	.word	:b:
+	.endm
+ASADLVO	.macro	a
+	.word	AsADLVO,:a:
+	.endm
+ASSVRL	.macro	a,b
+	.word	AsSVRL
+	.long	:a:,:b:
+	.endm
+ASSVRLT	.macro	a
+	.word	AsSVRLT
+	.long	:a:
+	.endm
+ASSVL	.macro	a
+	.word	AsSVL
+	.long	:a:
+	.endm
+ASEND	.macro
+	.word	-32
+	.endm
+
+
+********************************
+* Non dupe macros from macros.hdr
+
+*Defs for symbols referenced from macros
+	.globl	ERRORLOG
+
+* Swap contents of two registers that reside in same file
+SWAP	.macro R1,R2
+	xor    :R1.S:,:R2.S:
+	xor    :R2.S:,:R1.S:
+	xor    :R1.S:,:R2.S:
+	.endm
+
+* Test a register for zero
+TEST	.macro R1
+	MOVE	:R1.S:,:R1.S:
+	.endm
+
+*EQUATES FOR XY COMPARES(MOTOLORA STYLE)
+JRXEQ	.macro	P1
+	JRXZ	P1.S
+	.endm
+JRXNE	.macro	P1
+	JRXNZ	P1.S
+	.endm
+JRXGE	.macro	P1
+	JRXNN	P1.S
+	.endm
+JRXLT	.macro	P1
+	JRXN	P1.S
+	.endm
+JRYEQ	.macro	P1
+	JRYZ	P1.S
+	.endm
+JRYNE	.macro	P1
+	JRYNZ	P1.S
+	.endm
+JRYGE	.macro	P1
+	JRYNN	P1.S
+	.endm
+JRYLT	.macro	P1
+	JRYN	P1.S
+	.endm
+
+*MAKE A SINGLE SOUND USING THE GSP SOUND PROCESSOR
+SOUND1	.macro S
+	movi	:S:,a0
+	calla	snd_play1
+	.endm
+
+*CALLERR - CALL THE ERROR LOG MACRO
+*REGS = # OF REGISTERS PUSHED ON THE STACK BY THIS SUBROUTINE
+CALLERR	.macro	NUM,REGS
+	mmtm	sp,a1,a2
+	move	*sp((:REGS:+2)*20H),a1,L
+	movi	:NUM:,a2
+	calla	ERRORLOG	
+	mmfm	sp,a1,a2
+	.endm
+

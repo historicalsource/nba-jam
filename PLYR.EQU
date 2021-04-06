@@ -1,0 +1,371 @@
+********************************
+* Player/game constants and structures
+*.Last mod - 2/5/93 14:49
+;
+; Ball data structure
+;
+	STRUCTPD
+	WORD	ball_anix	;X anipt offset
+	WORD	ball_aniy	;Y ^
+	APTR	ball_ani1st_p	;*1st ani_l pos
+	APTR	ball_ani_p	;*Current ani_l pos
+	WORD	ball_zsznum	;Z size # 0-?
+	WORD	ball_collcnt	;# of collisions in a row
+	WORD	ball_onfire	;!0=Flaming
+;unused	WORD	ball_xscrllmin	;
+;unused	WORD	ball_xscrllmax	;
+;
+; Player data structure
+;
+	STRUCTPD		;70 Words max
+	WORD	plyr_num	;P# (0-3)
+	APTR	plyr_tmproc_p	;*Teammates process
+	APTR	plyr_PDATA_p	;*PxDATA
+	APTR	plyr_attrib_p	;*Players attribute table
+	WORD	plyr_seq	;Current ani sequence #
+	WORD	plyr_seqflgs	;^ flags
+	WORD	plyr_seqdir	;^ dir 0-7
+	APTR	plyr_seqcode_p	;*Code to run when seq at end
+	APTR	plyr_ani1st_p	;*1st ani_l pos
+	APTR	plyr_ani_p	;*Current ani_l pos
+	WORD	plyr_anirevff	;Xored into aniflags to reverse FLIPH
+	WORD	plyr_dribmode	;-=Can't dribble, 0=Can drib, +=Dribbling
+;	WORD	plyr_passbtime	;0=Pass off, +=# ticks since pass pressed
+	WORD	plyr_slam_ticks	;ticks until slam ball (minus launch ticks)
+	WORD	plyr_rcvpass	;+=# ticks till you rcv pass
+	WORD	plyr_bvel	;Base velocity/16
+	WORD	plyr_turbon	;!0=Turbo on
+	WORD	plyr_ownball	;-=Teammate, 0=Neither, +=I have ball
+	LONG	plyr_ballxo	;Ball X offset (16:16)
+	WORD	plyr_ballyo	;Ball Y offset
+	WORD	plyr_ballzo	;Z^
+	WORD	plyr_shtdly	;After shot delay for coll
+	WORD	plyr_myhoopx	;Plyrs hoop X
+	WORD	plyr_ohoopx	;Opponents hoop X
+	WORD	plyr_tmdir	;Teammates dir
+	WORD	plyr_tmdist	;^ distance
+	WORD	plyr_o1dir	;Opponent 1 dir
+	WORD	plyr_o1dist	;^ dist
+	WORD	plyr_o2dir	;Opponent 1 dir
+	WORD	plyr_o2dist	;^ dist
+	WORD	plyr_balldir	;Balls dir
+	WORD	plyr_balldist	;^ dist
+	WORD	plyr_hpdir	;Plyrs hoop dir
+	WORD	plyr_hpdist	;^ dist
+	WORD	plyr_ohpdir	;Opponents hoop dir
+	WORD	plyr_ohpdist	;^ dist
+	WORD	plyr_indef	;!0=In defensive posture
+	WORD	plyr_nojoy	;0=Use joystick, +=Ignore joy, -=Use this instead
+	WORD	plyr_autoctrl	;!0=Plyr under temp computer control
+	WORD	plyr_dir	;Current dir 0-127 (3:4)
+	WORD	plyr_newdir	;New dir or -1
+	WORD	plyr_dirtime	;# ticks stick pushed and facing current dir
+	WORD	plyr_jmpcnt	;0=No jmp, +=# ticks since jump
+	WORD	plyr_hangcnt	;0=No hang, +=Hang cnt down
+	WORD	plyr_aniy	;Current frames y anipt
+	WORD	plyr_stagcnt	;+x each innerbox collision
+	WORD	plyr_ptsdown	;# pts losing by (neg # if winning)
+	WORD	plyr_d_mode	;-=Defense, 0=Get ball, +=Offense
+	WORD	plyr_d_skill	;0=Average, -=Poorer, +=Better
+	WORD	plyr_d_cflgs	;Drone command flags
+	WORD	plyr_d_seekcnt	;!0=Cntdn to continue seek
+	WORD	plyr_d_seekx	;X to seek
+	WORD	plyr_d_seeky	;Y ^
+	APTR	plyr_headobj_p	;*Head obj
+	APTR	plyr_shadobj_p	;*Shadow obj
+;	APTR	plyr_aligndot_p	;*Alignment obj
+	WORD	plyr_offscrn	;!0=Plyr is on defense & off trailing scrn edge
+	WORD	plyr_offtime	;Amount of time off scrn for idiot box
+	WORD	plyr_tbutn	;Ticks sice last turbo button press
+	WORD	plyr_turndelay	;Ticks before turning toward action (stands)
+	WORD	plyr_idiotbit	;Bit 0=drn pass,1=drn shoot,2=dunk,3=shoot
+	WORD	plyr_shtbutn	;Ticks sice last shoot button press
+	WORD	plyr_inair_pass	;-=cant pass to teamate in air, +=can
+;	WORD	plyr_keeppal	;Keep pal for reuse upon finish of flames
+;	WORD	plyr_hdkeeppal	;Keep head pal for reuse upon finish of flames
+	LONG	plyr_kpzvel	;Keep ZVEL for flyback skids on butt
+	LONG	plyr_kpxvel	;Keep XVEL for flyback skids on butt
+	LONG	plyr_meter_proc	;Jump ball meter
+	WORD	plyr_meter_time	;Jump ball meter
+	WORD	plyr_old_seqdir	;dir 0-7 - for behind back pass
+	WORD	plyr_offset_flag ;0 or 1, Have I already offset this flyback?
+	WORD	plyr_hold_block ;Ticks block being held for rejections
+	LONG	plyr_lost_ptr	;Player lost arrow process ptr for arw flash
+	WORD	plyr_inflsh	;In red flash flag
+	WORD	plyr_alley_cnt	;# of alley oops
+
+
+	STRUCT	0		;Plyr secondary data
+	WORD	pld_d_nastycnt	;0=Normal, +=Nasty cntdn
+
+	WORD	pld_d_grddist	;% distance to guard opp (0-256)
+	WORD	pld_d_lowsecagr	;Low second aggressive time (1-5)
+	LABEL	PLDSZ		;Struc size
+
+
+	STRUCT	0		;Plyr attribute table
+;Size,speed,shot%,dunk ability,defensive ability,steal skill,drone skill
+	APTR	PAT_SCL_p	;*Scale table (keep 1st)
+	WORD	PAT_BVEL	;Base velocity/16
+	WORD	PAT_SHOTSKILL	;Base shooting %
+	WORD	PAT_DUNKSKILL	;Dunk tables this guy can do
+	WORD	PAT_DEFSKILL	;Defensive skill (Blocks)
+	WORD	PAT_STLSKILL	;Defensive steal skill 
+	WORD	PAT_SKILL	;Drone base skill
+	APTR	PAT_PALF_p	;*Body flesh palette
+	APTR	PAT_PALU_p	;*Body uniform ^
+	APTR	PAT_PALU2_p	;*Body 2nd uniform ^
+	APTR	PAT_PALT_p	;*Body trim ^
+	APTR	PAT_PALT2_p	;*Body 2nd trim ^
+	APTR	PAT_HEADT_p	;*Head_t
+	WORD	PAT_PASS	;Player passing skill
+	WORD	PAT_POWER	;Player power/intimidation factor
+	WORD	PAT_CLUTCH	;Player clutch performer stat
+	APTR	PAT_PALSW_p	;*Body swipe palette
+	APTR	PAT_PALSW2_p	;*Body 2nd swipe ^
+	APTR	PAT_PALVP_p	;*Body vertical panel ^
+	APTR	PAT_PALVP2_p	;*Body 2nd vertical panel ^
+	APTR	PAT_SIZE
+;
+; Sequence table define/build macros
+;
+SEQ	.macro	n,d
+:n:	.equ	SOFF
+	.eval	SOFF+1,SOFF
+	.if	SEQT
+	.long	:d:
+	.endif
+	.endm
+SEQG	.macro	n,d
+	.global	:d:
+:n:	.equ	SOFF
+	.eval	SOFF+1,SOFF
+	.if	SEQT
+	.long	:d:
+	.endif
+	.endm
+
+	.global	pseq_t
+	.if	SEQT
+pseq_t
+	.endif
+;
+; Sequence table
+;
+	.asg	0,SOFF
+	SEQ	NULL_SEQ	,0
+	SEQG	STND_SEQ	,stnd_t		;Stand
+	SEQ	STND2_SEQ	,stnd2_t	;Stand straight up
+	SEQG	STNDDEF_SEQ	,stnddef_t
+	SEQG	STNDWB_SEQ	,stndwb_t	;^ with ball
+	SEQG	STNDWB2_SEQ	,stndwb2_t
+	SEQ	STNDDRIB_SEQ	,stnddrib_t
+	SEQ	STNDDRIB2_SEQ	,stnddrib2_t
+	SEQ	STNDDRIBDEF_SEQ	,stnddribdef_t
+	SEQG	WALKFDEF_SEQ	,walkfdef_t
+	SEQG	WALKBDEF_SEQ	,walkbdef_t
+	SEQG	WALKLDEF_SEQ	,walkldef_t
+	SEQG	WALKRDEF_SEQ	,walkrdef_t
+	SEQG	RUN_SEQ		,run_t
+	SEQG	RUNTURB_SEQ	,runturb_t	;Must follow run!
+	SEQG	RUNDRIB_SEQ	,rundrib_t
+	SEQG	RUNDRIBTURB_SEQ	,rundribturb_t	;Must follow rundrib!
+	SEQ	BLOCK_SEQ	,block_t
+	SEQ	BLOCKREJ_SEQ	,blockrej_t	;Reject block
+	SEQ	FASTBLOCKREJ_SEQ,fastblockrej_t	;Fast reject block
+	SEQ	REBOUND_SEQ	,rebound_t	;Rebound
+	SEQ	REBOUNDA_SEQ	,rebounda_t	;Auto rebound
+	SEQ	NOSPEAR_SEQ	,nospear_t	;Turn a spear into a grab
+	SEQ	SHOOT_SEQ	,shoot_t	;Shoot ball
+	SEQ	QSHOOT_SEQ	,qshoot_t	;Shoot ball quickly
+	SEQ	UNDR_HOOP_SHT_SEQ,undr_hoop_sht_tbl	;fade sideways and shoot
+	SEQ	UNDR_HOOP_SHT_SEQ2,undr_hoop_sht_tbl2	;fade sideways and shoot
+	SEQG	HOOK_SEQ	,hook_t		;Hook shot
+ 	SEQG	HOOK2_SEQ	,hook2_t	;Hook shot lower arc
+	SEQG	LAYUP_SEQ	,layup_t	;Layups
+	SEQG	LAYUPREB_SEQ	,layupreb_t	;Layup from rebound
+	SEQ	SHOOTDESP_SEQ	,shootdesp_t	;Desperation (keep in order!)
+	SEQ	SHOOTDESP2_SEQ	,shootdesp2_t
+	SEQ	SHOOTDESP3_SEQ	,shootdesp3_t
+	SEQ	PASSS_SEQ	,passs_t	;Short pass
+	SEQ	PASSC_SEQ	,passc_t	;Long chest pass
+	SEQ	FASTPASSC_SEQ	,fastpassc_t	;Fast long chest pass
+;	SEQ	PASSOH_SEQ	,passoh_t	;Overhead pass
+	SEQ	PASSNEWOH_SEQ	,passnewoh_t	;New overhead pass
+	SEQ	FASTPASSNEWOH_SEQ,fastpassnewoh_t	;Fast new overhead pass
+	SEQ	PASSDO_SEQ	,passdo_t	;Dish off
+	SEQ	PASSDO2_SEQ	,passdo2_t	;Dish off no big arm extend
+	SEQ	PASSBH_SEQ	,passbh_t	;Behind back pass
+	SEQ	PASSBH2_SEQ	,passbh2_t	;Behind back pass option #2
+	SEQG	PASSNL_SEQ	,passnl_t	;No look pass
+;	SEQG	PASSNL2_SEQ	,passnl2_t	;
+;	SEQG	PASSNL3_SEQ	,passnl3_t	;
+	SEQ	STEAL_SEQ	,steal_t	;Swipe at ball
+;FIX!!!  Check all references to regular STEAL_SEQ!
+;	SEQ	STEALUP_SEQ	,stealup_t	;Swipe at ball - swat upward
+	SEQG	PUSH_SEQ	,push_t		;Push opponent
+	SEQG	STAGGER_SEQ	,stagger_t	;Staggered
+	SEQG	FALL_SEQ	,fall_t		;Fall down
+	SEQG	FLYBACK_SEQ	,flyback_t	;Pushed
+	SEQG	FLYBACK2_SEQ	,flyback2_t	;Pushed - nofall
+	SEQG	FLYBACKWB_SEQ	,flybackwb_t	;Pushed (have ball)
+	SEQG	FLYBACKWB2_SEQ	,flybackwb2_t	;Pushed (have ball) - no fall
+;	SEQG	FFALL_SEQ	,ffall_t	;Fall down - Catch fire!
+;	SEQG	FFLYBACK_SEQ	,fflyback_t	;Pushed - Catch fire!
+;	SEQG	FFLYBACK2_SEQ	,fflyback2_t	;Pushed - nofall - Catch fire!
+;	SEQG	FFLYBACKWB_SEQ	,fflybackwb_t	;Pushed (have ball)
+;	SEQG	FFLYBACKWB2_SEQ	,fflybackwb2_t	;Pushed (have ball) - no fall
+	SEQG	PICKUP_SEQ	,pickup_t	;Pickup ball
+	SEQG	ELBO_SEQ	,elbo_t		;Throw elbows
+	SEQG	ELBO2_SEQ	,elbo2_t	;Throw elbows slower
+	SEQG	TIP_SEQ		,tip_t		;Tip stand
+	SEQG	TIPJ_SEQ	,tipj_t		;Tip jump
+	SEQG	TIPSTND_SEQ	,tipstnd_t	;Stand before jump ball
+	SEQG	SPIN_MOVE_SEQ	,spinmove_t	;avoid plr by spinning around him
+;	SEQG	LOB_PASS_SEQ	,lobpass_t	;lob the ball to the hoop
+;	SEQG	PUTBACK_SEQ	,putback_t	;put-back slam
+;	SEQG	GOOD_BLOCK_SEQ	,good_block_t	;Jump into this on good block
+
+	SEQG	DUNKA_SEQ	,dunka_t
+	SEQG	DUNKA2_SEQ	,dunka2_t
+	SEQG	DUNKA3_SEQ	,dunka3_t
+	SEQG	DUNKB_SEQ	,dunkb_t
+	SEQG	DUNKB2_SEQ	,dunkb2_t	;Under hoop dunk
+	SEQG	DUNKB3_SEQ	,dunkb3_t	;Under hoop dunk - quick
+	SEQG	DUNKC_SEQ	,dunkc_t
+	SEQG	DUNKD_SEQ	,dunkd_t
+	SEQG	DUNKD2_SEQ	,dunkd2_t	;Dunkd option
+	SEQG	DUNKE_SEQ	,dunke_t
+	SEQG	DUNKE2_SEQ	,dunke2_t	;Dunke option
+	SEQG	DUNKF_SEQ	,dunkf_t
+	SEQG	DUNKG_SEQ	,dunkg_t
+	SEQG	DUNKG2_SEQ	,dunkg2_t	;Under hoop dunk
+	SEQG	DUNKJ_SEQ	,dunkj_t
+	SEQG	DUNKJ2_SEQ	,dunkj2_t	;Dunkj option
+	SEQG	DUNKK_SEQ	,dunkk_t
+	SEQG	DUNKK2_SEQ	,dunkk2_t
+	SEQG	DUNKL_SEQ	,dunkl_t
+	SEQG	DUNKL2_SEQ	,dunkl2_t
+	SEQG	DUNKL3_SEQ	,dunkl3_t
+	SEQG	DUNKN_SEQ	,dunkn_t
+	SEQG	DUNKO_SEQ	,dunko_t
+	SEQG	DUNKP_SEQ	,dunkp_t
+	SEQG	DUNKP2_SEQ	,dunkp2_t
+	SEQG	DUNKP3_SEQ	,dunkp3_t
+	SEQG	DUNKQ_SEQ	,dunkq_t
+	SEQG	DUNKQ2_SEQ	,dunkq2_t
+	SEQG	DUNKR_SEQ	,dunkr_t
+	SEQG	DUNKR2_SEQ	,dunkr2_t
+	SEQG	DUNKS_SEQ	,dunks_t
+	SEQG	DUNKS2_SEQ	,dunks2_t
+	SEQG	DUNKU_SEQ	,dunku_t
+	SEQG	DUNKU2_SEQ	,dunku2_t
+;all seq. from here down, scroller moves slower  (height range ?)
+	SEQG	DUNKU3_SEQ	,dunku3_t
+	SEQG	DUNKQ3_SEQ	,dunkq3_t
+	SEQG	DUNKO2_SEQ	,dunko2_t
+	SEQG	DUNKN2_SEQ	,dunkn2_t	;Under hoop dunk
+	SEQG	DUNKN3_SEQ	,dunkn3_t	;Under hoop dunk
+	SEQG	DUNKT_SEQ	,dunkt_t
+	SEQG	DUNKT2_SEQ	,dunkt2_t
+	SEQG	DUNKT3_SEQ	,dunkt3_t
+	SEQG	DUNKT4_SEQ	,dunkt4_t
+	SEQG	DUNKT5_SEQ	,dunkt5_t
+	SEQG	DUNKV_SEQ	,dunkv_t
+	SEQG	DUNKV2_SEQ	,dunkv2_t
+	SEQG	DUNKV3_SEQ	,dunkv3_t
+	SEQG	DUNKV4_SEQ	,dunkv4_t
+	SEQG	DUNKW_SEQ	,dunkw_t
+	SEQG	DUNKW2_SEQ	,dunkw2_t
+	SEQG	DUNKW3_SEQ	,dunkw3_t
+	SEQG	DUNKX_SEQ	,dunkx_t
+	SEQG	DUNKX2_SEQ	,dunkx2_t
+	SEQG	DUNKX3_SEQ	,dunkx3_t
+	SEQG	DUNKY_SEQ	,dunky_t
+	SEQG	DUNKY2_SEQ	,dunky2_t	;Cool
+	SEQG	DUNKZ_SEQ	,dunkz_t
+	SEQG	DUNKZ2_SEQ	,dunkz2_t
+	SEQG	DUNKZ3_SEQ	,dunkz3_t
+	SEQG	DUNKLAY_SEQ	,dunklay_t
+	SEQG	DUNKLAY2_SEQ	,dunklay2_t
+	SEQG	DUNKLAY3_SEQ	,dunklay3_t
+	SEQG	DUNKLAY3A_SEQ	,dunklay3a_t
+	SEQG	DUNKLAY3B_SEQ	,dunklay3b_t
+	SEQG	DUNKLAY3C_SEQ	,dunklay3c_t
+	SEQG	DUNKLAY4_SEQ	,dunklay4_t
+	SEQG	DUNKLAY5_SEQ	,dunklay5_t
+	SEQG	DUNKLAY6_SEQ	,dunklay6_t
+	SEQG	DUNKLAY7_SEQ	,dunklay7_t
+	SEQG	DUNKLAY7A_SEQ	,dunklay7a_t
+	SEQG	DUNKLAY8_SEQ	,dunklay8_t
+	SEQG	QUICK_LAYUP_SEQ	,quicklay_t
+	SEQG	ALLEYOOP_PAS_SEQ,alleyoop_pas_t
+;	SEQG	DDUNK_STRT_SEQ	,ddunk_strt_t
+	SEQG	DDUNK_STRT2_SEQ	,ddunk_strt2_t
+;dont change order
+	SEQG	ALLEYOOP1_SEQ	,alley_oop1_t
+	SEQG	ALLEYOOP2_SEQ	,alley_oop2_t
+	SEQG	ALLEYOOP3_SEQ	,alley_oop3_t
+	SEQG	ALLEYOOP4_SEQ	,alley_oop4_t
+	SEQG	ALLEYOOP5_SEQ	,alley_oop5_t
+	SEQG	ALLEYOOP6_SEQ	,alley_oop6_t
+	SEQG	ALLEYOOP7_SEQ	,alley_oop7_t
+	SEQG	ALLEYOOP8_SEQ	,alley_oop8_t
+	SEQG	ALLEYOOP9_SEQ	,alley_oop9_t
+	SEQG	ALLEYOOP10_SEQ	,alley_oop10_t	;dir 1 - <5 dnk attrib
+	SEQG	ALLEYOOP11_SEQ	,alley_oop11_t	;dir 2 - <5 dnk attrib
+	SEQG	ALLEYOOP12_SEQ	,alley_oop12_t	;dir 3 - <5 dnk attrib
+	SEQG	ALLEYOOP13_SEQ	,alley_oop13_t	;dir 4 - <5 dnk attrib
+	SEQG	ALLEYOOP14_SEQ	,alley_oop14_t	;dir 5 - <5 dnk attrib
+;dont change order
+	SEQG	DDUNK_RECV_SEQ	,ddunk_recv_t
+
+	.if	IMGVIEW
+	SEQG	debug_SEQ1	,debug_t1
+	SEQG	debug_SEQ4	,debug_t4
+	.endif
+
+;Seq flags
+	.asg	0,SOFF
+	FLAG	WALK		;In a defensive walk
+	FLAG	DUNK		;Dunk sequence
+	FLAG	NOJUMP		;Can't jump
+	FLAG	NOMV		;No XZ movement
+	FLAG	EASYSTAG	;Easier to stagger
+	FLAG	NOBALL		;Can't hold ball
+	FLAG	BLOCKREB	;Blocking/rebounding
+	FLAG	DRIFT		;In air drifting
+	FLAG	DRIBBLE		;Doing dribble
+	FLAG	SHOOT		;Shooting the ball
+	FLAG	PASS		;Passer
+	FLAG	NOSTEAL		;Ball can't be stolen
+	FLAG	NOCOLLP		;No collisions with other plyrs
+	FLAG	NOJOY		;Ignore plyrs joystick
+	FLAG	SAMEDIR		;Don't change dir if rcving pass
+	FLAG	LAYUP		;A layup sequence from a dunk
+
+;Drone command flags
+	.asg	0,SOFF
+	FLAG	DRN_PASS	;Tell drone to pass
+	FLAG	DRN_SHOOT	;^ shoot
+
+;PxCTRL flags
+	.asg	0,SOFF
+	FLAG	JOYU
+	FLAG	JOYD
+	FLAG	JOYL
+	FLAG	JOYR
+	FLAG	BUT1
+	FLAG	BUT2
+	FLAG	BUT3
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+;JEFF:	More heads in create player
+;JEFF:	Fix angle 1&5 alleyoops (jump from out-of-bounds)
+;JEFF:	Dont push player if failing or falling down
+;JEFF:	Team starring page
+;JEFF:	Halftime team swap
+;JEFF:	Snd system volume reset problem
+;JEFF:	Do attract mode/sound volume
+;JEFF:	Fix favored by points on vs. screen
+;JEFF:	Score plate clock digits glitch @ halftime fade
+;JEFF:	What happens when you go grand champ
+;JEFF:	Put in secret players and adjust their stats
+;JEFF:	Fix white pix on stat screen fade down
+;JEFF:	Softly off of glass speech happened on pure swish
+
+

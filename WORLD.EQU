@@ -1,0 +1,149 @@
+*****************************************************************************
+* World.Equ - court-world definitions & parameters
+*
+*.Last mod - 9/15/95 16:54
+
+;----------
+; Conditional assembly flags
+
+CRTALGN		.equ	0	;1-> to show alignment dots
+DUNKTST		.equ	0	;1-> dunk test; 2-> same but with plyr fire
+DRONES_2MORE	.equ	0	;1-> ;Needed for 2 additional drones
+
+	.asg	4,NUMPLYRS
+	.if DRONES_2MORE
+	.asg	6,NUMPLYRS
+	.endif
+
+;----------
+; Conversion assignments/values
+
+	.asg	3/8,Z2Y
+	.asg	8/3,Y2Z
+
+;----------
+; Court & floor img specs
+
+GNDI_W		.equ	1762			;Crt img W
+GNDI_TW		.equ	982			;Crt img base-to-base W @ top
+GNDI_BW		.equ	1594			;Crt img base-to-base W @ bot
+GNDI_H		.equ	144			;Crt img H
+GNDI_M		.equ	54			;Crt img Mid Y
+GNDI_Y		.equ	254-GNDI_H		;Nonscroll starting Y
+
+GND_TOP		.equ	40			;H of floor above crt
+GND_BOT		.equ	0			;H of floor below crt
+GND_H		.equ	GNDI_H+GND_TOP+GND_BOT	;Total H of floor
+GND_Y		.equ	GNDI_Y-GND_TOP		;Nonscroll starting Y
+
+DIVRES		.equ	6			;Frac bres for slope divisor
+		.asg	(1<<DIVRES),frc
+		.asg	(GNDI_BW-GNDI_TW),dW
+		.asg	(GND_TOP+GNDI_H), gH
+		.asg	(GNDI_BW*GNDI_H), bWcH
+DIVSLP		.equ	frc*bWcH/dW-frc*gH	;Gnd DMA slope divisor
+;
+;NOTE: 6 bres for DIVRES puts it fairly close to a 32b/32b dividend
+;      overflow. Check close if court img gets much wider (near 2k pix,
+;      but this also depends on how steep the perspective slant is)
+
+;----------
+; Court-world defines
+
+GRAV		.equ	2600h	;2500
+GRAVB		.equ	2600h	;2500
+
+WRLDMID		.equ	2000h
+
+CZMIN		.equ	1000			;Crt Z min
+CZMID		.equ	CZMIN+GNDI_M*Y2Z	; midpoint
+CZMAX		.equ	CZMIN+GNDI_H*Y2Z	; max
+
+GZMIN		.equ	CZMIN-GND_TOP*Y2Z	;Floor Z min
+GZMAX		.equ	CZMAX+GND_BOT*Y2Z	; max
+GZBASE		.equ	GZMIN			; (min copy)
+
+HOOPBASE_X	.equ	444			;Obj coor for hoop placement
+HOOPBASE_Y	.equ	0
+
+HOOPLX		.equ	WRLDMID-367		;Detect coors for hoops
+HOOPRX		.equ	WRLDMID+367
+HOOPY		.equ	-128			;-125
+
+BBRD_X		.equ	HOOPRX-WRLDMID+4	;Backboard X (dist from ctr)
+BBRD_Y		.equ	HOOPY+8			;Backboard Y (bottom)
+BBRD_Z		.equ	CZMID			;Backboard Z (mid board)
+BBRD_YWID	.equ	50			;Backboard Y width
+BBRD_ZWID	.equ	56			;Backboard Z width
+
+SCOREBRD_X	.equ	200-36			;Scoreboard X
+SCOREBRD_Y	.equ	0			;Scoreboard Y
+SCOREBRD_Z	.equ	GZMIN			;Scoreboard Z
+
+LFTCRT_X	.equ	WRLDMID-400		;Crt lft/rgt X limits
+RGTCRT_X	.equ	WRLDMID+400
+
+PLYRMINX	.equ	LFTCRT_X+20		;X accel limit pts
+PLYRMAXX	.equ	RGTCRT_X-20
+PLYRMINX2	.equ	LFTCRT_X+5		;XVEL jump-drift limit pts
+PLYRMAXX2	.equ	RGTCRT_X-5
+
+;----------
+; Scroller equates
+
+MAX_VIEW1	equ	375	;max possible & limit for inbound,dunks
+MAX_VIEW2	equ	312	;310;330;limit for all other action
+SCRL_EDGE_OFF	equ	72	;X offset from screen ctr for ball tracking
+SCROLL_BUFFER	equ	8	;pix "window" for scroll completion
+INBND_MINX	equ	1000h	;min step needed to scroll X when inbounding
+
+DIVS_DELTA	equ	  48h	;accel factor for current -> target rates
+DIVS_RATE1	equ	2400h	;rate for inbound,dunks,loose,turnover   -slow
+DIVS_RATE2	equ	 800h	;rate default,min when past MAX_VIEW2  -faster
+DIVS_RATE3	equ	 500h	;rate for turbo passes                -fastest 
+
+YMIN_VIEW	equ	-186	;-130;min world Y allowed
+YBUFF_NORM	equ	70	;default buffer
+YBUFF_DUNK1	equ	45	;dunk type 1 buffer
+YBUFF_DUNK2	equ	25	;dunk type 2 buffer
+YBUFF_ALLEY	equ	-8	;alley-oop buffer
+
+YRATE_NORM	equ	2	;rate default,dunk type 1
+YRATE_SLOW	equ	4	;rate dunk type 2
+
+VSCR_CNT	.equ	6	;Crt cnt to vscroll off the bottom
+CLIP_CNT	.equ	0	;Crt cnt to always clip off the bottom
+
+;----------
+; Common conversion macros
+;----------
+; Convert linear X to Z-base X
+;  Parms: <regx>=X val INT:FRC; returns whole # result
+;                 unless <keep> specified
+;         <regz>=Z val; trashed
+;         <keep>=bitcount of result fraction to keep or
+;                 additional bits to lose if minus (optional)
+;
+PRJX2Z	.macro	regx,regz,keep
+
+	.asg	503-GZBASE, ZFAC_OFF
+
+	.asg	11, XFRC_BC
+	.asg	10, ZFAC_BC
+	.asg	2,  SCAL_BC
+
+	.asg	(XFRC_BC+ZFAC_BC-SCAL_BC-(:keep:)), K_BC
+
+	sra	16-XFRC_BC,:regx:	;Keep what we can of X FRC m'plicand
+	addi	ZFAC_OFF,:regz:		;Apply base offset to Z m'plier
+	mpys	:regz:,:regx:
+	move	:regx:,:regz:		;Trash <regz> for a quick "multiply"
+	sra	1,:regx:		; (* 65/128) of the product
+	sra	7,:regz:
+	add	:regz:,:regx:
+	.if	 K_BC < 0
+	sll	-K_BC,:regx:
+	.elseif	 K_BC > 0
+	sra	 K_BC,:regx:
+	.endif
+	.endm

@@ -1,0 +1,48 @@
+***> 52e6c90,2
+;
+PON>
+CON>
+XOF>
+;
+IHDR SIZX:W,SIZY:W,ANIX:W,ANIY:W,SAG:L,CTRL:W,PAL:L,PWRD1:W,PWRD2:W,PWRD3:W,PT0X:W,PT2X:W,PT2Y:W,PT3X:W,PT3Y:W,PT5X:W
+;
+ASM> FLAIL.TBL
+GLO> FLAIL.GLO
+;
+nba_msc1.img
+;---> w1cow1,w1cow2,w1cow3
+;---> w1cow4,w1cow5,w1cow6,w1cow7,w2cow1,w2cow2,w2cow3,w2cow4,w2cow5,w2cow6
+;---> w2cow7,w3cow1,w3cow2,w3cow3,w3cow4,w3cow5,w3cow6,w3cow7,w4cow1,w4cow2
+;---> w4cow3,w4cow4,w4cow5,w4cow6,w4cow7,w5cow1,w5cow2,w5cow3,w5cow4,w5cow5
+;---> w5cow6,w5cow7
+---> w1flai1,w1flai2,w1flai3,w1flai4,w1flai5,w1flai6,w1flai7,w1flai8
+---> w2flai1,w2flai2,w2flai3,w2flai4
+---> w2flai5,w2flai6,w2flai7,w2flai8,w2flai9,w2flai11
+---> w3flai1,w3flai2,w3flai3,w3flai4,w3flai5,w3flai6,w3flai7
+---> w3flai8,w3flai9
+---> w4flai1,w4flai2,w4flai3,w4flai4,w4flai5,w4flai6
+---> w4flai7,w4flai8
+---> w5flai2,w5flai3,w5flai4,w5flai5,w5flai6
+---> w5flai7,w5flai8,w5flai10,w5flai11
+;
+nba_msc4.img
+---> w1fall1,w1fall2
+---> w1fall3,w1fall4,w1fall5,w1fall6,w1fall7,w1fall8,w1fall9,w1fall10
+---> w1fall11,w1fall12,w1fall13,w1fall14,w1fall15,w1fall16,w1fall17,w1fall18
+---> w1fall19,w1fall20,w1fall21,w1fall22,w1fall23
+---> w2fall1,w2fall2
+---> w2fall3,w2fall4,w2fall5,w2fall6,w2fall7,w2fall8,w2fall9,w2fall10
+---> w2fall11,w2fall12,w2fall13,w2fall14,w2fall15,w2fall16,w2fall17,w2fall18
+---> w2fall19,w2fall20,w2fall21
+---> w3fall1,w3fall2,w3fall3,w3fall4
+---> w3fall5,w3fall6,w3fall7,w3fall8,w3fall9,w3fall10,w3fall11,w3fall12
+---> w3fall13,w3fall14,w3fall15,w3fall16,w3fall17,w3fall18,w3fall19,w3fall20
+---> w3fall21,w3fall22,w3fall23,w3fall24
+---> w4fall1,w4fall2,w4fall3
+---> w4fall4,w4fall5,w4fall6,w4fall7,w4fall8,w4fall9,w4fall10,w4fall11
+---> w4fall12,w4fall13,w4fall14,w4fall15,w4fall16,w4fall17,w4fall18,w4fall19
+---> w4fall20,w4fall21,w4fall22
+---> w5fall1,w5fall2,w5fall3,w5fall4
+---> w5fall5,w5fall6,w5fall7,w5fall8,w5fall9,w5fall10,w5fall11,w5fall12
+---> w5fall13,w5fall14,w5fall15,w5fall16,w5fall17,w5fall18,w5fall19,w5fall20
+---> w5fall21,w5fall22

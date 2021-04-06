@@ -1,0 +1,569 @@
+IHDR SIZX:W,SIZY:W,ANIX:W,ANIY:W,SAG:L,CTRL:W,PAL:L
+***> 4673800
+;04672220H
+GLO> IMGTBL.GLO
+PON>
+;
+ASM> COURT.TBL
+FRM> COURT
+ADS.IMG
+---> AD_III_L,RF_III_L,AD_REV_R,RF_REV_R,AD_PEK_L,RF_PEK_L
+---> AD_MUS_R,RF_MUS_R,AD_SMO_R,RF_SMO_R,AD_CHAL_L,RF_CHAL_L
+---> AD_WWF_L,RF_WWF_L
+---> AD_KANO_L,RF_KANO_L,AD_KOM1_L
+---> RF_KOM1_L,AD_KOM2_L
+;
+COURTZ.IMG
+;Advertisement imgs
+---> adrecy2,adhot,admid2,adblue2,blueref,hotref,midref
+---> recycref
+---> ad1,ad1ref,ad2,ad2ref
+---> pal_img2,pal_img4,pal_img5,pal_img3,pal_img1
+---> adnba
+---> adjet,nbaref
+---> jamref,jetref
+---> adnba2,adjam2
+---> tfreeply,tcredit
+---> reflc1,reflc2,reflc3,reflc4,topcrwd,table2
+---> cdre0,newtbl1,newtbl2,crowd1a2,crowd1a3,crowd1a4,crowd1a5
+---> usher,crowd2a2,crowd2a3,crowd2a4,newtbl3,crowd3a2,crowd3a3
+---> crowd1a,crowd1b,crowd2a,crowd2b,crowd3,crowd3a4
+---> sdcrwd1,sdcrwd2,sdcrwd3,sdcrwd4
+---> sdcrwd5,sdcrwd6,sdcrwd7,sdcrwd8
+---> nsdcrwd1a,nsdcrwd2a,nsdcrwd4a,sdcrwd8c,nsdcrwd4c
+---> nsdcrwd1c,nsdcrwd2c,nsdcrwd3c,nsdcrwd3a
+---> crowd40,crowd401,crowd402
+---> PAL_ATL
+---> PAL_BOS,PAL_CHA,PAL_CHI,PAL_CHI2,PAL_CLE,PAL_CLP,PAL_DAL,PAL_DEN
+---> PAL_DET,PAL_GLD,PAL_HOU,PAL_IND,PAL_LAK,PAL_MIA,PAL_MIL,PAL_MIN,PAL_NEJ
+---> PAL_NEY,PAL_ORL,PAL_ORL2,PAL_PHI,PAL_PHO,PAL_POR,PAL_SAC,PAL_SAN
+---> PAL_SEA,PAL_UTA,PAL_UTA2,PAL_WAS
+CHEERS.IMG
+---> cheer1,cheer2,cheer3,cheer4,cheer5,cheer6,cheer7,cheer2a,cary1,cary2
+---> cary3,cary4,cary5,cary6
+;
+ASM> PLYRHD.TBL
+XON>
+HDS1.IMG
+---> ewing1,ewing2,ewing3
+---> ewing4,ewing5,ewing6,ewing7,ewing8,ewing9,ewing10,ewing11,ewing12
+---> ewing13,ewing14,ewing15,ewing16,stock1,stock2,stock3,stock4,stock5
+---> stock6,stock7,stock8,stock9,stock10,stock11,stock12,stock13,stock14
+---> stock15,stock16,shiek1,shiek2,shiek3,shiek4,shiek5,shiek6,shiek7,shiek8
+---> shiek9,shiek10,shiek11,shiek12,shiek13,shiek14,shiek15,shiek16,rharp1
+---> rharp2,rharp3,rharp4,rharp5,rharp6,rharp7,rharp8,rharp9,rharp10,rharp11
+---> rharp12,rharp13,rharp14,rharp15,rharp16,kmalone1,kmalone2,kmalone3
+---> kmalone4,kmalone5,kmalone6,kmalone7,kmalone8,kmalone9,kmalone10
+---> kmalone11,kmalone12,kmalone13,kmalone14,kmalone15,kmalone16
+HDS2.IMG
+---> Person1,Person2,Person3,Person4,Person5,Person6,Person7,Person8,Person9
+---> Person10,Person11,Person12,Person13,Person14,Person15,Person16,Augmon1
+---> Augmon2,Augmon3,Augmon4,Augmon5,Augmon6,Augmon7,Augmon8,Augmon9
+---> Augmon10,Augmon11,Augmon12,Augmon13,Augmon14,Augmon15,Augmon16,Benja1
+---> Benja2,Benja3,Benja4,Benja5,Benja6,Benja7,Benja8,Benja9,Benja10,Benja11
+---> Benja12,Benja13,Benja14,Benja15,Benja16,Barkley1,Barkley2,Barkley3
+---> Barkley4,Barkley5,Barkley6,Barkley7,Barkley8,Barkley9,Barkley10
+---> Barkley11,Barkley12,Barkley13,Barkley14,Barkley15,Barkley16,Cole1,Cole2
+---> Cole3,Cole4,Cole5,Cole6,Cole7,Cole8,Cole9,Cole10,Cole11,Cole12,Cole13
+---> Cole14,Cole15,Cole16
+---> Drex1,Drex2,Drex3,Drex4,Drex5,Drex6
+---> Drex7,Drex8,Drex9,Drex10,Drex11,Drex12,Drex13,Drex14,Drex15,Drex16
+---> Ellis1,Ellis2,Ellis3,Ellis4,Ellis5,Ellis6,Ellis7,Ellis8,Ellis9,Ellis10
+---> Ellis11,Ellis12,Ellis13,Ellis14,Ellis15,Ellis16,Elliot1,Elliot2,Elliot3
+---> Elliot4,Elliot5,Elliot6,Elliot7,Elliot8,Elliot9,Elliot10,Elliot11
+---> Elliot12,Elliot13,Elliot14,Elliot15,Elliot16,Hrdaway1,Hrdaway2,Hrdaway3
+---> Hrdaway4,Hrdaway5,Hrdaway6,Hrdaway7,Hrdaway8,Hrdaway9,Hrdaway10
+---> Hrdaway11,Hrdaway12,Hrdaway13,Hrdaway14,Hrdaway15,Hrdaway16
+HDS3.IMG
+---> HarpMav1,HarpMav2,HarpMav3,HarpMav4,HarpMav5,HarpMav6,HarpMav7,HarpMav8
+---> HarpMav9,HarpMav10,HarpMav11,HarpMav12,HarpMav13,HarpMav14,HarpMav15
+---> HarpMav16,Grant1,Grant2,Grant3,Grant4,Grant5,Grant6,Grant7,Grant8
+---> Grant9,Grant10,Grant11,Grant12,Grant13,Grant14,Grant15,Grant16,GrantG1
+---> GrantG2,GrantG3,GrantG4,GrantG5,GrantG6,GrantG7,GrantG8,GrantG9
+---> GrantG10,GrantG11,GrantG12,GrantG13,GrantG14,GrantG15,GrantG16,Horna1
+---> Horna2,Horna3,Horna4,Horna5,Horna6,Horna7,Horna8,Horna9,Horna10,Horna11
+---> Horna12,Horna13,Horna14,Horna15,Horna16
+---> Majerle1
+---> Majerle2,Majerle3,Majerle4,Majerle5,Majerle6,Majerle7,Majerle8,Majerle9
+---> Majerle10,Majerle11,Majerle12,Majerle13,Majerle14,Majerle15,Majerle16
+---> Manning1,Manning2,Manning3,Manning4,Manning5,Manning6,Manning7,Manning8
+---> Manning9,Manning10,Manning11,Manning12,Manning13,Manning14,Manning15
+---> Manning16
+HDS4.IMG
+---> Miller1,Miller2,Miller3,Miller4,Miller5,Miller6,Miller7
+---> Miller8,Miller9,Miller10,Miller11,Miller12,Miller13,Miller14,Miller15
+---> Miller16,Mutumbo1,Mutumbo2,Mutumbo3,Mutumbo4,Mutumbo5,Mutumbo6,Mutumbo7
+---> Mutumbo8,Mutumbo9,Mutumbo10,Mutumbo11,Mutumbo12,Mutumbo13,Mutumbo14
+---> Mutumbo15,Mutumbo16,Oakley1,Oakley2,Oakley3,Oakley4,Oakley5,Oakley6
+---> Oakley7,Oakley8,Oakley9,Oakley10,Oakley11,Oakley12,Oakley13,Oakley14
+---> Oakley15,Oakley16,Hakeem1,Hakeem2,Hakeem3,Hakeem4,Hakeem5,Hakeem6
+---> Hakeem7,Hakeem8,Hakeem9,Hakeem10,Hakeem11,Hakeem12,Hakeem13,Hakeem14
+---> Hakeem15,Hakeem16
+---> Porter1,Porter2,Porter3,Porter4,Porter5,Porter6,Porter7,Porter8,Porter9
+---> Porter10,Porter11,Porter12,Porter13,Porter14,Porter15,Porter16,Price1
+---> Price2,Price3,Price4,Price5,Price6,Price7,Price8,Price9,Price10,Price11
+---> Price12,Price13,Price14,Price15,Price16,Rice1,Rice2,Rice3,Rice4,Rice5
+---> Rice6,Rice7,Rice8,Rice9,Rice10,Rice11,Rice12,Rice13,Rice14,Rice15
+---> Rice16,Robins1,Robins2,Robins3,Robins4,Robins5,Robins6,Robins7,Robins8
+---> Robins9,Robins10,Robins11,Robins12,Robins13,Robins14,Robins15,Robins16
+HDS5.IMG
+---> schremp1,schremp2
+---> schremp3,schremp4,schremp5,schremp6,schremp7,schremp8,schremp9
+---> schremp10,schremp11,schremp12,schremp13,schremp14,schremp15,schremp16
+---> skiles1,skiles2,skiles3,skiles4,skiles5,skiles6,skiles7,skiles8,skiles9
+---> skiles10,skiles11,skiles12,skiles13,skiles14,skiles15,skiles16
+---> smith1,smith2,smith3,smith4
+---> smith5,smith6,smith7,smith8,smith9,smith10,smith11,smith12,smith13
+---> smith14,smith15,smith16,thomas1,thomas2,thomas3,thomas4,thomas5,thomas6
+---> thomas7,thomas8,thomas9,thomas10,thomas11,thomas12,thomas13,thomas14
+---> thomas15,thomas16,tisdale1,tisdale2,tisdale3,tisdale4,tisdale5,tisdale6
+---> tisdale7,tisdale8,tisdale9,tisdale10,tisdale11,tisdale12,tisdale13
+---> tisdale14,tisdale15,tisdale16,webb1,webb2,webb3,webb4,webb5,webb6,webb7
+---> webb8,webb9,webb10,webb11,webb12,webb13,webb14,webb15,webb16,worthy1
+---> worthy2,worthy3,worthy4,worthy5,worthy6,worthy7,worthy8,worthy9
+---> worthy10,worthy11,worthy12,worthy13,worthy14,worthy15,worthy16
+---> laet1,laet2,laet3,laet4,laet5,laet6,laet7,laet8,laet9,laet10
+---> laet11,laet12,laet13,laet14,laet15,laet16,hawkins1,hawkins2,hawkins3
+---> hawkins4,hawkins5,hawkins6,hawkins7,hawkins8,hawkins9,hawkins10
+---> hawkins11,hawkins12,hawkins13,hawkins14,hawkins15,hawkins16,johnson1
+---> johnson2,johnson3,johnson4,johnson5,johnson6,johnson7,johnson8,johnson9
+---> johnson10,johnson11,johnson12,johnson13,johnson14,johnson15,johnson16
+---> divac1,divac2,divac3,divac4,divac5,divac6,divac7,divac8,divac9,divac10
+---> divac11,divac12,divac13,divac14,divac15,divac16
+HDS6.IMG
+---> kemp1,kemp2,kemp3,kemp4,kemp5,kemp6,kemp7,kemp8,kemp9
+---> kemp10,kemp11,kemp12,kemp13,kemp14,kemp15,kemp16
+---> pippin1,pippin2,pippin3,pippin4,pippin5,pippin6,pippin7,pippin8,pippin9
+---> pippin10,pippin11,pippin12,pippin13,pippin14,pippin15,pippin16,gill1
+---> gill2,gill3,gill4,gill5,gill6,gill7,gill8,gill9,gill10,gill11,gill12
+---> gill13,gill14,gill15,gill16,daug1,daug2,daug3,daug4,daug5,daug6,daug7
+---> daug8,daug9,daug10,daug11,daug12,daug13,daug14,daug15,daug16,mullin1
+---> mullin2,mullin3,mullin4,mullin5,mullin6,mullin7,mullin8,mullin9
+---> mullin10,mullin11,mullin12,mullin13,mullin14,mullin15,mullin16,wilkens1
+---> wilkens2,wilkens3,wilkens4,wilkens5,wilkens6,wilkens7,wilkens8,wilkens9
+---> wilkens10,wilkens11,wilkens12,wilkens13,wilkens14,wilkens15,wilkens16
+ASM> PLYRHD2.TBL
+HDS7.IMG
+---> Lohaus2,Lohaus3,Lohaus4,Lohaus5,Lohaus6,Lohaus7,Lohaus8,Lohaus9,Lohaus1
+---> Lohaus10,Lohaus11,Lohaus12,Lohaus13,Lohaus14,Lohaus15,Lohaus16
+---> edwrd1,edwrd2,edwrd3,edwrd4,edwrd5
+---> edwrd6,edwrd7,edwrd13,edwrd9,edwrd10,edwrd11,edwrd12,edwrd8,edwrd14
+---> edwrd15,edwrd16,gug1,gug2,gug3,gug4,gug5,gug6,gug7,gug8,gug9,gug10
+---> gug11,gug12,gug13,gug14,gug15,gug16
+;,iuz1,iuz2,iuz3,iuz4,iuz5,iuz6,iuz7
+;---> iuz8,iuz9,iuz10,iuz11,iuz12,iuz13,iuz14,iuz15,iuz16
+XOF>
+;
+ASM> IMGTBL.ASM
+BALL.IMG
+---> shadow1,shadow2,shadow3,shadow4,shadow5,shadow6
+---> shadow7,shadow8,shadow9,shadow10,shadow11
+---> ball11,shadow12,shadow13,shadow14,shadow15,ballshad5
+;
+IHDR SIZX:W,SIZY:W,ANIX:W,ANIY:W,SAG:L,CTRL:W,PAL:L,PWRD1:W,PWRD2:W,PWRD3:W,PT0X:W,PT2X:W,PT2Y:W,PT3X:W,PT3Y:W,PT5X:W
+WST.IMG
+ASM> STAND.TBL
+---> W1ST1,W1ST2,W1ST3,W1ST4,W1ST5
+---> W2ST1,W2ST2,W2ST3,W2ST4,W2ST5
+---> W3ST1,W3ST2,W3ST3,W3ST4,W3ST5
+---> W4ST1,W4ST2,W4ST3,W4ST4,W4ST5
+---> W5ST1,W5ST2,W5ST3,W5ST4,W5ST5
+;
+IHDR SIZX:W,SIZY:W,ANIX:W,ANIY:W,SAG:L,CTRL:W,PAL:L,PWRD1:W,PWRD2:W,PWRD3:W,PT0X:W
+ASM> IMGTBL.ASM
+REFTIP.IMG
+---> reftip1,reftip10,reftip11,reftip12,reftip13,reftip14,reftip15,reftip16
+---> reftip2,reftip3,reftip4,reftip5,reftip6,reftip7,reftip8,reftip9,refbk1
+---> refbk2,refbk3,refbk4,refbk5,refbk6,refbk7,refbk8,refsqt5,refsqt4
+IHDR SIZX:W,SIZY:W,ANIX:W,ANIY:W,SAG:L,CTRL:W,PAL:L
+;
+PON>
+;
+ASM> IMGTBL.ASM
+BALLTIME.IMG
+---> t0000,tx000,txx00,txxx0
+---> txxxx,t1000,t1100,t1110
+---> t1111,tx100,tx110,tx111
+---> txx10,txx11,txxx1
+TVSCORE.IMG
+---> BERAN,BOON,BOOTY,MARTINEZ,PENACHO
+---> DABEL,VOGEL
+---> DAVIS
+---> GENTILE
+---> HEITSCH
+---> KINKEAD
+---> LINHOFF,LOWES
+---> MACIKA,MEDNICK
+---> PONTAREL
+---> SHARPE,DAVIES
+---> TOBIAS,TSUI
+---> LASKO,GRANN,FORD,JARVIS,HAEGER
+---> GREEN,DILLON,KAM,DEAL,LOFFRE,BARKER,COX,RAIDEN,REAPER,KONGO,ELVIS
+---> HOSK,OLIV,SCORP,REPT,SUBZ
+---> COMAN,GAY
+;
+---> PETRO,NEWCOMER,OURSLER
+---> MORRIS,SIMPSON,JSKILES
+;---> HOWARD
+;---> SCOTT
+---> HEY
+---> CARLTON
+---> GOSKIE
+---> DIVITA
+---> TURMELL
+---> RIVETT
+---> LIPTAK
+---> DoubleOT,TripleOT,endof1,endof3,endof4,halftime
+---> shotclok,quarter,start,insert,colon,cpu,timerlow
+---> one,two,three,four,freeply,crplate,crplate2
+---> credit,scorebox,qrtr1,qrtr2,qrtr3,qrtr4
+---> AUGMON,BARKLEY,BENJAMIN,COLEMAN
+---> DAUGHRTY,EDWARDS,DREXLER,ELLIOT
+---> LELLIS,GUGLI,EWING,GILL
+---> GRANT_HC,GRANT_HV,THARDAWAY,HARPER_D
+---> HARPER_R,HAWKINS,HORNACEK
+;,IUZZ
+---> JOHNSN_L,DIVAC,KEMP,LAETNER,AHARDAWAY
+---> MAJERLE,MALONE_K,LOHAUS
+---> MANNING,MILLER,MULLIN,MUTUMBO
+---> OAKLEY,OLAJUWON,ONEAL
+---> PERSON,PIPPEN,PORTER
+---> PRICE,RICE,DROBINSON
+---> SCHREMPF,SEIKALY,SKILES,SMITH
+---> STOCKTON,THOMAS,TISDALE,WEBB,KANDERSON,NANDERSON
+---> WILKINS,WORTHY,KJOHNSON,CROBINSON,DELLIS
+;,MAGIC
+---> bbal,bbal_w,tocontrol
+---> METERg,LITUPg
+---> METERr,LITUPr
+---> METERy,LITUPy
+---> METERb,LITUPb
+COF>
+---> font60,font61,font62,font63,font64,font65,font66,font67,font68,font69
+---> clock,clock2,font90,font60w,font60r,font60g,font6?
+---> font91,font92,font93,font94
+---> font95,font96,font97,font98
+---> font99
+---> metal1,overtime,final,font90r,metal2
+---> S_LED_0,S_LED_1,S_LED_2,S_LED_3,S_LED_4,S_LED_5,S_LED_6,S_LED_7,S_LED_8
+---> S_LED_9,S_LED_MAX
+---> BigLED_0,BigLED_1,BigLED_2,BigLED_3,BigLED_4,BigLED_5
+---> BigLED_6,BigLED_7,BigLED_8,BigLED_9
+---> please
+CON>
+---> S_LED_0r
+TVSCORE2.IMG
+---> MCDAN,WILLIS,BROWN,GAMBLE,MOURN,ARMSTR,KUKOC,NANCE,JACK,MASH,ROGERS
+---> DUMARS,RODMAN,HUNTER,WEBBER,MAXWELL,HORRY,SMITS,SEALY,ROBERTS,PEELER
+---> CAMPBELL,MINER,BAKER,DAY,RIDER,CMORRIS,MASON,STARKS,WEATH
+---> BRAD,SIMM,HURL,RICH,MCKEY,PAYTON,BENOIT,ELLISON
+---> CHEANEY
+FONT6.IMG
+COF>
+---> font6_A,font6_B,font6_C,font6_D,font6_E,font6_F,font6_G,font6_H,font6_I
+---> font6_J,font6_K,font6_L,font6_M,font6_N,font6_O,font6_P,font6_Q,font6_R
+---> font6_S,font6_T,font6_U,font6_V,font6_W,font6_X,font6_Y,font6_Z,font6_EXP
+CON>
+;
+SPARKS.IMG
+ASM> IMGTBL.ASM
+---> spark2,spark3,spark4,spark5,spark1
+HOOP.IMG
+---> back2,back3,back4,back5,back6
+---> rim1f,rim1b,rim2f,rim2b,rim3f,rim3b,rimbase,rim4f,rim4b
+---> hoopbot,hooptop
+---> swish1b,swish1f,swish2b,swish2f,swish3b,swish3f,swish4b,swish4f,swish5b
+---> swish5f,farshot1b,farshot1f,farshot2b,farshot2f,farshot3b,farshot3f
+---> farshot4b,farshot4f
+---> bbord_1,bbord_2,bbord_3,bbord_4,bbord_5,bbord_6,bbord_7,bbord_8,bbord_9
+---> bbord_10,bturn_1,bturn_2,bturn_3,bturn_4,bturn_5,shard1_1,shard1_2
+---> shard1_3,shard1_4,shard1_5,shard1_6,shard1_7,shard1_8,shard2_1,shard2_2
+---> shard2_3,shard2_4,shard2_5,shard2_6,shard2_7,shard2_8,shard3_1,shard3_2
+---> shard3_3,shard3_4,shard3_5,shard3_6,shard3_7,shard3_8,shard3_9
+---> shard3_10,shard3_11,shard3_12,shard4_1,shard4_2,shard4_3,shard4_4
+---> shard4_5,shard4_6,shard4_7,shard4_8,shard4_9,shard4_10,shard5_1
+---> shard5_2,shard5_3,shard5_4,shard5_5,shard5_6,shard5_7,shard5_8,shard6_1
+---> shard6_2,shard6_3,shard6_4,shard6_5,shard6_6,shard6_7,shard6_8,shard7_1
+---> shard7_2,shard7_3,shard7_4,shard7_5,shard7_6,shard7_7,shard7_8,shard7_9
+---> shard7_10,shard8_1,shard8_2,shard8_3,shard8_4,shard8_5,shard8_6
+---> shard8_7,shard8_8,shard8_9,shard8_10
+---> shat1_1
+---> shat1_2,shat1_3,shat1_4,shat1_5,shat2_1,shat2_2,shat2_3,shat2_4,shat2_5
+---> shat3_1,shat3_2,shat3_3,shat3_4,shat3_5,shat4_1,shat4_2,shat4_3,shat4_4
+---> shat4_5
+---> rimbndF_1,rimbndF_2,rimbndF_3,rimbndF_4,rimbndF_5,rimbndF_6,rimbndF_7
+---> rimbndF_8,rimbndF_9,rimbndF_10,rimbndF_11,rimbndF_12,rimbndF_13
+---> rimbndF_14,rimbndF_15,rimbndF_16,rimbndF_17,rimbndB_1,rimbndB_2
+---> rimbndB_3,rimbndB_4,rimbndB_5,rimbndB_6,rimbndB_7,rimbndB_8,rimbndB_9
+---> rimbndB_10,rimbndB_11,rimbndB_12,rimbndB_13,rimbndB_14,rimbndB_15
+---> rimbndB_16,rimbndB_17
+---> firimB_1,firimB_2,firimB_3,firimB_4,firimB_5
+---> firimB_6,firimB_7,firimB_8,firimB_9,firimB_10,firimF_1,firimF_2
+---> firimF_3,firimF_4,firimF_5,firimF_6,firimF_7,firimF_8,firimF_9
+---> firimF_10,firimB_11,firimF_11,firimF_12,firimF_13,firimF_14,firimF_15
+---> firimF_16,firimF_17,firimB_bnd,firimF_bnd
+;
+TVTEXT.IMG
+---> BirthM_B
+---> Stats_B
+---> INITIALS_B
+---> BirthD_B
+---> PRESSBUTT
+---> PRESSTURB
+---> selectbox
+---> CENTERBAR
+---> TopTenred,TopTengrn
+---> TopTenorg,TopTengld
+---> start3,insert3,freplay3
+---> join3
+---> INITIALS,BirthM,BirthD,Stats
+---> start2,insert2,freeplay
+---> yesnobak
+---> FulGamered,FulGameorg
+---> FulGamegrn,FulGamegld,rosterblu,rosterred,fatalred,fatalblu,swapblu
+---> swapred
+;
+OSGEMD.IMG
+PON>
+---> _4playbx,_4playline,useupbx
+---> OSGEMD_AND
+---> OSGEMD_A,OSGEMD_B,OSGEMD_C,OSGEMD_D
+---> OSGEMD_E,OSGEMD_F,OSGEMD_G,OSGEMD_H
+---> OSGEMD_I,OSGEMD_J,OSGEMD_K,OSGEMD_L
+---> OSGEMD_M,OSGEMD_N,OSGEMD_O,OSGEMD_P
+---> OSGEMD_Q,OSGEMD_R,OSGEMD_S,OSGEMD_T
+---> OSGEMD_U,OSGEMD_V,OSGEMD_W,OSGEMD_X
+---> OSGEMD_Y,OSGEMD_Z
+---> OSGEMD_EXP
+---> OSGEMD_DAS
+---> OSGEMD_DEL
+---> OSGEMD_DOT
+---> OSGEMD_DOL
+---> OSGEMD_SLS
+---> OSGEMD_APO
+;MJT
+---> OSGEMD_COM
+;
+---> OSGEMD_QUE
+---> growbox
+---> OSGEMD_BAK
+---> OSGEMD_SPC
+---> OSGEMD_END
+---> OSGEMD_COL
+---> OSGEMD_OBR,OSGEMD_CBR,OSGEMD_NUM
+---> OSGEMD_0,OSGEMD_1,OSGEMD_2,OSGEMD_3,OSGEMD_4,OSGEMD_5
+---> OSGEMD_6,OSGEMD_7,OSGEMD_8,OSGEMD_9
+---> MD_JAN,MD_FEB,MD_MAR,MD_APR,MD_MAY,MD_JUN
+---> MD_JUL,MD_AUG,MD_SEP,MD_OCT,MD_NOV,MD_DEC
+---> OSGENM_1,OSGENM_2,OSGENM_3,OSGENM_4
+---> OSGENM_5,OSGENM_6,OSGENM_7,OSGENM_8
+---> OSGENM_9,OSGENM_10,OSGENM_11,OSGENM_12
+---> OSGENM_13,OSGENM_14,OSGENM_15,OSGENM_16
+---> OSGENM_17,OSGENM_18,OSGENM_19,OSGENM_20
+---> OSGENM_21,OSGENM_22,OSGENM_23,OSGENM_24
+---> OSGENM_25,OSGENM_26,OSGENM_27,OSGENM_28
+---> OSGENM_29,OSGENM_30,OSGENM_31
+;
+LOGOS.IMG
+ZON>
+PON>
+---> T_BULLS,T_HAWKS,T_NUGS,T_BLAZ
+---> T_SONICS,T_76RS,T_SUNS,T_SPURS
+---> T_MAGIC,T_PACER,T_CAVS,T_BUCKS
+---> T_HEAT,T_CLIPS,T_BULTS,T_WARS
+---> T_HORS,T_PISS,T_LAKS,T_TWOLV
+---> T_CELTS,T_JAZZ,T_KINGS,T_NETS
+---> T_MAVS,T_ROCKS,T_KNIKS
+ZOF>
+;
+CITIES.IMG
+PON>
+---> cities1,cities2
+---> cities3,cities4
+---> C_PORT,C_LA,C_LALaks,C_LAClips
+---> C_PHX,C_GOLD,C_SEA,C_SAC
+---> C_HOU,C_SAN,C_UTAH,C_DAL
+---> C_MINN,C_DEN,C_CHIC,C_DET
+---> C_IND,C_CLEV,C_MILW,C_ATL
+---> C_CHAR,C_PHIL,C_BOST,C_NY
+---> C_NJ,C_WASH,C_ORL,C_MIAMI
+---> C_PORT_O,C_LALaks_O,C_LAClips_O
+---> C_PHX_O,C_GOLD_O,C_SEA_O,C_SAC_O
+---> C_HOU_O,C_SAN_O,C_UTAH_O,C_DAL_O
+---> C_MINN_O,C_DEN_O,C_CHIC_O,C_DET_O
+---> C_IND_O,C_CLEV_O,C_MILW_O,C_ATL_O
+---> C_CHAR_O,C_PHIL_O,C_BOST_O,C_NY_O
+---> C_NJ_O,C_WASH_O,C_ORL_O,C_MIAMI_O
+LGMD.IMG
+---> lgmd_A,lgmd_B,lgmd_C,lgmd_D
+---> lgmd_E,lgmd_F,lgmd_G,lgmd_H
+---> lgmd_I,lgmd_J,lgmd_K,lgmd_L
+---> lgmd_M,lgmd_N,lgmd_O,lgmd_P
+---> lgmd_Q,lgmd_R,lgmd_S,lgmd_T
+---> lgmd_U,lgmd_V,lgmd_W,lgmd_X
+---> lgmd_Y,lgmd_Z
+---> lgmd_0,lgmd_1,lgmd_2,lgmd_3
+---> lgmd_4,lgmd_5,lgmd_6,lgmd_7
+---> lgmd_8,lgmd_9
+---> lgmd_DOT
+---> lgmd_EXP
+---> lgmd_COL
+---> lgmd_NUM
+---> omlgmd_A,omlgmd_B,omlgmd_C,omlgmd_D
+---> omlgmd_E,omlgmd_F,omlgmd_G,omlgmd_H
+---> omlgmd_I,omlgmd_J,omlgmd_K,omlgmd_L
+---> omlgmd_M,omlgmd_N,omlgmd_O,omlgmd_P
+---> omlgmd_Q,omlgmd_R,omlgmd_S,omlgmd_T
+---> omlgmd_U,omlgmd_V,omlgmd_W,omlgmd_X
+---> omlgmd_Y,omlgmd_Z
+---> omlgmd_EXP,omlgmd_DOT
+STATSTXT.IMG
+---> scorshad1,scorshad2,ATT_BLU
+---> stx_rank,stx_pct,stx_w,stx_l
+---> stx_lastmtch,stx_defeated,stx_lostto
+---> stx_youhave,stx_ofthe27,stx_nbateams
+---> stx_all,stx_norecord,stx_record
+---> credbox
+---> stx_fgs,stx_3pts,stx_atline,stx_points
+---> stx_dunks,stx_ast,stx_steals,stx_blocks
+---> stx_rebs,stx_injury
+COF>
+---> stshad1,stshad2
+CON>
+;
+SGMD8.IMG
+---> SGMD8_A,SGMD8_B,SGMD8_C,SGMD8_D
+---> SGMD8_E,SGMD8_F,SGMD8_G,SGMD8_H
+---> SGMD8_I,SGMD8_J,SGMD8_K,SGMD8_L
+---> SGMD8_M,SGMD8_N,SGMD8_O,SGMD8_P
+---> SGMD8_Q,SGMD8_R,SGMD8_S,SGMD8_T
+---> SGMD8_U,SGMD8_V,SGMD8_W,SGMD8_X
+---> SGMD8_Y,SGMD8_Z
+---> SGMD8_0,SGMD8_1,SGMD8_2,SGMD8_3
+---> SGMD8_4,SGMD8_5,SGMD8_6,SGMD8_7
+---> SGMD8_8,SGMD8_9,SGMD8_DOT
+---> SGMD8_DAS,SGMD8_EXP
+---> SGMD8_NUM,SGMD8_COM
+---> SGMD8_OBR,SGMD8_CBR
+---> SGMD8_COL,SGMD8_AND
+---> SGMD8_APO,SGMD8_SLS,SGMD8_PCT
+---> plyr1,plyr2,plyr3,plyr4,threepnts,nosecrets
+---> osgmd8_A,osgmd8_B,osgmd8_C,osgmd8_D
+---> osgmd8_E,osgmd8_F,osgmd8_G,osgmd8_H
+---> osgmd8_I,osgmd8_J,osgmd8_K,osgmd8_L
+---> osgmd8_M,osgmd8_N,osgmd8_O,osgmd8_P
+---> osgmd8_Q,osgmd8_R,osgmd8_S,osgmd8_T
+---> osgmd8_U,osgmd8_V,osgmd8_W,osgmd8_X
+---> osgmd8_Y,osgmd8_Z
+---> osgmd8_0,osgmd8_1,osgmd8_2,osgmd8_3
+---> osgmd8_4,osgmd8_5,osgmd8_6,osgmd8_7
+---> osgmd8_8,osgmd8_9,osgmd8_DOT
+---> osgmd8_DAS,osgmd8_EXP
+---> osgmd8_NUM,osgmd8_COM
+---> osgmd8_OBR,osgmd8_CBR
+---> osgmd8_COL,osgmd8_AND
+---> osgmd8_APO,osgmd8_SLS,osgmd8_PCT
+;
+OGMD10.IMG
+COF>
+---> getready,_1quart,continue
+---> _2quart,_3quart
+---> _4quart,overtme
+---> congrats_l,winstay_l,chalneed_l,chalacc_l,winfree
+---> TMATE
+---> CHALENG
+---> osgmd10_A,osgmd10_B,osgmd10_C,osgmd10_D
+---> osgmd10_E,osgmd10_F,osgmd10_G,osgmd10_H
+---> osgmd10_I,osgmd10_J,osgmd10_K,osgmd10_L
+---> osgmd10_M,osgmd10_N,osgmd10_O,osgmd10_P
+---> osgmd10_Q,osgmd10_R,osgmd10_S,osgmd10_T
+---> osgmd10_U,osgmd10_V,osgmd10_W,osgmd10_X
+---> osgmd10_Y,osgmd10_Z,osgmd10_0,osgmd10_1
+---> osgmd10_2,osgmd10_3,osgmd10_4,osgmd10_5
+---> osgmd10_6,osgmd10_7,osgmd10_8,osgmd10_9
+---> osgmd10_PCT,osgmd10_EXP,osgmd10_OBR
+---> osgmd10_CBR,osgmd10_QUE,osgmd10_COM,osgmd10_DOT
+---> osgmd10_COL,osgmd10_DAS,osgmd10_NUM,osgmd10_AND
+---> osgmd10_SLS,osgmd10_DOL,osgmd10_APO
+CON>
+INFOWIN.IMG
+---> dronetxt,firstwin,colormessage,joycontrol,red,blue,green,yellow
+---> message1,message2,message3,message4,message5,message6,message7
+---> message9,message2a
+---> infobox,infoboxy,infoboxr
+;
+IHDR SIZX:W,SIZY:W,ANIX:W,ANIY:W,SAG:L,CTRL:W,PAL:L
+ARROWS.IMG
+ASM> ARROW.TBL
+---> arrow1l,arrow1r,arrow2l,arrow2r,arrow3l,arrow3r,arrow4l,arrow4r
+---> arrow1t,arrow2t,arrow3t,arrow4t
+---> arrow1t2
+;
+---> arrow1l2p,arrow1r2p,arrow2l2p,arrow2r2p
+---> arrow1t2p,arrow2t2p
+;
+CITNAMES.IMG
+ASM> CITY.TBL
+---> ATL,BOST,CHAR,CHI,CLEV,DAL,DEN,DET,GOLDN,HOU,IND
+---> LA_CLIP,LA_LAKS
+---> MIAMI,MILW,MINN,NJ,NY,ORL,PHIL,PHX,PORT,SAC,SANANT,SEA,UTAH,WASH
+---> SMD16_0,SMD16_1,SMD16_2,SMD16_3,SMD16_4,SMD16_5,SMD16_6,SMD16_7,SMD16_8
+---> SMD16_9,SMD16_9r
+;
+ASM> IMGTBL.ASM
+;TITLE.IMG
+;---> SUBLOGO
+;NBALGO.IMG
+;---> nbalogo
+ZON>
+TROPHY.IMG
+---> TROPHYD1
+ZOF>
+;OURHDS.IMG
+;---> TON_GOS,SHA_LIP,MRK_TUR
+;---> JAM_RIV,JON_CAR,JON_HEY,SAL_DIV
+XPLOSION.IMG
+PON>
+---> CLD1A
+---> CLDB1
+---> CLDB1YELL
+---> CLDB1WHT,CLDB1ORNG,CLDB1LGRY,CLDB1GRN,CLDB1PURP
+POF>
+---> CLD2,CLD3,CLD4,CLD4A,CLD4B,CLD5,CLD6,CLD7,CLD8,CLD9,CLD10,CLD11
+---> CLDB2,CLDB3,CLDB4
+ASM> IMGTBL.ASM
+NSCRN2.IMG
+PON>
+---> t_plateV
+;
+;        || ;THESE ARE CHARACTERS TO MAKE DIFFERENT!
+ASM> IMGTBL.ASM
+GLO> BGNDTBL.GLO
+BBB> HISCORE
+BBB> EMPTYJAM
+BBB> YESNO
+BBB> SELBACK
+BBB> TEAMSEL
+BBB> MATCHBAK
+BBB> STATSCRN
+BBB> NEWTITLE
+;BBB> TTITLE
+BBB> CONGRATS
+BBB> LADDER2
+;BBB> LOVEGM
+BBB> CHRVIC
+BBB> SELBACKK
+BBB> SUBST
+BBB> VIEWHP
+BBB> blankjam
+GLO> IMGTBL.GLO
+PON>
+TSMLOGO.IMG
+---> TSMLOGO
+---> TSMLOGO2
+FLASH.IMG
+PON>
+---> flash1,flash4
+POF>
+---> flash3,flash3a,flash5,flash6,flash2
+

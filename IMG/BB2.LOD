@@ -1,0 +1,93 @@
+***> 3eda390,1
+;
+POF>
+COF>
+XOF>
+ZOF>
+;
+IHDR SIZX:W,SIZY:W,ANIX:W,ANIY:W,SAG:L,CTRL:W
+;
+ASM> CROWD.TBL
+;
+nbacrowd.img
+;---> COACH02,COACH03,COACH04,COACH05,COACH06
+;---> BNCHPL02,BNCHPL03
+;,BNCHPL04,BNCHPL05,BNCHPL06,BNCHPL07
+---> CR4THD02,CR4THD03,CR4THD04,CR4THD05
+;,CR4THD06,CR4THD07
+;
+ASM> PLAQUES.TBL
+;
+tvtext.img
+---> BST_DEFred,BST_STKred,BST_RNKred,BST_OFFred
+;
+PON>
+;
+IHDR SIZX:W,SIZY:W,ANIX:W,ANIY:W,SAG:L,CTRL:W,PAL:L,PWRD1:W,PWRD2:W,PWRD3:W,PT0X:W,PT2X:W,PT2Y:W,PT3X:W,PT3Y:W,PT5X:W
+;
+ASM> PLYRSEQ.TBL
+GLO> PLYRSEQ.GLO
+;
+nba_pas1.img
+---> w1cp1,w1cp2,w1cp3,w1cp4
+---> w1cp5,w1cp6,w2cp1,w2cp2,w2cp3,w2cp4,w2cp5,w2cp6,w3cp1,w3cp2,w3cp3,w3cp4
+---> w3cp5,w3cp6,w4cp1,w4cp2,w4cp3,w4cp4,w4cp5,w4cp6,w5cp1,w5cp2,w5cp3,w5cp4
+---> w5cp5,w5cp6
+---> w1ohp1,w1ohp2,w1ohp3,w1ohp4,w1ohp5,w1ohp6,w1ohp7,w1ohp8
+---> w1ohp9,w1ohp10,w1ohp11
+---> w2ohp1,w2ohp2,w2ohp3,w2ohp4,w2ohp5,w2ohp6,w2ohp7
+---> w2ohp8,w2ohp9,w2ohp10,w2ohp11,w3ohp1,w3ohp2,w3ohp3,w3ohp4,w3ohp5,w3ohp6
+---> w3ohp7,w3ohp8,w3ohp9,w3ohp10,w3ohp11,w4ohp1,w4ohp2,w4ohp3,w4ohp4,w4ohp5
+---> w4ohp6,w4ohp7,w4ohp8,w4ohp9,w4ohp10,w4ohp11
+---> w5ohp1,w5ohp2,w5ohp3,w5ohp4
+---> w5ohp5,w5ohp6,w5ohp7,w5ohp8,w5ohp9,w5ohp10,w5ohp11
+;
+nba_msc2.img
+---> w1push1,w1push2,w1push3
+---> w1push4,w1push5,w1push6,w1push7,w1push8,w1push9,w1push10,w1push11
+---> w2push1,w2push2,w2push3,w2push4,w2push5,w2push6,w2push7,w2push8,w2push9
+---> w2push10,w2push11,w3push1,w3push2,w3push3,w3push4,w3push5,w3push6
+---> w3push7,w3push8,w3push9,w3push10,w3push11,w4push1,w4push2,w4push3
+---> w4push4,w4push5,w4push6,w4push7,w4push8,w4push9,w4push10,w4push11
+---> w5push1,w5push2,w5push3,w5push4,w5push5,w5push6,w5push7,w5push8,w5push9
+---> w5push10,w5push11
+;
+nba_def1.img
+---> T1SWPE1,T1SWPE2,T1SWPE3,T1SWPE4
+---> T1SWPE5
+---> T1SWPE6,T1SWPE7,T1SWPE8,T1SWPE9,T1SWPE10
+---> T1SWPE11,T1SWPE12,T2SWPE1,T2SWPE2
+---> T2SWPE3
+---> T2SWPE4,T2SWPE5
+---> T2SWPE6,T2SWPE7,T2SWPE8,T2SWPE9,T2SWPE10,T2SWPE11,T2SWPE12,T3SWPE1
+---> T3SWPE2,T3SWPE3,T3SWPE4
+---> T3SWPE5
+---> T3SWPE6,T3SWPE7,T3SWPE8
+---> T3SWPE9,T3SWPE10,T3SWPE11,T3SWPE12,T4SWPE1,T4SWPE2,T4SWPE3,T4SWPE4
+---> T4SWPE6
+---> T4SWPE5,T4SWPE7,T4SWPE8,T4SWPE9,T4SWPE10,T4SWPE11
+---> T4SWPE12,T5SWPE1,T5SWPE2,T5SWPE3,T5SWPE4,T5SWPE6
+---> T5SWPE5
+---> T5SWPE7,T5SWPE8,T5SWPE9,T5SWPE10,T5SWPE11,T5SWPE12
+;
+nba_def3.img
+---> w1reb5,w1reb7,w1reb8,w1reb9,w1reb10
+---> w2reb1,w2reb2,w2reb3,w2reb5,w2reb6,w2reb7,w2reb8,w2reb9,w2reb10
+;---> w3reb1,w3reb2,w3reb3,w3reb4,w3reb5,w3reb6,w3reb7,w3reb8,w3reb9,w3reb10
+---> w4reb4,w4reb5,w4reb7,w4reb8,w4reb9,w4reb10
+---> w5reb5,w5reb7,w5reb8,w5reb9
+---> w1blokl1,w1blokl2,w1blokl3,w1blokl4
+---> w2blokl1,w2blokl2,w2blokl3,w2blokl4
+---> w3blokl1,w3blokl2,w3blokl3,w3blokl4
+---> w4blokl1,w4blokl2,w4blokl3,w4blokl4
+---> w5blokl1,w5blokl2,w5blokl3,w5blokl4
+;
+nba_def4.img
+---> w1rej1,w1rej2,w1rej3
+---> w1rej4,w1rej5,w1rej6,w1rej7,w1rej8,w1rej9,w1rej10,w1rej11,w2rej1,w2rej2
+---> w2rej3,w2rej4,w2rej5,w2rej6,w2rej7,w2rej8,w2rej9,w2rej10,w2rej11
+;,w3rej1
+;---> w3rej2,w3rej3,w3rej4,w3rej5,w3rej6,w3rej7,w3rej8,w3rej9,w3rej10,w3rej11
+---> w4rej1,w4rej2,w4rej3,w4rej4,w4rej5
+---> w4rej6,w4rej7,w4rej8,w4rej9,w4rej10
+---> w4rej11

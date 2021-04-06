@@ -1,0 +1,115 @@
+*.Last mod - 11/30/93 20:20
+*.Last mod - 4/11/95 3:07
+	.globl	OFREE,OBJLST,BAKLST,DISPLAYON,SCRNRELV
+	.globl	GETOBJ,INSOBJ,DELOBJ,DELOBJA8
+	.globl	DISPLAY,OBJSTR
+	.globl	ANI,SCRTST,SCRTSTG,GANIOF,DELBOBJ
+	.globl	INSBOBJ,KILBOBJ
+	.globl	PULLBOBJ,PULLOBJ,GANISAG
+	.globl	QDMA,QDMAN,GETANIXY
+	.globl	obj_addworldxy
+	.globl	SCROLLX,SCROLLY,WORLDTLX,WORLDTLY,WORLDTL
+	.globl	SCRNTL,SCRNLR,GSCRNREL,ADJNEWTL
+	.globl	OBJSTR,SCREENTL,SCREENLR,DMAQCUR
+	.globl	dpage,dtype
+	.globl	dmaq0cnt,dmaq1cnt,dmaq0flg,dmaq1flg
+	.globl	dmaq0,dmaq1
+	.globl	STOPOBJS
+	.globl	FREEOBJ,EXISTOBJ
+	.globl	ISOBJ
+	.globl	BEGINOBJ,BEGINOBJ2
+	.globl	BEGINOBJP,BEGINOBJP2
+	.globl	obj_delc,obj_del1c,obj_aniq,obj_aniq_cnoff
+	.globl	obj_aniq_scld
+	.globl	DELOBJDIE,FRQDELDIE
+	.globl	scrn_scaleininit,scrn_scalein,scrn_scaleout
+	.globl	display_blank,display_unblank
+	.globl	display_2dsclmodeon,display_2dsclstarmodeon
+
+*CONSTANTS
+
+SCRNXP	.equ	56		;Left X padding in bitmap
+SCRNST	.equ	[0,-32]		;Top left of screen
+SCRNEND .equ	[254,432]	;Bottom right of screen
+SCRNMID	.equ	[128,200]	;Midpoint of screen
+PAGE1YO	.equ	256		;2nd page Y offset
+TSEC	.equ	53		;Ticks per second
+;;HEBLNKINIT .equ	32h		;Initial value for register
+HEBLNKINIT .equ	65h		;Initial value for register
+
+OWSPD		.equ	18	;Open window speed
+OWSPD2		.equ	25
+CWSPD		.equ	40	;Close win speed
+
+;;SCALETSIZE	equ	40*4*16
+SCALETSIZE	.equ	50*4*16
+
+
+*STRUCT OBJ
+OLINK	.equ	0	;UHL *next object block
+OXVEL	.equ	20h	;UHL X velocity 16:16
+OYVEL	.equ	40h	;UHL Y velocity 16:16
+OZVEL	.equ	60h	;UHL Z velocity 16:16
+OXVAL	.equ	80h	;UHL X position 16:16
+OXFRAC	.equ	80h	; X pos fraction
+OXPOS	.equ	90h	; X pos integer
+OYVAL	.equ	0a0h	;UHL Y position 16:16
+OYFRAC	.equ	0a0h	; Y pos frac
+OYPOS	.equ	0b0h	; Y pos int
+OZVAL	.equ	0c0h	;UHL Z position 16:16
+OZPOS	.equ	0d0h	; Z pos int
+OFLAGS	.equ	0e0h	;UHW Mode flags
+OCTRL	.equ	0f0h	;UHW DMA control
+OFSET	.equ	100h	;UHW Offset
+OSAG	.equ	110h	;UHL *Image data
+OSIZE	.equ	130h	;
+OSIZEX	.equ	130h	;UHW X size
+OSIZEY	.equ	140h	;UHW Y size
+OPAL	.equ	150h	;UHW Pallette #
+OCONST	.equ	160h	;UHW Constant color
+OIMG	.equ	170h	;UHL *Image header
+OID	.equ	190h	;UHW Object ID
+OPLINK	.equ	1a0h	;UHL *Process
+ODATA_p	.equ	1c0h	;UHL *Scale table if scaled obj
+OXANI	.equ	1e0h	;SHL X scaled animation pt 16:16
+OMISC	.equ	210h	;UHW Misc data (3D mode Z offset)
+OSCALE	.equ	220H	;UHL scale this object (set to 100% in BEGINOBJ)
+OBSIZ	.equ	240h
+*ENDSTRUCT
+
+NOBJ	.equ	450	;Total # objects
+
+BQCELL	.equ	0c0h 	;Size of DMA queue element
+
+;Values for OFLAGS & OCTRL
+M_WRZERO 	.equ	1	;Write zero data
+M_WRNONZ 	.equ	2	;Write non-zero data
+M_CONZER 	.equ	4	;Replace zero data with constant
+M_CONNON 	.equ	8	;Replace non-zero data with constant
+M_CONST		.equ	0ch	;Replace all with constant
+M_FLIPH		.equ	10h	;Flip horizontally
+M_FLIPV		.equ	20h	;Flip vertically
+M_3DQ		.equ	40h	;Display in quick perspective
+M_3D		.equ	100h	;Display in perspective using XYZ
+M_SHAD		.equ	200h	;Shadow
+M_PIXSCAN 	.equ	400h	;Pixel scan on
+M_NOCOLL 	.equ	800h	;Collisions off
+M_NOSCALE	.equ	1000h	;3D scaling off
+M_SCRNREL	.equ	2000h	;Screen relative XY on
+M_CHARGEN	.equ	4000h	;Character generator type
+
+;OFLAGS/OCTRL bits
+B_WRZERO	.equ	0
+B_WRNONZ	.equ	1
+B_CONZER	.equ	2
+B_CONNON	.equ	3
+B_FLIPH		.equ	4
+B_FLIPV		.equ	5
+B_3DQ		.equ	6
+B_3D		.equ	8
+B_SHAD		.equ	9
+B_PIXSCAN	.equ	10
+B_NOCOLL	.equ	11
+B_NOSCALE	.equ	12
+B_SCRNREL	.equ	13
+B_CHARGEN	.equ	14

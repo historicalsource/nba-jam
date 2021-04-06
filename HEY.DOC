@@ -1,0 +1,590 @@
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+reg
+ex thin
+thin
+fat
+ex fat
+
+
+;00 ATLANTA HAWKS
+
+ .word	09,01,07,02
+ .word  04,02,0,0,0	;STACEY AUGMON		6-8, thin
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;MOOKIE BLAYLOCK	      
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;STEVE SMITH		       
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;KEN NORMAN
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;ALAN HENDERSON
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;01 BOSTON CELTICS
+
+ .word	08,01,07,08
+ .word  06,02,0,0,0	;DEE BROWN
+
+ .word	05,08,05,05
+ .word  03,09,0,0,0	;DANA BARROS
+
+ .word	03,05,07,02
+ .word  06,04,0,0,0	;ERIC MONTROSS
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;DINO RADJA
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;ERIC WILLIAMS
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;02 CHARLOTTE HORNETS
+
+ .word	07,09,07,09
+ .word  03,06,0,0,0	;LARRY JOHNSON	  6-7     Fat (medium)
+
+ .word	07,09,05,08
+ .word  04,09,0,0,0	;ALONZO MOURNING  6-10 (6-11)   Skinny
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;KENDALL GILL
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;DELL CURRY
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;GEORGE ZIDEK
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;03 CHICAGO BULLS
+
+ .word	08,03,06,10
+ .word  09,05,0,0,0	;SCOTTIE PIPPEN	   6-7    Skinny
+
+ .word	06,04,05,02
+ .word  04,07,0,0,0	;TONI KUKOC	   6-11    Skinny
+
+ .word	08,09,02,07
+ .word  07,09,0,0,0	;DENNIS RODMAN		6-8  Skinny (medium)
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;STEVE KERR
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;JASON CAFFEY
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;04 CLEVELAND CAVALIERS
+
+ .word	05,05,08,04
+ .word  03,03,0,0,0	;DAN MAJERLE	      6-6  Skinny  (medium)
+
+ .word	08,02,09,00
+ .word  10,00,0,0,0	;TYRONE HILL
+
+ .word	07,06,03,08
+ .word  03,07,0,0,0	;CHRIS MILLS
+
+ .word	03,07,04,07
+ .word  03,09,0,0,0	;BOBBY PHILLS
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;BOB SURA
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;05 DALLAS MAVERICKS
+
+ .word	08,05,06,01
+ .word  05,03,0,0,0	;JIM JACKSON	   6-6    Fat (medium)
+
+ .word	08,08,08,07
+ .word  03,06,0,0,0	;JAMAL MASHBURN	   6-8    Skinny (Medium)
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;JASON KIDD
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;POPEYE JONES
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;CHEROKEE PARKS
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;06 DENVER NUGGETS
+
+ .word	05,08,01,08
+ .word  02,09,0,0,0	;DIKEMBE MUTUMBO   7-2	Skinny (medium)
+
+ .word	06,05,05,06
+ .word  02,05,0,0,0	;LAPHONSO ELLIS	   6-8	Fat (medium)
+
+ .word	07,07,05,03
+ .word  03,03,0,0,0	;MAHMOUD ABDUL-RAUF
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;ROBERT PACK
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;ANTONIO McDYESS
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;07 DETROIT PISTONS
+
+ .word	08,03,07,00
+ .word  04,02,0,0,0	;JOE DUMARS	   6-3	Skinny (medium)
+
+ .word	07,04,06,06
+ .word  05,06,0,0,0	;GRANT HILL
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;TERRY MILLS
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;OTIS THORPE
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;THEO RALIFFE
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;08 GOLDEN STATE WARRIORS
+
+ .word	09,04,06,00
+ .word  08,00,0,0,0	;TIM HARDAWAY  6-0	Skinny
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;RONY SEIKALY
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;LATRELL SPREWELL
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;MARSHALL
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;JOE SMITH
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;09 HOUSTON ROCKETS
+
+ .word	08,08,02,09
+ .word  03,09,0,0,0	;HAKEEM OLAJUWON   7-0	Fat (medium)
+
+ .word	07,00,04,01
+ .word  05,03,0,0,0	;CLYDE DREXLER
+
+ .word	07,06,06,07
+ .word  04,07,0,0,0	;ROBERT HORRY	   6-10	Skinny
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;SAM CASSELL
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;KENNY SMITH
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;10 INDIANA PACERS
+
+ .word	07,04,09,05
+ .word  05,04,0,0,0	;REGGIE MILLER	   6-7	Skinny
+
+ .word	02,07,02,04
+ .word  01,08,0,0,0	;RIK SMITS	   7-4	Skinny
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;DALE DAVIS
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;DEREK McKEE
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;TRAVIS BEST
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;11 L.A. CLIPPERS
+
+ .word	08,03,06,10
+ .word  04,08,0,0,0	;LOY VAUGHT
+
+ .word	08,04,07,04
+ .word  08,07,0,0,0	;RODNEY ROGERS
+
+ .word	01,09,04,03
+ .word  02,08,0,0,0	;LAMOND MURRAY
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;POOH RICHARDSON
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;BRENT BARRY
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;12 L.A. LAKERS
+
+ .word	03,06,05,07
+ .word  04,07,0,0,0	;VLADE DIVAC	   7-1	Skinny (medium)
+
+ .word	07,08,04,06
+ .word  02,09,0,0,0	;ELDON CAMPBELL	   6-11	Skinny
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;NICK VAN EXEL
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;CEDRIC CEBALLOS
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;EDDIE JONES
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;13 MIAMI HEAT
+
+ .word	07,03,09,05
+ .word  04,04,0,0,0	;GLEN RICE	   6-8	Fat (medium)
+
+ .word	03,06,03,08
+ .word  03,08,0,0,0	;KEVIN WILLIS
+
+ .word	09,02,05,09
+ .word  07,06,0,0,0	;BILLY OWENS
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;KHALID REEVES
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;KURT THOMAS
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;14 MILWAUKEE
+
+ .word	07,02,04,07
+ .word  02,09,0,0,0	;VIN BAKER   	6-11    Skinny
+
+ .word	06,04,04,05
+ .word  06,05,0,0,0	;TODD DAY	6-6	Skinny (medium)
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;GLENN ROBINSON
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;ERIC MURDOCK
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;SHAWN RESPERT
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;15 MINNESOTA TIMBERWOLVES
+
+ .word	09,06,04,09
+ .word  05,05,0,0,0	;ISIAH J.R. RIDER    6-5 Skinny  (medium)
+
+ .word	07,08,07,07
+ .word  04,05,0,0,0	;TOM GUGLIOTTA	    6-10   Skinny
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;MICHAEL WILLIAMS
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;SEAN ROOKS
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;KEVIN GARNETT
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;16 NEW JERSEY NETS
+
+ .word	07,09,07,08
+ .word  02,08,0,0,0	;DERRICK COLEMAN      6-10   Fat
+
+ .word	09,02,07,00
+ .word  07,01,0,0,0	;KENNY ANDERSON	      6-1   Skinny
+
+ .word	02,09,04,04
+ .word  02,08,0,0,0	;CHRIS MORRIS	      6-8   Fat
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;ARMON GILLIAM
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;ED O'BANNON
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;17 NEW YORK
+
+ .word	07,08,04,09
+ .word  04,09,0,0,0	;PATRICK EWING	      7-0    Fat
+
+ .word	04,09,02,04
+ .word  03,07,0,0,0	;ANTHONY MASON	       6-7    Skinny (medium)
+
+ .word	08,02,06,03
+ .word  06,01,0,0,0	;JOHN STARKS	       6-5    Skinny
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;DEREK HARPER
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;CHARLES OAKLEY
+
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;18 ORLANDO MAGIC
+
+ .word	09,02,08,03
+ .word  07,04,0,0,0	;ANFERNEE (Penny) HARDAWAY
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;HORACE GRANT
+
+ .word	07,06,09,05
+ .word  08,06,0,0,0	;NICK ANDERSON		 6-6   Fat (medium)
+
+ .word	07,01,09,00
+ .word  08,01,0,0,0	;DENNIS SCOTT
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;DAVID VAUGHN
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;19 PHILADELPHIA  76ers
+
+ .word	05,08,06,06
+ .word  03,08,0,0,0	;CLARENCE WEATHERSPOON	 6-7	Fat (mediumn)
+
+ .word	07,05,03,09
+ .word  07,09,0,0,0	;SHAWN BRADLEY	7-6 	Skinny
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;SHARONE WRIGHT
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;WILLY BURTON
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;JERRY STACKHOUSE
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;20 PHOENIX SUNS
+
+ .word	08,01,07,00
+ .word  07,00,0,0,0	;KEVIN JOHNSON	      6-1  Skinny
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;DANNY MANNING
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;WESLEY PERSON
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;WAYMAN TISDALE
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;MARIO BENNETT
+
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;21 PORTLAND TRAILBLAZERS
+
+ .word	05,09,03,07
+ .word  03,09,0,0,0	;CLIFF ROBINSON	     6-10	Skinny (medium)
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;ROD STRICKLAND
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;ARVYDAS SABONIS
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;BUCK WILLIAMS
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;RANDOLPH CHILDRESS
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;22 SACRAMENTO KINGS
+
+ .word	07,08,09,03
+ .word  05,02,0,0,0	;MITCH RICHMOND	       6-5	Skinny (medium)
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;WALT WILLIAMS
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;BRIAN GRANT
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;SARUNAS MARCIULONIS
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;CORLISS WILLIAMSON
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;23 SAN ANTONIO	SPURS
+
+ .word	07,07,03,08
+ .word  03,09,0,0,0	;DAVID ROBINSON		7-1  Skinny (medium)
+
+ .word	08,09,02,07
+ .word  07,09,0,0,0	;SEAN ELLIOTT
+
+ .word	04,05,09,02
+ .word  05,05,0,0,0	;CHUCK PERSON
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;AVERY JOHNSON
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;CORY ALEXANDER
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;24 SEATTLE SUPERSONICS
+
+ .word	08,08,05,10
+ .word  03,08,0,0,0	;SHAWN KEMP	        6-10 Skinny (medium)
+
+ .word	08,05,05,01
+ .word  07,01,0,0,0	;GARY PAYTON		6-4   Skinny
+
+ .word	07,06,07,07
+ .word  07,07,0,0,0	;DETLEF SCHREMPF
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;HERSY HAWKINS
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;SHERELL FORD
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;25 TORONTO RAPTORS
+
+ .word	07,08,07,07
+ .word  04,05,0,0,0	;JEROME KERSEY
+
+ .word	05,08,02,06
+ .word  01,09,0,0,0	;CARLOS ROGERS
+
+ .word	08,02,08,03
+ .word  07,04,0,0,0	;VICTOR ALEXANDER
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;DONTONIO WINGFIELD
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;DAMON STOUDAMIRE
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;26 UTAH JAZZ
+
+ .word	07,09,04,09
+ .word  03,08,0,0,0	;KARL MALONE		6-9 Fat (medium)
+
+ .word	08,00,09,00
+ .word  09,00,0,0,0	;JOHN STOCKTON		6-1 Skinny
+
+ .word	05,04,04,03
+ .word  04,06,0,0,0	;DAVID BENOIT		6-8 Skinny
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;JEFF JORNACEK
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;GREG OSTERTAG
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;27 VANCOUVER GRIZZLIES
+
+ .word	05,08,02,06
+ .word  01,09,0,0,0	;BLUE EDWARDS
+
+ .word	07,08,07,07
+ .word  04,05,0,0,0	;BENOIT BENJAMIN
+
+ .word	08,02,08,03
+ .word  07,04,0,0,0	;GREG ANTHONY
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;KENNY GATTISON
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;BRYANT REEVES
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;28 WASHINGTON BULLETS
+
+ .word	08,02,08,03
+ .word  07,04,0,0,0	;CALBERT CHEANEY    6-7    Skinny (medium)
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;MARK PRICE
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;CHRIS WEBBER
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;JUWAN HOWARD
+
+ .word	06,09,04,06
+ .word  00,09,0,0,0	;RASHEED WALLACE
+
+

@@ -1,0 +1,61 @@
+.struct disp.equ
+.struct mproc.equ
+.struct game.equ
+.struct	sys.equ
+;.struct	d3.asm
+.km !f1 \ @J"HOME"@K*ACTIVE\ PROC\ PLINK"CR"
+.km !f2 \ @J"HOME"@K*OBJLST\ OBJ\ OLINK"CR"
+.km !f3 \ @J"HOME"@KPALRAM\ PAL\ *"CR"
+.km !f4 \ @J"HOME"@K*BAKLST\ OBJ\ OLINK"CR"
+;.km !f9 \ @J"HOME"@Krocketptx_t+112\ XYZ\ *"CR"
+;.km !f10 \ @J"HOME"@Kd3world_t\ APTR\ *"CR"
+;.km @!f10 \ @J"HOME"@Kd3gnd_t\ APTR\ *"CR"
+;.km !f11 \ @J"HOME"@K*d3vis_p\ D3OBJ\ D3LINK"CR"
+;.km !f12 \ @J"HOME"@K*d3free_p\ D3OBJ\ D3LINK"CR"
+
+;OLD BELOW
+;.km !f1 @D*ACTIVE\ PROC\ PLINK"CR"
+;.km !f2 @D*OBJLST\ OBJ\ OLINK"CR"
+;.km !f3 @DPALRAM\ PAL\ *"CR"
+
+;CORRECT TODD STUFF BELOW
+;.km !f1 \ @J"HOME"@K*ANIOBJS\ ANIM\ AnimNxt"CR"
+;.km !f2 \ @J"HOME"@K*OFREE\ OBJ\ OLINK"CR"
+;.km !f6 \ @J"HOME"@K*ACTIVE\ PRC\ PLINK"CR"
+;.km s @D"CR"S
+;.km w @D"CR"W
+
+;**** display SOURCE when cursor on longword in struct or mem display ****
+.km S @M"CR"S"CR"
+;**** display WORDS when cursor on longword in struct or mem display ****
+.km W @M"CR"W"CR"
+; this is a comment
+.wp CLOCK_OFF,UHW
+.wp SLDEBUG,UHW
+.wp slowmotion,UDW
+.wp GAMERASE,UHW
+.wp PSTATUS,UHW
+.wp CPULEFT,UDW
+.wp CPUAVG,UDW
+.wp WORLDTLX,UHL
+.wp WORLDTLY,UHL
+.wp PCNT,UHW
+;.wp WAVE,UHW
+.wp timerp1,UHL
+.wp timerp2,UHL
+.wp timerp3,UHL
+.wp timerp4,UHL
+.wp SCRNTL,UHL
+.wp SCRNLR,UHL
+.wp dirqtimer,SHW
+.wp dpageflip,SHW
+.wp dpage,SHW
+;.wp viewx,SHL
+;.wp viewy,SHL
+;.wp viewz,SHL
+;.wp viewxa,SHW
+;.wp viewya,SHW
+;.wp viewza,SHW
+.wp gmqrtr,UDW
+.wp game_time,UHL
+

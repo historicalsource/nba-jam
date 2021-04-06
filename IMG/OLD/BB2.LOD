@@ -1,0 +1,270 @@
+IHDR SIZX:W,SIZY:W,ANIX:W,ANIY:W,SAG:L,CTRL:W,PAL:L
+***> 2000000
+PON>
+CON>
+;
+leds1.img
+ASM> leds.tbl
+---> LED_00
+IHDR SAG:L
+---> LED_MAX
+---> LED_0
+COF>
+---> LED_1,LED_2,LED_3,LED_4,LED_5,LED_6,LED_7,LED_8,LED_9
+---> LED_10,LED_11,LED_12,LED_13,LED_14,LED_15,LED_16,LED_17,LED_18,LED_19
+---> LED_20,LED_21,LED_22,LED_23,LED_24,LED_25,LED_26,LED_27,LED_28,LED_29
+---> LED_30,LED_31,LED_32,LED_33,LED_34,LED_35,LED_36,LED_37,LED_38,LED_39
+---> LED_40,LED_41,LED_42,LED_43,LED_44,LED_45,LED_46,LED_47,LED_48,LED_49
+---> LED_50,LED_51,LED_52,LED_53,LED_54,LED_55,LED_56,LED_57,LED_58,LED_59
+---> LED_60,LED_61,LED_62,LED_63,LED_64,LED_65,LED_66,LED_67,LED_68,LED_69
+---> LED_70,LED_71,LED_72,LED_73,LED_74,LED_75,LED_76,LED_77,LED_78,LED_79
+---> LED_80,LED_81,LED_82,LED_83,LED_84,LED_85,LED_86,LED_87,LED_88,LED_89
+---> LED_90,LED_91,LED_92,LED_93,LED_94,LED_95,LED_96,LED_97,LED_98,LED_99
+;
+---> LED_100,LED_101,LED_102,LED_103,LED_104,LED_105,LED_106,LED_107,LED_108,LED_109
+---> LED_110,LED_111,LED_112,LED_113,LED_114,LED_115,LED_116,LED_117,LED_118,LED_119
+---> LED_120,LED_121,LED_122,LED_123,LED_124,LED_125,LED_126,LED_127,LED_128,LED_129
+---> LED_130,LED_131,LED_132,LED_133,LED_134,LED_135,LED_136,LED_137,LED_138,LED_139
+---> LED_140,LED_141,LED_142,LED_143,LED_144,LED_145,LED_146,LED_147,LED_148,LED_149
+---> LED_150,LED_151,LED_152,LED_153,LED_154,LED_155,LED_156,LED_157,LED_158,LED_159
+;
+CON>
+IHDR SIZX:W,SIZY:W,ANIX:W,ANIY:W,SAG:L,CTRL:W,PAL:L
+;
+;Loads DIAGP palette
+IHDR PAL:L
+ASM> junkxxxx
+diagp.img
+---> DIAGPIMG
+;
+IHDR SIZX:W,SIZY:W,ANIX:W,ANIY:W,SAG:L,CTRL:W,PAL:L,PWRD1:W,PWRD2:W,PWRD3:W,PT0X:W,PT2X:W,PT2Y:W,PT3X:W,PT3Y:W,PT5X:W
+wnlp.img
+ASM> pass.tbl
+---> W2NLPR1,W2NLPR2,W2NLPR3
+---> W2NLPL1,W2NLPL2,W2NLPL3
+---> W4NLPR1,W4NLPR2,W4NLPR3
+---> W4NLPL1,W4NLPL2,W4NLPL3
+todd.img
+ASM> plyrseq.tbl
+---> T1SWPE1,T1SWPE2,T1SWPE3,T1SWPE4,T1SWPE5,T1SWPE6,T1SWPE7,T1SWPE8,T1SWPE9
+---> T2SWPE1,T2SWPE2,T2SWPE3,T2SWPE4,T2SWPE5,T2SWPE6,T2SWPE7
+---> T3SWPE1,T3SWPE2,T3SWPE3,T3SWPE4,T3SWPE5,T3SWPE6,T3SWPE7
+---> T4SWPE1,T4SWPE2,T4SWPE3,T4SWPE4,T4SWPE5,T4SWPE6
+---> T5SWPE1,T5SWPE2,T5SWPE3,T5SWPE4,T5SWPE5,T5SWPE6
+---> T2DESP1,T2DESP2,T2DESP3,T2DESP4,T2DESP5,T2DESP6
+---> T1DESP1,T1DESP2,T1DESP3,T1DESP4,T1DESP5,T1DESP6
+---> T1DESP7,T1DESP8,T1DESP9
+---> T2HIND1,T2HIND2,T2HIND3,T2HIND4,T2HIND5,T2HIND6
+---> T4HIND1,T4HIND2,T4HIND3,T4HIND4,T4HIND5,T4HIND6
+---> T4HIND7,T4HIND8
+willie.img
+---> w1cp1,w1cp2,w1cp3,w1cp4,w1drun1,w1drun2,w1drun3,w1drun4,w1drun5,w1drun6
+---> w1drun7,w1drun8,w1dst1,w1dst2,w1dst3,w1dst4,w1dst5,w1dst6,w1js1,w1js2
+---> w1run8,w1js3,w1js4,w1js5,w1jupa,w1run1,w1run2,w1run3,w1run4,w1run5,w1run6
+---> w1run7,w1stand,w2cp1,w2cp2,w2cp3,w2cp4,w2drun1,w2drun2,w2drun3,w2drun4
+---> w2drun5,w2drun6,w2drun7,w2drun8,w2js1,w2js2,w2js3,w2js4,w2js5,w2jupa
+---> w2run1,w2run2,w2run3,w2run4,w2run5,w2run6,w2run7,w2run8,w2stand,w3cp1
+---> w3cp2,w3cp3,w3cp4,w3drun1,w3drun2,w3drun3,w3drun4,w3drun5,w3drun6
+---> w3drun7,w3drun8,w3dst1,w3dst2,w3dst3,w3dst4,w3dst5,w3dst6,w3js1,w3js2
+---> w3js3,w3js4,w3js5,w3jupa,w3run1,w3run2,w3run3,w3run4,w3run5,w3run6
+---> w3run7,w3run8,w3stand,w4cp1,w4cp2,w4cp3,w4cp4,w4drun1,w4drun2,w4drun3
+---> w4drun4,w4drun5,w4drun6,w4drun7,w4drun8,w4dst1,w4dst2,w4dst3,w4dst4
+---> w4dst5,w4dst6,w4js1,w4js2,w4js3,w4js4,w4js5,w4jupa,w4run1,w4run2,w4run3
+---> w4run4,w4run5,w4run6,w4run7,w4run8,w4stand,w5cp1,w5cp2,w5cp3,w5cp4
+---> w5drun1,w5drun2,w5drun3,w5drun4,w5drun5,w5drun6,w5drun7,w5drun8,w5dst1
+---> w5dst2,w5dst3,w5dst4,w5dst5,w5dst6,w5js1,w5js2,w5js3,w5js4,w5js5,w5jupa
+---> w5run1,w5run2,w5run3,w5run4,w5run5,w5run6,w5run7,w5run8,w5stand
+;
+willie2.img
+---> w1ohp1,w1ohp2,w1ohp3,w1ohp4,w1ohp5,w1ohp6
+---> w2ohp1,w2ohp2,w2ohp3,w2ohp4
+---> w2ohp5,w5ohp5,w3ohp5
+---> w4ohp5,w3ohp1,w3ohp2,w3ohp3,w3ohp4,w4ohp1,w4ohp2,w4ohp3,w4ohp4,w5ohp1
+---> w5ohp2,w5ohp3,w5ohp4
+ASM> plyrd2seq.tbl
+todd.img
+---> T1HANG9,T1HANG10,T1HANG1,T1HANG2,T1HANG3,T1HANG4,T1HANG5,T1HANG6,T1HANG7
+---> T1HANG8
+---> T2DUNK9,T2DUNK10,T2DUNK1,T2DUNK2,T2DUNK3,T2DUNK4,T2DUNK5,T2DUNK6,T2DUNK7
+---> T2DUNK8
+---> T6DUNK9,T6DUNK10,T6DUNK1,T6DUNK2,T6DUNK3,T6DUNK4,T6DUNK5,T6DUNK6,T6DUNK7
+---> T6DUNK8,T6DUNK11,T6DUNK12,T6DUNK13
+ASM> plyrdseq.tbl
+willie2.img
+---> w2stdu1,w2stdu2,w2stdu3,w2stdu4,w2stdu5,w2stdu6,w2stdu7,w2stdu8,w2stdu9
+---> w3shdu4,w3shdu5,w3shdu6,w3shdu7,w3shdu8,w3shdu9
+---> w3shdu10,w3shdu11
+---> w2jamdu2,w2jamdu3,w2jamdu4,w2jamdu5,w2jamdu6
+---> w2jamdu7,w2jamdu8,w2jamdu9,w2jamdu10
+---> w2bhdu3,w2bhdu4,w2bhdu5,w2bhdu6
+---> w2bhdu7,w2bhdu8,w2bhdu9,w2bhdu10
+---> w1hks1,w1hks2,w1hks3
+---> w1hks4,w1hks5,w1hks6,w1spdu1
+---> w1spdu10,w1spdu11,w1spdu2,w1spdu3,w1spdu4,w1spdu5,w1spdu6,w1spdu7
+---> w1spdu8,w1spdu9,w1stdu1,w1stdu10,w1stdu2,w1stdu3,w1stdu4,w1stdu5
+---> w1stdu6,w1stdu7,w1stdu8,w1stdu9
+---> w2swdu1,w2swdu2,w2swdu3
+---> w2swdu4,w2swdu5,w2swdu6,w2swdu7,w2swdu8,w2swdu9,w3flydu10,w3flydu2
+---> w3flydu3,w3flydu4,w3flydu5,w3flydu6,w3flydu7,w3flydu8,w3flydu9,w3hang1
+---> w3hang2,w3hang3,w3hang4,w3hang5,w3hang6,w3hang7,w3jmdu10,w3jmdu11
+---> w3jmdu4,w3jmdu5,w3jmdu6,w3jmdu7,w3jmdu8,w3jmdu9
+---> w3ondu1,w3ondu2,w3ondu3,w3ondu4,w3ondu5,w3ondu6,w3ondu7
+---> w3ondu8
+---> w3spdu1,w3spdu10,w3spdu2,w3spdu3,w3spdu4
+---> w3spdu5,w3spdu6,w3spdu7,w3spdu8,w3spdu9,w3twdu1,w3twdu2,w3twdu3,w3twdu4
+---> w3twdu5,w3twdu6,w3twdu7,w3twdu8,w4hks1,w4hks2,w4hks3,w4hks4,w4hks5
+---> w5hks1,w4hks6,w4modu1,w4modu2,w4modu3,w4modu4,w4modu5,w4modu6,w4modu7
+---> w4stdu3,w4stdu4,w4stdu5,w4stdu6,w4stdu7
+---> w4stdu8
+---> w5stdu1,w5stdu10,w5stdu11,w5stdu12,w5stdu13,w5stdu2
+---> w5stdu3,w5stdu4,w5stdu5,w5stdu6,w5stdu7,w5stdu8,w5stdu9,w2swdu6a
+dunks.img
+---> w3sp2du3,w3sp2du4,w3sp2du5,w3sp2du6,w3sp2du7,w3sp2du8,w3sp2du9,w3sp2du10
+---> w3sp2du11,w3sp2du12,w3sp2du13,w3sp2du14,w3sp2du15,w3sp2duA,w3sp2duB,w3sp2duC
+---> w3sp2duD,w3sp2duE
+---> w3wmdu3,w3wmdu4,w3wmdu5,w3wmdu6,w3wmdu7,w3wmdu8,w3wmdu9
+---> w3wmdu10,w3wmduA,w3wmduB,w3wmduC,w3wmduD,w3wmduE
+---> w1dpdu3,w1dpdu4,w1dpdu5,w1dpdu6,w1dpdu7,w1dpdu8,w1dpdu9,w1dpdu10,w1dpdu13
+---> w2wmdu1,w2wmdu2,w2wmdu3,w2wmdu4,w2wmdu5,w2wmdu6,w2wmdu7,w2wmdu8,w2wmdu9
+ASM> plyrd2seq.tbl
+---> CANB1,CANB2,CANB3,CANB4,CANB5,CANB6,CANB7,CANB8,CANB9
+---> CANB10,CANB11,CANB13,CANB14,CANB15,CANB16,CANB12
+---> canroll1,canroll2,canroll3,canroll4,canroll5,canroll6,canroll7,canroll8
+ASM> plyrdseq.tbl
+---> thangdu1,thangdu2,thangdu3,thangdu4,thangdu5,thangdu6,thangdu7,thangdu8
+---> thangdu9,thangdu10,thangdu11
+;
+willie3.img
+ASM> plyrseq.tbl
+---> w3dfcr1,w3dfcr2,w3dfcr3,w3dfcr4,w3dfcr5,w3dfcr6,w3defwd1,w3defwd2
+---> w3defwd3,w3defwd4,w3defwd5,w3defwd6
+---> w1blok1,w1blok2,w1blok3
+---> w2blok1,w2blok2,w2blok3,w4blok1,w4blok2,w4blok3
+---> w1defwd1,w1defwd2,w1defwd3,w1defwd4,w1defwd5
+---> w1defwd6,w1dfcr1,w1dfcr2,w1dfcr3,w1dfcr4,w1dfcr5,w1dfcr6,w1drcr1
+---> w1drcr2,w1drcr3,w1drcr4,w1drcr5,w1drcr6
+---> w2defwd1,w2defwd2,w2defwd3
+---> w2defwd4,w2defwd5,w2defwd6,w2dfcr1,w2dfcr2,w2dfcr3,w2dfcr4,w2dfcr5
+---> w2drcr1,w2drcr2,w2drcr3,w2drcr4,w2drcr5
+---> w3blok1,w3blok2,w3blok3
+---> w4defwd1,w4defwd2,w4defwd3,w4defwd4,w4defwd5
+---> w4defwd6,w4dfcr1,w4dfcr2,w4dfcr3,w4dfcr4,w4dfcr5,w4dfcr6
+---> w4stel1,w4stel2
+---> w4stel3,w4stel4,w5blok1
+---> w5blok2,w5blok3,w5defwd1,w5defwd2,w5defwd3,w5defwd4,w5defwd5,w5defwd6
+---> w5dfcr1,w5dfcr2,w5dfcr3,w5dfcr4,w5dfcr5,w5dfcr6,w5drcr1,w5drcr2,w5drcr3
+---> w5drcr4,w5drcr5,w5drcr6
+---> w3drcr1,w3drcr2,w3drcr3,w3drcr4,w4drcr1,w4drcr2,w4drcr3,w4drcr4
+---> w4drcr5
+;
+ASM> layup.tbl
+---> w4fgrl1,w4fgrl2,w4fgrl3,w5fgrl1,w5fgrl2,w5fgrl3,w5fgrl4
+---> w2fgrl1,w2fgrl2,w2fgrl3,w2fgrl4
+---> w3fgrl2,w3fgrl3,w3fgrl4,w3fgrl5
+---> w3fgrl6
+layups.img
+---> w1splay1,w1splay2,w1splay3,w1splay4,w1splay5
+---> w1splay6,w1splay7,w1splay8,w1splay9,w1splay10,w1splay11
+ASM> plyrseq.tbl
+;
+willie4.img
+---> w2push1,w2push2,w2push3,w2push4,w4push1,w4push2,w4push3
+---> w1reb2,w1reb1,w1reb3,w1reb4,w1reb5
+;
+ASM> plyrseq2.tbl
+---> w2fall1,w2fall10,w2fall11,w2fall12,w2fall13,w2fall14,w2fall15
+---> w2fall16,w2fall2,w2fall3,w2fall4,w2fall5,w2fall6,w2fall7,w2fall8
+---> w2fall9
+---> w3fall1,w3fall2,w3fall3,w3fall4,w3fall5,w3fall6
+---> w3fall7,w3fall8
+---> w4elbo1,w4elbo2,w4elbo3,w4elbo4,w4elbo5,w4elbo6,w4elbo7
+---> w4fall1,w4fall10,w4fall11,w4fall12,w4fall13,w4fall14,w4fall15,w4fall16
+---> w4fall17,w4fall18,w4fall2,w4fall3,w4fall4,w4fall5,w4fall6,w4fall7
+---> w4fall8,w4fall9,w4pikup1,w4pikup2,w4pikup3
+---> w2elbo1,w2elbo2,w2elbo3,w2elbo4
+---> w2elbo5,w1pikup1,w1pikup2,w1pikup3,w2pikup1,w2pikup2,w2pikup3
+---> w3pikup1,w3pikup2,w3pikup3,w5pikup1,w5pikup2,w5pikup3
+---> w3tip1,w3tip2,w3tip3,w3tip4,w3tip5,w3tip6,w3tip7
+;
+ASM> plyrseq.tbl
+---> w2reb1,w2reb2,w2reb3,w2reb4,w2reb5,w2reb6,w2reb7
+---> w3reb1,w3reb2,w3reb3,w3reb4,w3reb5
+---> w4reb1,w4reb2,w4reb3,w4reb4,w4reb5,w4reb6
+;
+willie5.img
+;ASM> plyrseq.tbl
+---> w2stwbl,w3desp1,w3desp2,w3desp3,w3desp4,w3desp5,w3desp6,w3stwbl,w4stwbl
+---> w5stwbl,w3rej1,w3rej2,w3rej3
+---> w3rej4,w3rej5,w3rej6,w3rej7,w3rej8,w3rej9,w2rej1,w2rej2,w2rej3,w2rej4
+---> w2rej5,w2rej6,w2rej7,w2rej8,w2rej9,w3run0
+;
+IHDR SIZX:W,SIZY:W,ANIX:W,ANIY:W,SAG:L,CTRL:W,PAL:L
+ASM> TEXT.TBL
+;
+COF>
+trogf15.img
+PON>
+---> FON150,FON151,FON152,FON153,FON154,FON155,FON156,FON157,FON158,FON159
+---> FON15A,FON15B,FON15C,FON15CR,FON15D,FON15E,FON15F,FON15G,FON15H,FON15I
+---> FON15J,FON15K,FON15L,FON15M,FON15N,FON15O,FON15P,FON15Q,FON15R,FON15S
+---> FON15T,FON15U,FON15V,FON15W,FON15X,FON15Y,FON15Z,FON15and,FON15apos
+---> FON15apos1,FON15ast,FON15backsp,FON15brackl,FON15brackr,FON15break
+---> FON15carr,FON15colon,FON15comma,FON15dash,FON15doll,FON15engPOUN
+---> FON15equal,FON15excla,FON15forsp,FON15la,FON15lb,FON15lc,FON15ld
+---> FON15le,FON15less,FON15lf,FON15lg,FON15lh,FON15li,FON15line,FON15lj
+---> FON15lk,FON15ll,FON15lm,FON15ln,FON15lo,FON15lp,FON15lq,FON15lr
+---> FON15ls,FON15lt,FON15lu,FON15lv,FON15lw,FON15lx,FON15ly,FON15lz
+---> FON15more,FON15paren2l,FON15paren2r,FON15parenl,FON15parenr,FON15perc
+---> FON15period,FON15plus,FON15poun,FON15quest,FON15quote,FON15rquote
+---> FON15semicol
+;
+trogf7.img
+---> FONT7A,FONT7B,FONT7C,FONT7D,FONT7E,FONT7F,FONT7G,FONT7H,FONT7I,FONT7J
+---> FONT7K,FONT7L,FONT7M,FONT7N,FONT7O,FONT7P,FONT7Q,FONT7R,FONT7S,FONT7T
+---> FONT7U,FONT7V,FONT7W,FONT7X,FONT7Y,FONT7Z,FONT7a,FONT7b,FONT7c,FONT7d
+---> FONT7e,FONT7f,FONT7g,FONT7h,FONT7i,FONT7j,FONT7k,FONT7l,FONT7m,FONT7n
+---> FONT7o,FONT7p,FONT7q,FONT7r,FONT7s,FONT7t,FONT7u,FONT7v,FONT71,FONT72
+---> FONT73,FONT74,FONT75,FONT76,FONT77,FONT78,FONT79,FONT70,FONT7excla
+---> FONT7pound,FONT7doll,FONT7percen,FONT7and,FONT7ast,FONT7parenl
+---> FONT7parenr,FONT7dash,FONT7line,FONT7equal,FONT7plus,FONT7bracl
+---> FONT7bracr,FONT7backsp,FONT7paren2l,FONT7paren2r,FONT7break
+---> FONT7semicol,FONT7apost,FONT7colon,FONT7quote,FONT7comma,FONT7period
+---> FONT7forsp,FONT7less,FONT7more,FONT7quest
+squadplt.img
+---> SQUD_1,SQUD_2,SQUD_3,SQUD_4,SQUD_5,SQUD_6,SQUD_7,SQUD_8,SQUD_9,SQUD_10
+---> SQUD_11,SQUD_12,SQUD_13,SQUD_14,SQUD_15,SQUD_16,SQUD_17,SQUD_18,SQUD_19
+---> SQUD_20
+CON>
+;
+ball.img
+POF>
+ASM> ball.tbl
+---> ballshad1,ballshad2,ballshad3,ballshad4,ballshad6
+---> ballshad7,ballshad8,ballshad9,ballshad10,ballshad11,ballshad12
+---> ball12,ball13
+---> ball21,ball22,ball23
+---> ball31,ball32,ball33
+---> ball41,ball42,ball43
+---> ball51,ball52,ball53
+---> ball61,ball62,ball63
+---> ball71,ball72,ball73
+---> ball81,ball82,ball83
+---> ball91,ball92,ball93
+---> ball101,ball102,ball103
+---> ballf11,ballf12,ballf13,ballf14,ballf15,ballf16,ballf21
+---> ballf22,ballf23,ballf24,ballf25,ballf26,ballf31,ballf32,ballf33,ballf34
+---> ballf35,ballf36,ballf41,ballf42,ballf43,ballf44,ballf45,ballf46,ballf51
+---> ballf52,ballf53,ballf54,ballf55,ballf56,ballf61,ballf62,ballf63,ballf64
+---> ballf65,ballf66,ballf71,ballf72,ballf73,ballf74,ballf75,ballf76,ballf81
+---> ballf82,ballf83,ballf84,ballf85,ballf86,ballf91,ballf92,ballf93,ballf94
+---> ballf95,ballf96
+;
+courtz.img
+POF>
+ASM> crowd.tbl
+---> sdcrwd1b,sdcrwd2b,sdcrwd3b,sdcrwd4b
+---> sdcrwd5b,sdcrwd6b,sdcrwd7b,sdcrwd8b
+---> sdcrwd1c,sdcrwd2c,sdcrwd3c,sdcrwd4c
+---> nsdcrwd1b,nsdcrwd2b,nsdcrwd3b,nsdcrwd4b
+---> sdcrwd5c,sdcrwd6c,sdcrwd7c
+

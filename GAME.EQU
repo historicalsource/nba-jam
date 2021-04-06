@@ -1,0 +1,786 @@
+**************************************************************************
+* game.equ - All .equ constants to be used throughout the game
+*
+*.Last mod - 3/16/93 16:42
+*.Last mod - 4/12/95 - DCS sound board equates (JBJ)
+**************************************************************************
+
+	.asg	85/100,DIST_REDUCTION
+	.asg	111/100,DIST_ADDITION
+
+TRIVIA_PTS_NEEDED 	equ	100
+ALL_TMS_DEFEATD		equ	1fffffffh
+NUM_BUTTONS		equ	8
+NUM_ATTRIBS		equ	8
+NUM_HEADS		equ	5
+MIDDLE_HEAD		equ	2
+MAX_CHK_MRKS		equ	2
+MIDDLE_NICK_NAME	equ	5
+NICK_NAMES_ON_SCRN	equ	11			;on screen at once
+MIDDLE_UNIFORM_NBR	equ	5
+UNIFORM_NAMES_ON_SCRN	equ	11			;on screen at once
+
+REPEAT_DELAY		equ	18
+DEFAULT_HIT_PTS		equ	40
+ATTRIB_MAX_VALUE	equ	10
+ATTRIB_MIN_VALUE	equ	0
+
+
+TEAMSEL_PAGE	equ	0*256
+NAMENT_PAGE	equ	0*256
+YESNO_PAGE	equ	0*256
+;NAMENT_PAGE	equ	1*256
+;YESNO_PAGE	equ	2*256
+
+;
+; X,Y positions for objects on OPTIONS SCREEN
+;
+	.asg	23,BALL1X
+	.asg	66,BALL1Y
+	.asg	156,BALL2X
+	.asg	66,BALL2Y
+	.asg	285,BALL3X
+	.asg	66,BALL3Y
+
+;
+; X,Y positions for objects in PLAYER DESIGN
+;
+	.asg	107,BBOXX		;big box ULHC X
+	.asg	34,BBOXY		;big box ULHC Y
+	.asg	269,SBOXX		;small box ULHC X
+	.asg	178,SBOXY		;small box ULHC Y
+
+;
+; X,Y positions for objects during SELECT TEAMS
+;
+	.asg	99,TM1_X
+	.asg	300,TM2_X
+	.asg	103,TM1_Y
+	.asg	103,TM2_Y
+
+
+;
+; This ID is excuslive to SCREEN TRANSITION EFFECTS
+;
+TRANS_OBJ_ID	equ	0909h		;TRANSITION EFFECT ID
+
+JOY_NONE	equ	0
+JOY_UP		equ	0001h
+JOY_DOWN	equ	0002h
+JOY_LEFT	equ	0004h
+JOY_RIGHT	equ	0008h
+JOY_UP_LEFT	equ	0005h
+JOY_UP_RIGHT	equ	0009h
+JOY_DOWN_RIGHT	equ	000Ah
+JOY_DOWN_LEFT	equ	0006h
+BUT_SHOOT	equ	0010h
+BUT_PASS	equ	0020h
+BUT_TURBO	equ	0040h
+
+JDN_UP		equ	0100h
+JDN_DOWN	equ	0200h
+JDN_LEFT	equ	0400h
+JDN_RIGHT	equ	0800h
+JDN_UP_LEFT	equ	0500h
+JDN_UP_RIGHT	equ	0900h
+JDN_DOWN_RIGHT	equ	0A00h
+JDN_DOWN_LEFT	equ	0600h
+BDN_SHOOT	equ	1000h
+BDN_PASS	equ	2000h
+BDN_TURBO	equ	4000h
+
+JOY_REAL_LR	equ	JOY_LEFT | JOY_RIGHT
+JOY_ALL		equ	01111b | JOY_REAL_LR
+
+TURBO_BUTTON	equ	4
+SHOOT_BUTTON	equ	1
+PASS_BUTTON	equ	2
+
+END_CHAR	equ	29 ;(0 relative)
+DEL_CHAR	equ	27
+SPACE_CHAR	equ	29 ;(1 relative)
+NUM_TEAMS	equ	29
+NAME_LETTERS	equ	6	;characters for players NAME
+
+;
+; PLAYER HEAD TABLE EQUATES (table is near end of SELECT2.asm)
+;
+HEADS_PER_LINE		equ	2*32		;2 longs
+HEAD_COMBINATIONS	equ	20	      ;20 comb. of 2 heads & end marker
+NEXT_TEAM		equ	HEADS_PER_LINE*HEAD_COMBINATIONS
+
+;
+; PLAYER NAME TABLE EQUATES (in SCORE2.ASM)
+;
+NAMES_PER_LINE		equ	2*32		;2 longs
+NAME_COMBINATIONS	equ	20	      ;20 comb. of 2 heads & end marker
+NEXT_TEAM_NAMES		equ	NAMES_PER_LINE*NAME_COMBINATIONS
+;
+; MY [CITY NAME, CITY NUMBER] TABLE OFFSETS (in select.asm)
+;
+DELAY_B4_SCROLL		equ	15			;40 ticks
+OFFSET_NXT_CITY_NAME	equ	32+16			;1 long + 1 word
+HILITED_CITY_NAME_OFFST	equ	(OFFSET_NXT_CITY_NAME*3)	;7 cites shown
+HILITED_CITY_NBR_OFFST	equ	(OFFSET_NXT_CITY_NAME*3)+32	;  4th is hi-lighted
+
+;equates first originated in this file
+;these were in score.asm, moved here to be consistent
+
+BUYTICK	.EQU	110		;60
+SCRNTOP .EQU	100
+BRGHT	.EQU	2c2ch		;GREEN IN SCOREPAL
+COLORS	.EQU	0909h		;WHITE IN SCOREPAL
+COLORA	.EQU	3E3Eh		;COLOR CYCLE IN SCOREPAL
+
+
+******************************************************************************
+* Net ani #'s
+
+	.asg	0,NET_RESET
+
+	.asg	2,NET_DEEPZ_FAR
+	.asg	4,NET_DEEPZ_CLOSE
+	.asg	6,NET_MIDZ_FAR
+	.asg	8,NET_MIDZ_CLOSE
+	.asg	10,NET_NEARZ_FAR
+	.asg	12,NET_NEARZ_CLOSE
+
+	.asg	14,NET_MISS_FAR
+	.asg	15,NET_MISS_CLOSE
+
+	.asg	16,NET_SOFT
+	.asg	17,NET_DUNK
+	.asg	18,NET_SHATTER
+
+	.asg	19,NET_ONFIRE
+	.asg	20,NET_ROLLINFIRE
+
+;----------
+; Some player equates
+
+	.asg	52,TURBO_CNT		;Turbo bar width cnt
+
+	.asg	3,ONFIRE_MINCNT		;Min # buckets for plyr on-fire
+	.asg	8,ONFIRE_MAXCNT		;Max # buckets for plyr off-fire
+
+	.asg	3,TMFIRE_MINCNT		;Min # team-shots for team on-fire
+
+******************************************************************************
+
+;LEDOCTRL	.equ	DMAWNZ|>3000	;3 bits per pixel (In BB.asm)
+;MSGOCTRL	.equ	DMAWNZ|>6000
+;LEDOCTRL	.equ	DMAWNZ|5000h	;3 bits per pixel (In BB.asm)
+MSGOCTRL	.equ	DMAWNZ|3000h	;5000h
+
+
+******************************************************************************
+
+QRTRTIME	.EQU	[300h,0h]	;Time of each quarter
+
+
+******************************************************************************
+* PROCESS ID'S
+
+CYCPID		.equ	109
+BUYINPID	.equ	110
+GMEOVPID	.equ	113
+COLRPID		.equ    120             ;COLOR CYCLE FROM INTERRUPT
+DG1PID		.equ    121             ;CNTDWN DIGIT PROC
+DG2PID		.equ    122             ;CNTDWN DIGIT PROC
+FADEPID		.equ    123             ;SOUND FADER
+CP_PID1		.equ    124		;Credit page
+CP_PID2		.equ    125		;^
+LC_PID		.equ	126+8000h	;Left coin (Indestructible)
+RC_PID		.equ	127+8000h
+CC_PID		.equ	128+8000h
+SLAM_PID	.equ	129+8000h
+DIAG_PID	.equ	130
+PSWPID		.equ	131		;Plyr start switch
+
+clockid		.equ	132		;24 second shot clock proc & img id
+tvid		.equ	133		;tv score plate images
+gclockid	.equ	134		;game clock
+tvscrid		.equ	135		;big tv score images
+bclockid	.equ	136		;big game clock
+creditid	.equ	137		;credit info at top score board
+stickid		.equ	138		;cpu message stick procid
+qrtrid		.equ	139		;qrtr imgs at scorers table
+arwid		.equ	140		;Plyr arrow process
+
+p1stickid	.equ	141		;message stick on ids for p1
+p2stickid	.equ	142
+p3stickid	.equ	143
+p4stickid	.equ	144		;p4
+TIPID		.equ	145
+ARWPID		.equ	146
+adpid		.equ	147
+takepid		.equ	148
+
+tmfireid	.equ	149
+flashpid	.equ	150		;For flash_me routine
+
+VOLBTN_PID	.equ	149h		;coin door volume button
+VOLADJ_PID	.equ	150h		;in-game volume adjustment
+FX_PID		.equ	151h		;volume adjust bgnd noise
+
+WATCH_FOR_PLAYERS_PID	.equ	114
+TEAM1_SEL_PID	.equ	152h
+TEAM2_SEL_PID	.equ	153h
+FOG_PID		.equ	154h
+TRAIL_HNDLR_PID	.equ	155h
+CLOCK_PID	.equ	156h		;during CREATE PLAYER
+JOIN_CYCLE_PID	.equ	157h
+P1_BOX_SLIDE_PID	.equ	158h
+P2_BOX_SLIDE_PID	.equ	159h
+P3_BOX_SLIDE_PID	.equ	15ah
+P4_BOX_SLIDE_PID	.equ	15bh
+VS_LOGO_PID	.equ	15ch
+FIRE_ANIM_PID	.equ	15dh
+
+WIN_STAY_PID	.equ	15eh
+SHAKE_PID	equ	15fh
+
+METER_PID	.equ	160h		;Jump ball meter
+PLYR_TRAIL_OBJ_PID	.equ	161h
+FLSH_TXT_PID	.equ	162h
+
+SMOVE_PID	.equ	162h		;Secret swirl moves
+
+AMODE_PID	.equ	100h		;Attract mode
+INTRO_PID	.equ    300h		;Intro/player selection
+HISC_PID	.equ	600h		;Hiscore table entry
+ENDQRTR_PID	.equ	800h		;Hint pages/Halftime pages
+
+P1_PID		.equ	1000h		;P1 main loop
+
+P2_PID		.equ	1100h
+
+P3_PID		.equ	1200h
+
+P4_PID		.equ	1300h
+
+P5_PID		.equ	1400h
+P6_PID		.equ	1500h
+
+JOY_PID		.equ	2000h		;Joystick scanner
+COLL_PID	.equ	2100h		;Collisions
+STAT_PID	.equ	2200h		;Status display
+HOOP_PID	.equ	2300h		;Backboard,net,rim
+TOB_PID		.equ	2400h		;Takeout ball
+CNTDWN_PID	.equ	2500h		;countdown timer
+NOG_PID		.equ	2600h		;no good (shots that don't go in)
+CYCPID2		.equ	2700h		;2nd cycler
+
+
+ANIMPID		.equ	4000h		;Animation PIDs (256)
+ANIMPID2	.equ	4100h		;Animation2 PIDs (256)
+ANIMPID3	.equ	4200h		;Animation3 PIDs (256)
+ANIMPID4	.equ	4300h		;Animation4 PIDs (256)
+
+QSNDRST_PID	.equ	4400h
+HISCR_SCALE_PID	.equ	4401h
+
+
+;OBJECT ID'S
+
+;OBJECT IDENTIFIER FIELDS
+B_CLASS		.set	15
+F_CLASS		.set	0E000h
+
+CLSNEUT		.equ	0000h		;Neutral items
+CLSDEAD         .equ    2000h           ;Objects that delete themselves
+CLSANIM         .equ    3800h           ;Animation class objects
+CLSPLYR		.equ	4000h		;Players stuff
+CLSENMY		.equ	8000h		;Enemies
+
+TYPNEUT		.equ	0000h		;Type neutral
+TYPPLYR		.equ	0100h		;Player
+TYPBALL		.equ	0200h		;Basketball
+TYPTEXT		.equ	0700h		;Type text
+
+
+;
+; Object classes
+; 
+TM1BACKDROP		.equ	0805h
+
+COMBO_SYMBOLS_P1	equ	0806h		;obj class
+COMBO_SYMBOLS_P2	equ	0807h		;obj class
+COMBO_SYMBOLS_P3	equ	0808h		;obj class
+COMBO_SYMBOLS_P4	equ	0809h		;obj class
+PRIVILEGE_OBJS		equ	080ah
+SM_PLYRS_NAME		equ	080bh
+TM1_NAME_OBJS		equ	080ch
+TM2_NAME_OBJS		equ	080dh
+NICK_NAME_IMGS		equ	080eh			;should put in game.equ
+HIT_PTS_FRACTION	equ	080fh
+TM1_STAT_OBJS		equ	0810h
+TM2_STAT_OBJS		equ	0811h
+UNIFORM_NAME_OBJS	equ	0812h
+
+TM2BACKDROP		.equ	0905h
+CREATE_PLYR_TIMER	.equ	0901h
+BUTTON_PIECE		.equ	0902h
+BUTN_BOX_STUFF		.equ	0903h
+PLAYER_PIECE		.equ	0904h
+BUTN_BOX_INST		.equ	0905h
+BUTTON_INFO		.equ	0906h
+BODY_STYLE_STR		.equ	0907h
+BIG_BOX_STUFF		.equ	0908h
+FOG_IMG_STUFF		.equ	090ah
+OPTION_STUFF		.equ	090bh
+SPOTLIGHT		.equ	090ch
+BBALL_SHADOW		.equ	090dh
+TITLE_BAR		.equ	090eh
+TEAM_SEL_OBJS		.equ	090fh
+YES_NO_BUTNS		.equ	0900h
+
+WIN_STAY_MSG		.equ	0910h
+CHECK_MRK_OBJS		.equ	0911h
+RULES_ID		.equ	0912h
+P1_BTUNS		.equ	0913h
+P2_BTUNS		.equ	0914h
+P3_BTUNS		.equ	0915h
+P4_BTUNS		.equ	0916h
+TRIVIA_PTS_1_ID		.equ	0917h
+TRIVIA_PTS_2_ID		.equ	0918h
+TRIVIA_PTS_3_ID		.equ	0919h
+TRIVIA_PTS_4_ID		.equ	091ah
+TRIVIA_TIMER		.equ	091bh
+PLR_TRAIL_ID		.equ	091ch
+BUTN_PRIV_INST		.equ	091dh
+STAT_TEXT_ID		.equ	091eh
+ATTRIB_PLAQ_ID		.equ	091fh
+
+;TYPE NEUTRAL SUB TYPES
+SUBARW		.EQU	1		;ARROW ID
+SUBUP		.EQU	2		;OVERHEAD ITEMS
+SUBUP2		.EQU	3		;OVERHEAD ITEMS AFTER VEL SET
+
+;TYPE PLAYER SUB TYPES
+SUBPL1		.equ	1		;P1
+SUBPL2		.equ	2		;P2
+SUBPL3		.equ	3		;P3
+SUBPL4		.equ	4		;P4
+
+;TYPE TEXT SUB TYPES
+SUBTXT		.equ	1		;TEXT ID
+SUBP1TXT	.equ	2		;P1 TEXT
+SUBP2TXT	.equ	3		;P2 TEXT
+SUBP1LVS	.equ	4		;ID FOR P1 LIVES DIGIT
+SUBWNDW		.equ	5		;BIG BOX WINDOW ID
+SUBNEW		.equ	6		;NEWOID FOR WAVES
+SUBTIME		.equ	7		;BTIME ID
+SUBMES1		.equ	8		
+SUBMES2		.equ	9
+SUBGOTXT	.equ	0Ah		;GAME OVER TEXT
+SUBSCOR		.equ	0Bh		;SCORE ID
+SUBP2LVS	.equ	0Ch		;ID FOR P2 LIVES DIGIT
+SUBDG1I		.equ	0Dh		;CNTDWN PLYR1
+SUBDG2I		.equ	0Eh		;CNTDWN PLYR2
+
+
+B_TYPE		.set	12
+F_TYPE		.set	1F00h
+B_PLYR		.set	6
+F_PLYR		.set	00C0h
+B_PLYR1		.set	6
+B_PLYR2		.set	7
+
+B_SUBT		.set	5
+F_SUBT		.set	003Fh
+
+JOYLFT		.EQU	2
+JOYRGT		.EQU	3
+JOYUP		.EQU	0
+JOYDN		.EQU	1
+
+;BIT MASKS FOR PLAYER CONTROL TESTING
+
+BMPRYTE		.EQU	3  		;MOVE RIGHT,LEFT,DOWN,UP (LSB)
+BMPLEFT		.EQU	2
+BMPDOWN		.EQU	1
+BMPUP		.EQU	0
+
+;YUNIT EQUATES
+BMPFRYTE	.EQU	7		;FIRE RIGHT,LEFT,DOWN,UP (MSB)
+BMPFLEFT	.EQU	6
+BMPFDOWN	.EQU	5
+BMPFUP		.EQU	4
+
+;BITS USED IN PLAYER CONTROLS (1=ACTIVE)
+
+PRYTE		.EQU	8	
+PLEFT		.EQU	4
+PDOWN		.EQU	2
+PUP		.EQU	1
+
+;YUNIT EQUATES FOR JOYSTICK
+PFRYTE		.EQU	80H
+PFLEFT		.EQU	40H
+PFDOWN		.EQU	20H
+PFUP		.EQU	10H
+
+
+*GAME STATE CONSTANTS
+INAMODE		.equ	1
+ININTRO		.equ	2
+INGAME		.equ	3
+INPLYRINFO	.equ	4
+INHALFPRICE	.equ	5
+INFREEPRICE	.equ	6
+INGAMEOV	.equ	8
+INPLYRDESIGN	.equ	9
+IN_PRE_PLYR_DESIGN  .equ  7
+INDIAG		.equ	-1		;Any neg
+
+*ASCII FONT MISCELLANEOUS EQUATES
+F15SP		.EQU    7EH		;FONT 15 SP CHARACTER, FOR HS ENTRY
+F15RUB		.EQU	F15SP+1		;FONT 15 RUB CHARACTER,FOR HS ENTRY
+F15END		.EQU	F15RUB+1	;FONT 15 END CHARACTER,FOR HS ENTRY
+F15RQUOT	.EQU	F15END+1	;FONT 15 RIGHT QUOTE
+
+* PLAYER DATA STRUCTURE
+
+ply_messages	.equ	00h		;img pntr for player buyin messages
+ply_stick	.equ	20h		;img pntr for stuck on me message
+ply_turbo	.equ	40h		;size of turbo meter remaining
+ply_turbo_dl	.equ	50h		;delay before shrinking ply_turbo
+ply_time	.equ	60h		;amount of play time remaining
+ply_points	.equ	70h		;points this plyr scored
+ply_meter_imgs	.equ	80h		;box,turbo meter,litup img needed for
+used_turbo	.equ	0e0h		;cntr used for replenishing meter
+crds_paid	.equ	0f0h		;For full game purchased
+head_arw_img	.equ	100h		;*Plyr arrow img
+ply_idiot_use	.equ	120h		;Has idiot used turbo?
+PDSIZE		.equ	130h		;size of player data block
+
+
+******************************************************************************
+* PDATA equates for name entry system
+
+PC_CURSPOS	equ	PDATA+00h	;word
+PC_OBJID	equ	PDATA+10h	;word
+PC_TABWIDTH	equ	PDATA+20h	;word
+PC_TABSIZE	equ	PDATA+30h	;word
+PC_TABLE	equ	PDATA+40h	;dword
+PC_STARTX	equ	PDATA+60h	;word
+PC_STARTY	equ	PDATA+70h	;word
+PC_MENUBASE	equ	PDATA+80h	;dword
+PC_MENULEVEL	equ	PDATA+0a0h	;word
+PC_CURSOBJ	equ	PDATA+0b0h	;dword
+
+PC_NAM1OBJ	equ	PDATA+0d0h	;dword
+PC_LOGOOBJ	equ	PC_NAM1OBJ
+PC_NAM2OBJ	equ	PDATA+0f0h	;dword
+PC_PNAME1	equ	PC_NAM2OBJ
+PC_NAM3OBJ	equ	PDATA+110h	;dword
+PC_PNAME2	equ	PC_NAM3OBJ
+PC_NAM4OBJ	equ	PDATA+130h
+PC_NAM5OBJ	equ	PDATA+150h
+PC_NAM6OBJ	equ	PDATA+170h
+
+PC_PIN_NBR1	equ	PDATA+190h	;dword
+PC_PIN_NBR2	equ	PDATA+1b0h	;dword
+PC_PIN_NBR3	equ	PDATA+1d0h	;dword
+PC_PIN_NBR4	equ	PDATA+1f0h	;dword
+
+;PC_MONTHOBJ	equ	PDATA+130h	;dword
+;PC_DAYOBJ	equ	PC_MONTHOBJ
+
+PC_CHARPOS	equ	PDATA+210h	;word
+PC_CENTERX	equ	PDATA+220h	;word
+PC_HEAD1OBJ	equ	PDATA+230h	;dword
+PC_HEAD2OBJ	equ	PDATA+250h	;dword
+PC_CREDOBJS	equ	PDATA+270h	;dword * 3
+
+PC_PLAYNUM	equ	PDATA+2d0h	;word
+PC_SPARE	equ	PDATA+2e0h	;word
+
+PC_FLASHCOUNT	equ	PDATA+2f0h	;word
+PC_DATADDR	equ	PDATA+300h	;dword
+PC_CENTERX2	equ	PDATA+320h	;word
+PC_ARROWOBJ	equ	PDATA+330h	;dword
+PC_CENTERXkit	equ	PDATA+350h	;word
+
+
+******************************************************************************
+* player stats (during game)
+
+PS_2PTS_TRY	equ	0
+PS_2PTS_MADE	equ	1
+PS_3PTS_TRY	equ	2
+PS_3PTS_MADE	equ	3
+PS_DUNKS_TRY	equ	4
+PS_DUNKS_MADE	equ	5
+PS_BLOCKS	equ	6
+PS_OFF_REB	equ	7
+PS_DEF_REB	equ	8
+PS_STEALS	equ	9
+PS_FREE_TRY	equ	10
+PS_TURNOVERS	equ	11
+PS_ASSISTS	equ	12
+PS_INJURY	equ	13
+PS_DBLE_DUNKS	equ	14
+PS_ALLEYOOPS	equ	15
+PS_SIZE		equ	16
+
+
+******************************************************************************
+* player record (while in RAM)
+
+PR_COUNT	equ	0			;games played
+PR_WON		equ	PR_COUNT+16		;games won
+PR_LOST		equ	PR_WON+16
+PR_LASTPLAY	equ	PR_LOST+16
+PR_NAME1	equ	PR_LASTPLAY+16
+PR_NAME2	equ	PR_NAME1+16
+PR_NAME3	equ	PR_NAME2+16
+PR_NAME4	equ	PR_NAME3+16
+PR_NAME5	equ	PR_NAME4+16
+PR_NAME6	equ	PR_NAME5+16
+PR_PIN_NBR1	equ	PR_NAME6+16
+PR_PIN_NBR2	equ	PR_PIN_NBR1+16
+PR_PIN_NBR3	equ	PR_PIN_NBR2+16
+PR_PIN_NBR4	equ	PR_PIN_NBR3+16
+PR_TEAMSDEF	equ	PR_PIN_NBR4+16
+PR_NUMDEF	equ	PR_TEAMSDEF+32
+PR_NUMDEFOLD	equ	PR_NUMDEF+16
+PR_WINSTREAK	equ	PR_NUMDEFOLD+16		;current win streak
+PR_RANK		equ	PR_WINSTREAK+16
+PR_TOTAL_PTS	equ	PR_RANK+16	;these are for CREATE PLAYER
+PR_HEIGHT_PTS	equ	PR_TOTAL_PTS+16
+PR_WEIGHT_PTS	equ	PR_HEIGHT_PTS+16
+PR_SPEED_PTS	equ	PR_WEIGHT_PTS+16
+PR_POWER_PTS	equ	PR_SPEED_PTS+16
+PR_SHOOT_PTS	equ	PR_POWER_PTS+16
+PR_DUNKS_PTS	equ	PR_SHOOT_PTS+16
+PR_STEAL_PTS	equ	PR_DUNKS_PTS+16
+PR_BLOCKS_PTS	equ	PR_STEAL_PTS+16
+PR_HEAD_NBR	equ	PR_BLOCKS_PTS+16
+PR_CREATED_PLYR	equ	PR_HEAD_NBR+16     ;wheter player used CREATE PLAYER
+PR_NICKNAME_NBR	equ	PR_CREATED_PLYR+16
+PR_PTS_SCORED	equ	PR_NICKNAME_NBR+16
+PR_PTS_ALLOWED	equ	PR_PTS_SCORED+16
+PR_UNIFORM_NBR	equ	PR_PTS_ALLOWED+16
+PR_TRIVIA_PTS	equ	PR_UNIFORM_NBR+16
+PR_PRIVILEGES	equ	PR_TRIVIA_PTS+16
+PR_CHECKSUM	equ	PR_PRIVILEGES+16
+PR_SIZE		equ	PR_CHECKSUM+16
+
+******************************************************************************
+* player record (while in CMOS)
+
+PKDPR_COUNT		equ	0			;10 bits
+PKDPR_WON		equ	PKDPR_COUNT+10		;10 bits
+PKDPR_LASTPLAY		equ	PKDPR_WON+10		;11 bits
+PKDPR_NAME1		equ	PKDPR_LASTPLAY+11	;5 bits
+PKDPR_NAME2		equ	PKDPR_NAME1+5   	;5 bits
+PKDPR_NAME3		equ	PKDPR_NAME2+5   	;5 bits
+PKDPR_NAME4		equ	PKDPR_NAME3+5   	;5 bits
+PKDPR_NAME5		equ	PKDPR_NAME4+5   	;5 bits
+PKDPR_NAME6		equ	PKDPR_NAME5+5   	;5 bits
+PKDPR_PIN_NBR1		equ	PKDPR_NAME6+5		; 5 bits
+PKDPR_PIN_NBR2		equ	PKDPR_PIN_NBR1+5	; 5 bits
+PKDPR_PIN_NBR3		equ	PKDPR_PIN_NBR2+5	; 5 bits
+PKDPR_PIN_NBR4		equ	PKDPR_PIN_NBR3+5	; 5 bits
+PKDPR_TEAMSDEF		equ	PKDPR_PIN_NBR4+5	;30 bits (30 teams)
+PKDPR_WINSTREAK		equ	PKDPR_TEAMSDEF+30	; 6 bits
+PKDPR_TOTAL_PTS		equ	PKDPR_WINSTREAK+6   	;7 bits
+PKDPR_HEIGHT_PTS	equ	PKDPR_TOTAL_PTS+7	;4 bits
+PKDPR_WEIGHT_PTS	equ	PKDPR_HEIGHT_PTS+4	;4 bits
+PKDPR_SPEED_PTS		equ	PKDPR_WEIGHT_PTS+4	;4 bits
+PKDPR_POWER_PTS		equ	PKDPR_SPEED_PTS+4	;4 bits
+PKDPR_SHOOT_PTS		equ	PKDPR_POWER_PTS+4	;4 bits
+PKDPR_DUNKS_PTS		equ	PKDPR_SHOOT_PTS+4	;4 bits
+PKDPR_STEAL_PTS		equ	PKDPR_DUNKS_PTS+4	;4 bits
+PKDPR_BLOCKS_PTS	equ	PKDPR_STEAL_PTS+4	;4 bits
+PKDPR_HEAD_NBR		equ	PKDPR_BLOCKS_PTS+4	;8 bits
+PKDPR_CREATED_PLYR	equ	PKDPR_HEAD_NBR+8	;1 bit
+PKDPR_NICKNAME_NBR	equ	PKDPR_CREATED_PLYR+1	;6 bits
+PKDPR_PTS_SCORED	equ	PKDPR_NICKNAME_NBR+6	;16 bits
+PKDPR_PTS_ALLOWED	equ	PKDPR_PTS_SCORED+16    	;16 bits
+PKDPR_UNIFORM_NBR	equ	PKDPR_PTS_ALLOWED+16    ;7 bits
+PKDPR_TRIVIA_PTS	equ	PKDPR_UNIFORM_NBR+7	;8 bits
+PKDPR_PRIVILEGES	equ	PKDPR_TRIVIA_PTS+8	;7 bits
+PKDPR_CHECKSUM		equ	PKDPR_PRIVILEGES+7	;8 bits  (206 bits total)
+PKDPR_SIZE		equ	((PKDPR_CHECKSUM+8+7)/8)*8 ;must be on byte boundary
+
+******************************************************************************
+
+
+;FIX!!!!!!!!!!
+NUM_PRECORDS	equ	410  ;increased size of record..make sure they all fit
+;NUM_PRECORDS	equ	150  ;increased size of record..make sure they all fit
+;;NUM_PRECORDS	equ	290
+
+
+******************************************************************************
+* team record (while in RAM)
+
+TR_PTS_SCORED	equ	0
+TR_PTS_ALLOWED	equ	TR_PTS_SCORED+16
+TR_WINS		equ	TR_PTS_ALLOWED+16
+TR_OFF_RANK	equ	TR_WINS+16
+TR_DEF_RANK	equ	TR_OFF_RANK+16
+TR_TM_CHECKSUM	equ	TR_DEF_RANK+16
+TR_SIZE		equ	TR_TM_CHECKSUM+16
+
+
+******************************************************************************
+* team record (while in CMOS)
+
+PKDTR_PTS_SCORED	equ	0		   	;16 bits
+PKDTR_PTS_ALLOWED	equ	PKDTR_PTS_SCORED+16	;16 bits
+PKDTR_WINS		equ	PKDTR_PTS_ALLOWED+16	;11 bits
+PKDTR_TM_CHECKSUM	equ	PKDTR_WINS+11		; 8 bits  (51 bits total
+PKDTR_SIZE		equ	(((PKDTR_TM_CHECKSUM+8)+7)/8)*8 ;must be on byte boundary
+
+NUM_TM_RECORDS	equ	NUM_TEAMS
+
+******************************************************************************
+* World records record (while in CMOS)
+
+PKDWR_NAME1A		equ	0			;5 bits
+PKDWR_NAME2A		equ	PKDWR_NAME1A+5		;5 bits
+PKDWR_NAME3A		equ	PKDWR_NAME2A+5		;5 bits
+PKDWR_NAME4A		equ	PKDWR_NAME3A+5		;5 bits
+PKDWR_NAME5A		equ	PKDWR_NAME4A+5		;5 bits
+PKDWR_NAME6A		equ	PKDWR_NAME5A+5		;5 bits
+PKDWR_PIN1A		equ	PKDWR_NAME6A+5		;5 bits
+PKDWR_PIN2A		equ	PKDWR_PIN1A+5		;5 bits
+PKDWR_PIN3A		equ	PKDWR_PIN2A+5		;5 bits
+PKDWR_PIN4A		equ	PKDWR_PIN3A+5		;5 bits
+PKDWR_WINSTREAK		equ	PKDWR_PIN4A+5		;8 bits
+PKDWR_NAME1B		equ	PKDWR_WINSTREAK+8	;5 bits
+PKDWR_NAME2B		equ	PKDWR_NAME1B+5		;5 bits
+PKDWR_NAME3B		equ	PKDWR_NAME2B+5		;5 bits
+PKDWR_NAME4B		equ	PKDWR_NAME3B+5		;5 bits
+PKDWR_NAME5B		equ	PKDWR_NAME4B+5		;5 bits
+PKDWR_NAME6B		equ	PKDWR_NAME5B+5		;5 bits
+PKDWR_PIN1B		equ	PKDWR_NAME6B+5		;5 bits
+PKDWR_PIN2B		equ	PKDWR_PIN1B+5		;5 bits
+PKDWR_PIN3B		equ	PKDWR_PIN2B+5		;5 bits
+PKDWR_PIN4B		equ	PKDWR_PIN3B+5		;5 bits
+PKDWR_PTS_IN_GAME	equ	PKDWR_PIN4B+5		;8 bits
+PKDWR_NAME1C		equ	PKDWR_PTS_IN_GAME+8	;5 bits
+PKDWR_NAME2C		equ	PKDWR_NAME1C+5		;5 bits
+PKDWR_NAME3C		equ	PKDWR_NAME2C+5		;5 bits
+PKDWR_NAME4C		equ	PKDWR_NAME3C+5		;5 bits
+PKDWR_NAME5C		equ	PKDWR_NAME4C+5		;5 bits
+PKDWR_NAME6C		equ	PKDWR_NAME5C+5		;5 bits
+PKDWR_PIN1C		equ	PKDWR_NAME6C+5		;5 bits
+PKDWR_PIN2C		equ	PKDWR_PIN1C+5		;5 bits
+PKDWR_PIN3C		equ	PKDWR_PIN2C+5		;5 bits
+PKDWR_PIN4C		equ	PKDWR_PIN3C+5		;5 bits
+PKDWR_REBNDS_IN_GAME	equ	PKDWR_PIN4C+5		;8 bits
+PKDWR_NAME1D		equ	PKDWR_REBNDS_IN_GAME+8	;5 bits
+PKDWR_NAME2D		equ	PKDWR_NAME1D+5		;5 bits
+PKDWR_NAME3D		equ	PKDWR_NAME2D+5		;5 bits
+PKDWR_NAME4D		equ	PKDWR_NAME3D+5		;5 bits
+PKDWR_NAME5D		equ	PKDWR_NAME4D+5		;5 bits
+PKDWR_NAME6D		equ	PKDWR_NAME5D+5		;5 bits
+PKDWR_PIN1D		equ	PKDWR_NAME6D+5		;5 bits
+PKDWR_PIN2D		equ	PKDWR_PIN1D+5		;5 bits
+PKDWR_PIN3D		equ	PKDWR_PIN2D+5		;5 bits
+PKDWR_PIN4D		equ	PKDWR_PIN3D+5		;5 bits
+PKDWR_ASSISTS_IN_GAME	equ	PKDWR_PIN4D+5		;8 bits
+PKDWR_CHECKSUM		equ	PKDWR_ASSISTS_IN_GAME+8	;8 bits  (240 bits total
+PKDWR_SIZE		equ	(((PKDWR_CHECKSUM+8)+7)/8)*8 ;must be on byte boundary
+
+NUM_WRLD_RECS	equ	1
+
+******************************************************************************
+* World records record (while in RAM)
+
+WR_NAME1A		equ	0
+WR_NAME2A		equ	WR_NAME1A+16
+WR_NAME3A		equ	WR_NAME2A+16
+WR_NAME4A		equ	WR_NAME3A+16
+WR_NAME5A		equ	WR_NAME4A+16
+WR_NAME6A		equ	WR_NAME5A+16
+WR_PIN1A		equ	WR_NAME6A+16
+WR_PIN2A		equ	WR_PIN1A+16
+WR_PIN3A		equ	WR_PIN2A+16
+WR_PIN4A		equ	WR_PIN3A+16
+WR_WINSTREAK		equ	WR_PIN4A+16
+WR_NAME1B		equ	WR_WINSTREAK+16
+WR_NAME2B		equ	WR_NAME1B+16
+WR_NAME3B		equ	WR_NAME2B+16
+WR_NAME4B		equ	WR_NAME3B+16
+WR_NAME5B		equ	WR_NAME4B+16
+WR_NAME6B		equ	WR_NAME5B+16
+WR_PIN1B		equ	WR_NAME6B+16
+WR_PIN2B		equ	WR_PIN1B+16
+WR_PIN3B		equ	WR_PIN2B+16
+WR_PIN4B		equ	WR_PIN3B+16
+WR_PTS_IN_GAME		equ	WR_PIN4B+16
+WR_NAME1C		equ	WR_PTS_IN_GAME+16
+WR_NAME2C		equ	WR_NAME1C+16
+WR_NAME3C		equ	WR_NAME2C+16
+WR_NAME4C		equ	WR_NAME3C+16
+WR_NAME5C		equ	WR_NAME4C+16
+WR_NAME6C		equ	WR_NAME5C+16
+WR_PIN1C		equ	WR_NAME6C+16
+WR_PIN2C		equ	WR_PIN1C+16
+WR_PIN3C		equ	WR_PIN2C+16
+WR_PIN4C		equ	WR_PIN3C+16
+WR_REBNDS_IN_GAME	equ	WR_PIN4C+16
+WR_NAME1D		equ	WR_REBNDS_IN_GAME+16	;5 bits
+WR_NAME2D		equ	WR_NAME1D+16		;5 bits
+WR_NAME3D		equ	WR_NAME2D+16		;5 bits
+WR_NAME4D		equ	WR_NAME3D+16		;5 bits
+WR_NAME5D		equ	WR_NAME4D+16		;5 bits
+WR_NAME6D		equ	WR_NAME5D+16		;5 bits
+WR_PIN1D		equ	WR_NAME6D+16		;5 bits
+WR_PIN2D		equ	WR_PIN1D+16		;5 bits
+WR_PIN3D		equ	WR_PIN2D+16		;5 bits
+WR_PIN4D		equ	WR_PIN3D+16		;5 bits
+WR_ASSISTS_IN_GAME	equ	WR_PIN4D+16		;8 bits
+WR_CHECKSUM		equ	WR_ASSISTS_IN_GAME+16
+WR_SIZE			equ	WR_CHECKSUM+16
+
+
+
+******************************************************************************
+* team record (while in CMOS)
+
+PKDTR_PTS_SCORED	equ	0		   	;16 bits
+PKDTR_PTS_ALLOWED	equ	PKDTR_PTS_SCORED+16	;16 bits
+PKDTR_WINS		equ	PKDTR_PTS_ALLOWED+16	;11 bits
+PKDTR_TM_CHECKSUM	equ	PKDTR_WINS+11		; 8 bits  (51 bits total
+PKDTR_SIZE		equ	(((PKDTR_TM_CHECKSUM+8)+7)/8)*8 ;must be on byte boundary
+
+NUM_TM_RECORDS	equ	NUM_TEAMS
+
+
+RS_RECORD_NUM	equ	0
+RS_GAMES_PLAYED	equ	RS_RECORD_NUM+10h
+RS_WINS		equ	RS_GAMES_PLAYED+10h
+RS_AVERAGE	equ	RS_WINS+10h
+RS_TEAMSDEF	equ	RS_AVERAGE+10h
+RS_STREAK	equ	RS_TEAMSDEF+10h
+RS_OFF_RANK	equ	RS_STREAK+10h
+RS_DEF_RANK	equ	RS_OFF_RANK+10h
+RS_TRIVIA_PTS	equ	RS_DEF_RANK+10h
+RS_SIZE		equ	RS_TRIVIA_PTS+10h
+
+
+******************************************************************************
+* shot type equates (for play by play speech calls)
+
+DESPERATION	equ	0
+LONG_RANGE	equ	1
+_2_POINTS	equ	2
+_3_POINTS	equ	3
+HOOK_SHOT	equ	4
+LAY_UP		equ	5
+FINGER_ROLL	equ	6
+DUNK_SHORT	equ	7
+DUNK_MED	equ	8
+DUNK_LONG	equ	9
+FADE_AWAY	equ	10
+FADE_IN		equ	11
+
+******************************************************************************
+

@@ -1,0 +1,69 @@
+#
+.SUFFIXES : .EXE .ASM .OBJ .C
+#
+O =	NDSP1.OBJ MAIN.OBJ UTIL.OBJ PAL.OBJ MPROC.OBJ\
+	BAKGND.OBJ BGNDTBL.OBJ BGNDPAL.OBJ IMGTBL.OBJ IMGPAL.OBJ\
+	BB.OBJ BB3.OBJ PLYR.OBJ PLYR2.OBJ PLYRAT.OBJ PLYRSEQ.OBJ PLYRDSEQ.OBJ\
+	PLYRSEQ2.OBJ SCORE.OBJ SCORE2.OBJ BB2.OBJ BB4.OBJ\
+	DRONE.OBJ\
+	SOUNDS.OBJ PATCH.OBJ TEXT.OBJ PLYR3.OBJ\
+	PLYRAT2.OBJ PLYRLSEQ.OBJ PLYRRSEQ.OBJ\
+	ATTRACT.OBJ PLYRSTND.OBJ SELECT.OBJ\
+	SELECT2.OBJ STRING.OBJ RECORD.OBJ SPEECH.OBJ\
+	ADJUST.OBJ AUDIT.OBJ TEST.OBJ DIAG.OBJ MENU.OBJ HSTD.OBJ \
+	MAKEPLR.OBJ MAKEPLR2.OBJ SCREEN.OBJ SELECT3.OBJ SELECT4.OBJ PLYRAT3.OBJ \
+	PLYRDSQ2.OBJ
+#	PLYRDSQ2.OBJ UNZIP.OBJ
+
+
+bb.out: $(O)
+	gsplnk bb.cmd
+#	copy c:\bb.out c:\video\bball
+#	copy c:\bb.map c:\video\bball
+	tv bb /v
+$(O): $*.asm
+
+ndsp1.obj:    world.equ disp.equ court.tbl
+main.obj:     sys.equ
+bb.obj:       world.equ bbsec.equ court.tbl imgpal2.asm sys.equ imgpal7.asm
+plyr.obj:     world.equ plyr.equ disp.equ court.tbl imgtbl2.glo sys.equ
+plyr2.obj:    world.equ plyr.equ ball.tbl sys.equ
+plyr3.obj:    world.equ plyr.equ plyrhd2.tbl imgtbl2.glo
+plyrat.obj:   plyrhd.tbl plyr.equ
+plyrat2.obj:  plyrhd.tbl plyr.equ sys.equ
+plyrat3.obj:  imgtbl.asm
+plyrseq.obj:  plyrseq.tbl plyr.equ stand.tbl
+plyrrseq.obj: plyrseq.tbl plyr.equ stand.tbl
+plyrseq2.obj: plyrseq2.tbl plyr.equ flail.tbl
+plyrdseq.obj: plyrdseq.tbl plyrdsq2.tbl plyr.equ
+plyrdsq2.obj: plyrdseq.tbl plyrdsq2.tbl plyr.equ
+plyrlseq.obj: plyr.equ
+#plyrlseq.obj: plyr.equ layup.tbl
+#plyrlseq.obj: plyrd2sq.tbl plyr.equ layup.tbl
+plyrstnd.obj: stand.tbl imgtbl2.glo plyrhd3.tbl
+bb2.obj:      plyrseq.tbl plyrdseq.tbl sys.equ
+bb3.obj:      world.equ
+bb4.obj:      plyrhd.tbl plyrseq3.tbl
+score.obj:    world.equ leds.tbl arrow.tbl sys.equ
+score2.obj:   world.equ imgtbl2.glo sys.equ
+drone.obj:    world.equ plyr.equ
+record.obj:   world.equ
+audit.obj:    link.equ menu.equ
+hstd.obj:     link.equ
+menu.obj:     link.equ menu.equ imgtbl2.glo
+test.obj:     link.equ menu.equ
+attract.obj:  imgtbl.asm imgtbl2.glo
+makeplr.obj:  imgtbl.asm imgtbl2.glo
+makeplr2.obj: imgtbl.asm imgtbl2.glo
+screen.obj:   imgtbl.asm imgtbl2.glo
+select.obj:   mugshot.tbl imgtbl2.glo
+select2.obj:  mugshot.tbl imgtbl2.glo sys.equ
+select3.obj:  imgtbl.asm imgtbl2.glo
+select4.obj:  imgtbl.asm imgtbl2.glo
+diag.obj:     imgtbl2.glo
+speech.obj:   imgtbl2.glo
+adjust.obj:   menu.equ
+mproc.obj:    mproc.equ
+text.obj:     text.tbl mugshot.tbl
+unzip.obj:    bbvda.tbl
+

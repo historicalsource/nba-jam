@@ -1,0 +1,164 @@
+*.Last mod - 4/3/92 16:49
+
+EOSINT	.set	254+20		;End of screen
+
+;Define names of I/O registers
+HESYNC	.set	0C0000000h
+HEBLNK	.set	0C0000010h
+HSBLNK	.set	0C0000020h
+HTOTAL	.set	0C0000030h
+VESYNC	.set	0C0000040h
+VEBLNK	.set	0C0000050h
+VSBLNK	.set	0C0000060h
+VTOTAL	.set	0C0000070h
+DPYCTL	.set	0C0000080h
+DPYSTRT	.set	0C0000090h
+DPYINT	.set	0C00000A0h
+CONTROL	.set	0C00000B0h
+HSTDATA	.set	0C00000C0h
+HSTADRL	.set	0C00000D0h
+HSTADRH	.set	0C00000E0h
+HSTCTLL	.set	0C00000F0h
+HSTCTLH	.set	0C0000100h
+INTENB	.set	0C0000110h
+INTPEND	.set	0C0000120h
+CONVSP	.set	0C0000130h
+CONVDP	.set	0C0000140h
+PSIZE	.set	0C0000150h
+PMASK	.set	0C0000160h
+HCOUNT	.set	0C00001C0h
+VCOUNT	.set	0C00001D0h
+DPYADR	.set	0C00001E0h
+REFCNT	.set	0C00001F0h
+hesync	.set	0C0000000h
+heblnk	.set	0C0000010h
+hsblnk	.set	0C0000020h
+htotal	.set	0C0000030h
+vesync	.set	0C0000040h
+veblnk	.set	0C0000050h
+vsblnk	.set	0C0000060h
+vtotal	.set	0C0000070h
+dpyctl	.set	0C0000080h
+dpystrt	.set	0C0000090h
+dpyint	.set	0C00000A0h
+control	.set	0C00000B0h
+hstdata	.set	0C00000C0h
+hstadrl	.set	0C00000D0h
+hstadrh	.set	0C00000E0h
+hstctll	.set	0C00000F0h
+hstctlh	.set	0C0000100h
+intenb	.set	0C0000110h
+intpend	.set	0C0000120h
+convsp	.set	0C0000130h
+convdp	.set	0C0000140h
+psize	.set	0C0000150h
+pmask	.set	0C0000160h
+hcount	.set	0C00001C0h
+vcount	.set	0C00001D0h
+dpyadr	.set	0C00001E0h
+refcnt	.set	0C00001F0h
+
+X	.set	1
+Y	.set	10000h
+
+;	Masks for I/O register fields
+
+;Display control register bit definitions
+HSD	.set	1		;Horizontal Sync Direction
+DUDATE	.set	1111111100B	;Display update (2-9)
+ORG	.set	400h		;ORiGin (1 = lower left; 0 = upper left)
+SRT	.set	800h		;Shift Reg Transfer enable
+SRE	.set	1000h		;Screen Refresh Enable
+DXV	.set	2000h		;Disable eXternal Video
+NIL	.set	4000h		;Non-InterLaced video enable
+ENV	.set	8000h		;ENable Video
+
+;Bit fields within control register
+CD	.set	08000h		;Mask for Cache Dis bit in CONTROL
+PPOP	.set	07C00h		;Mask for Pix Proc OPer in CONTROL
+PBH	.set	0200h		;Mask for PBH bit in CONTROL
+PBV	.set	0100h		;Mask for PBV bit in CONTROL
+WIN	.set	0C0h		;Mask for Window field in CONTROL
+T	.set	020h		;Mask for Transparency field in CONTROL
+RR	.set	018h		;Mask for dram Refresh Rate bit in CONTROL
+RM	.set	4		;Mask for dram Refresh Mode bit in CONTROL
+
+;Bits within intpend and intenb
+X1E	.set	2		;Mask for Ext Int 1 in INTPEND
+X2E	.set	4		;Mask for Ext Int 2 in INTPEND 
+HIE	.set	200h		;Mask for Host Int in INTPEND
+DIE	.set	400h		;Mask for Disp Int in INTPEND
+WVP	.set	800h		;Mask for Window Violation in INTPEND
+;Bit positions in intpend
+DIP	.equ	10		;Bit test for display interrupt pending
+
+;Fields within HSTCTLL
+MSGIN		.set	7	;Message from Host to GSP
+INTIN_MSK	.set	8	;GSP can write 0 to this bit
+INTIN_BIT	.set	3	;GSP can write 0 to this bit
+INTOUT_MSK	.set	80h	;GSP can write 1 to this bit
+INTOUT_BIT	.set	7	;GSP can write 1 to this bit
+
+;Options for window field in control reg
+W1	.set	040h	;Int on attempt to write outside window.
+W2	.set	080h	;Inhibit all writes, Int on attempt to write within window
+W3	.set	0C0h	;inhibit writes outside window, no interrupt
+
+;Options for pixel proc operations in control reg 
+P_AND	.set	0400h
+P_ANDNOT .set	0800h
+P_ZERO	.set	0C00h
+P_ORNOT	.set	1000h
+P_XNOR	.set	1400h
+P_NEG	.set	1800h
+P_NOR	.set	1C00h
+P_OR	.set	2000h
+P_NOP	.set	2400h
+P_XOR	.set	2800h
+P_NOTAND .set	2C00h
+P_ONES	.set	3000h
+P_NOTOR	.set	3400h
+P_NAND	.set	3800h
+P_NOT	.set	3C00h
+P_ADD	.set	4000h
+P_ADDS	.set	4400h
+P_SUB	.set	4800h
+P_SUBS	.set	4C00h
+P_MAX	.set	5000h
+P_MIN	.set	5400h
+
+;Special A-file registers
+fp	.set	a13		;Frame, param. stack
+pstk	.set	a14		;Parameter stack pointer
+frame_pntr	.set	a14	;Used by C Compiler
+
+;B register graphics definitions
+saddr	.set	b0
+sptch	.set	b1
+daddr	.set	b2
+dptch	.set	b3
+offset	.set	b4
+wstart	.set	b5
+wend	.set	b6
+dydx	.set	b7
+color0	.set	b8
+color1	.set	b9
+count	.set	b10
+inc1	.set	b11
+inc2	.set	b12
+pattrn	.set	b13
+SADDR	.set	b0
+SPTCH	.set	b1
+DADDR	.set	b2
+DPTCH	.set	b3
+OFFSET	.set	b4
+WSTART	.set	b5
+WEND	.set	b6
+DYDX	.set	b7
+COLOR0	.set	b8
+COLOR1	.set	b9
+COUNT	.set	b10
+INC1	.set	b11
+INC2	.set 	b12
+PATTRN	.set	b13
+

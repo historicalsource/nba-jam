@@ -1,0 +1,582 @@
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;1 ATLANTA HAWKS
+
+	.word  07,04,05,05 
+	.word  07,05,06,06,06 ;STACEY AUGMON      6'8" 205  thin
+ 
+	.word  06,03,05,03 
+	.word  06,03,07,05,03 ;MOOKIE BLAYLOCK    6'1" 185  reg 
+
+	.word  07,06,07,07 
+	.word  07,06,05,06,07 ;STEVE SMITH        6'8" 208  reg
+     
+	.word  07,03,05,06 
+	.word  05,06,05,03,06 ;ALAN HENDERSON     ____________
+
+	.word  06,07,05,06  
+	.word  04,05,04,05,08 ;KEN NORMAN         6'8" 223  reg
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;2 BOSTON CELTICS
+ 
+	.word  08,02,06,02 
+	.word  06,01,05,04,02 ;DEE BROWN          6'1" 161 reg
+     
+	.word  07,02,08,01 
+	.word  07,01,06,05,02 ;DANA BARROS        5'11" 165 reg
+
+	.word  03,08,04,07  
+	.word  02,06,05,03,08 ;ERIC MONTROSS      ____________
+
+	.word  07,08,07,07 
+	.word  05,06,05,06,07 ;DINO RADJA         6'11" 225 thin 
+
+	.word  07,06,05,06 
+	.word  06,05,06,06,06 ;RICK FOX           6'7"  231 reg
+
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;3 CHARLOTTE HORNETS
+         
+	.word  08,03,07,04 
+	.word  05,04,05,07,05 ;DELL CURRY         6'5" 200  thin
+
+	.word  08,03,05,06 
+	.word  06,05,06,03,04 ;KENDALL GILL       6'5" 200 thin
+
+	.word  07,07,07,07 
+	.word  03,04,04,08,05 ;LARRY JOHNSON      6'7" 250 fat
+
+	.word  06,06,08,06 
+	.word  04,04,03,07,05 ;GLEN RICE          6'8" 220 reg
+
+	.word  03,07,04,06 
+	.word  02,05,04,03,08 ;GEORGE ZIDEK       _____________
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;4 CHICAGO BULLS
+
+	.word  08,08,08,09 
+	.word  09,08,06,07,07 ;SCOTTIE PIPPEN     6'7"  225  thin
+
+	.word  07,09,02,03 
+	.word  04,05,04,06,09 ;DENNIS RODMAN      6'8"  210 thin
+
+	.word  07,03,05,06 
+	.word  05,05,07,06,05 ;TONI KUKOC         6'11" 230 ex thin
+
+	.word  05,07,05,07 
+	.word  02,04,06,02,08 ;LUC LONGLEY        7'2"  265 fat
+
+	.word  06,02,08,01 
+	.word  03,02,05,05,03 ;STEVE KERR         ____________
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;5 CLEVELAND CAVALIERS
+       
+	.word  06,08,06,07 
+	.word  03,06,04,07,07 ;TYRONE HILL          6'9"  245 reg
+
+	.word  05,06,07,05            
+	.word  03,04,04,06,06 ;CHRIS MILLS          6'6"  216 fat
+
+	.word  07,05,06,06 
+	.word  05,04,05,06,05 ;BOBBY PHILLS         6'5"  217 reg
+
+	.word  06,05,05,03         
+	.word  04,03,07,04,03 ;TERRELL BRANDON      6'0"  180 thin
+
+	.word  05,07,06,05 
+	.word  03,04,05,05,06 ;DANNY FERRY          6'10" 245 reg
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;6 DALLAS MAVERICKS
+
+	.word  06,05,05,05 
+	.word  05,04,05,04,05 ;JIM JACKSON          6'6"  220 reg
+           
+	.word  07,05,04,05 
+	.word  06,06,08,05,05 ;JASON KIDD           ______________
+
+	.word  07,07,07,08 
+	.word  04,07,05,08,07 ;JAMAL MASHBURN       6'8"  240  thin
+
+	.word  05,06,05,07 
+	.word  04,06,03,05,07 ;POPEYE JONES         6'8"  250 reg
+
+	.word  06,05,07,05 
+	.word  05,05,04,05,05 ;GEORGE McCLOUD       6'8"  215 thin
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;7 DENVER NUGGETS
+
+	.word  08,04,07,03 
+	.word  07,04,05,07,04 ;MAHMOUD ABDUL-RAUF    6'1" 168 ex thin
+
+	.word  06,08,04,08 
+	.word  04,09,05,06,08 ;DIKEMBE MUTOMBO       7'2" 245 reg
+
+	.word  05,05,05,05 
+	.word  05,05,05,05,06 ;ANTONIO McDYESS      ______________
+
+	.word  06,04,05,06 
+	.word  05,05,06,04,06 ;JALEN ROSE           ______________
+
+	.word  05,06,06,05 
+	.word  05,05,05,06,05 ;DALE ELLIS           6'7" 215 reg
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;8 DETROIT PISTONS
+
+	.word  06,04,07,03 
+	.word  06,04,05,07,04 ;JOE DUMARS           6'3"  195 thin
+
+	.word  07,06,06,07 
+	.word  05,05,04,06,07 ;GRANT HILL           _____________
+
+	.word  04,06,06,05 
+	.word  04,05,04,06,04 ;TERRY MILLS          6'10" 250 fat
+
+	.word  05,08,05,07 
+	.word  04,07,04,05,08 ;OTIS THORPE          6'10" 246 reg
+
+	.word  06,04,05,04 
+	.word  05,03,06,04,04 ;ALAN HOUSTON         6'6"  200 thin
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;9 GOLDEN STATE WARRIORS
+         
+	.word  07,05,07,03 
+	.word  05,04,06,06,03 ;TIM HARDAWAY         6'0"  195  reg
+
+	.word  08,04,07,04 
+	.word  06,04,04,06,04 ;LATRELL SPREWELL     6'5"  190 ex thin
+
+	.word  04,05,08,05 
+	.word  04,04,06,06,06 ;CHRIS MULLIN         6'7" 215  reg
+
+	.word  05,07,05,07 
+	.word  04,06,04,04,07 ;RONY SEIKALY         6'11" 252 reg
+
+	.word  06,07,05,07 
+	.word  04,06,04,03,07 ;JOE SMITH            _____________
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;10 HOUSTON ROCKETS
+
+	.word  07,08,07,08 
+	.word  04,08,05,07,08 ;HAKEEM OLAJUWON      7'0"  255 reg
+
+	.word  07,04,05,06 
+	.word  04,04,05,07,05 ;CLYDE DREXLER        6'7"  222 thin
+
+	.word  06,05,06,06 
+	.word  05,05,05,06,06 ;ROBERT HORRY         6'10" 220 thin
+
+	.word  08,03,06,03 
+	.word  06,03,06,06,02 ;SAM CASSELL          6'3"  195 thin
+
+	.word  05,06,05,05 
+	.word  05,05,05,05,05 ;KENNY SMITH	    ______________	
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;11 INDIANA PACERS
+
+	.word  07,04,07,06 
+	.word  05,05,05,07,05 ;REGGIE MILLER        6'7"  185 ex thin
+
+	.word  05,06,04,06 
+	.word  04,06,04,05,06 ;DALE DAVIS           6'11" 230 reg
+
+	.word  04,08,06,07 
+	.word  02,07,04,05,07 ;RIK SMITS            7'4"  265 ex thin
+
+	.word  05,06,04,05 
+	.word  04,05,04,04,05 ;DEREK McKEE          6'10" 225 reg
+
+	.word  06,05,04,05 
+	.word  05,04,03,04,05 ;MARK JACKSON         6'3"  192 fat
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;12 L.A. CLIPPERS
+
+	.word  05,07,05,06 
+	.word  05,06,05,05,06 ;LOY VAUGHT           6'9" 240 reg
+
+	.word  06,05,05,05 
+	.word  05,05,05,05,05 ;RODNEY ROGERS	    _____________
+
+	.word  06,05,06,05 
+	.word  05,04,06,05,04 ;LAMOND MURRAY        _____________
+
+	.word  05,05,04,05 
+	.word  05,05,05,05,05 ;BRIAN WILLIAMS       _____________
+
+	.word  06,04,06,04 
+	.word  06,04,06,04,04 ;BRENT BARRY          _____________
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;13 L.A. LAKERS
+
+	.word  08,03,06,03 
+	.word  06,03,06,07,04 ;NICK VAN EXEL        6'1"  170 ex thin
+
+	.word  05,07,06,07 
+	.word  04,06,04,06,07 ;VLADE DIVAC          7'1"  260 thin
+
+	.word  06,05,05,07 
+	.word  04,05,04,05,06 ;CEDRIC CEBALLOS      6'7"  220  thin
+
+	.word  06,06,05,06 
+	.word  04,06,04,05,06 ;ELDON CAMPBELL       6'11" 230  ex thin
+
+	.word  06,05,04,05 
+	.word  05,05,05,04,05 ;EDDIE JONES          ________________
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;14 MIAMI HEAT
+
+	.word  05,06,06,06 
+	.word  04,04,05,05,05 ;BILLY OWENS         6'9"  220 reg
+
+	.word  05,07,04,06 
+	.word  04,06,04,04,06 ;KEVIN WILLIS        7'0"  240 reg
+
+	.word  05,06,06,05 
+	.word  04,05,05,04,05 ;SASHA DANILOVIC     _____________
+
+	.word  06,08,06,09 
+	.word  03,08,04,06,07 ;ALONZO MOURNING     6'10" 240 reg
+
+	.word  06,05,05,05 
+	.word  06,04,05,05,04 ;BIMBO COLES        6'2"  185 reg
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;15 MILWAUKEE BUCKS
+
+	.word  06,07,06,08 
+	.word  04,06,04,06,07 ;VIN BAKER          6'11" 234 thin
+
+	.word  05,07,07,06 
+	.word  04,05,04,06,05 ;GLENN ROBINSON     ______________
+
+	.word  06,05,05,05 
+	.word  05,05,06,05,05 ;SHAWN RESPERT	  ______________
+
+	.word  04,07,04,06 
+	.word  03,06,04,04,06 ;BENOIT BENJAMIN    7'0"  265  fat
+
+	.word  05,05,05,05 
+	.word  05,04,06,05,05 ;SHERMAN DOUGLAS    6'1"  180  fat
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;16 MINNESOTA TIMBERWOLVES
+
+	.word  07,05,04,07 
+	.word  05,04,04,05,05 ;ISIAH RIDER        6'5"  215  thin
+
+	.word  05,06,06,06 
+	.word  04,05,05,06,04 ;CHRISTIAN LAETNER  6'11" 235  reg
+
+	.word  06,05,05,06 
+	.word  04,05,05,04,06 ;SEAN ROOKS         6'10" 260  reg
+
+	.word  05,06,06,05 
+	.word  04,05,04,06,06 ;TOM GUGLIOTTA      6'10" 240  reg
+
+	.word  06,05,04,07 
+	.word  03,06,03,03,06 ;KEVIN GARNETT      ____________
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;17 NEW JERSEY NETS
+
+	.word  07,04,06,03 
+	.word  06,03,06,06,04 ;KENNY ANDERSON     6'1" 168  ex thin 
+
+	.word  05,07,05,06 
+	.word  04,06,04,05,06 ;ARMON GILLIAM      6'9" 245  fat
+
+	.word  05,05,05,06 
+	.word  04,05,05,03,06 ;ED O'BANNON        ______________
+
+	.word  03,06,03,08 
+	.word  01,09,03,04,07 ;SHAWN BRADLEY      7'6" 248  ex thin
+
+	.word  06,05,05,04 
+	.word  06,04,06,05,04 ;KEVIN EDWARDS      6'3" 210  reg
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;18 NEW YORK KNICKS
+
+	.word  05,08,07,08 
+	.word  04,07,05,08,07 ;PATRICK EWING     7'0" 240 reg
+
+	.word  05,06,05,05 
+	.word  03,05,04,06,06 ;ANTHONY MASON     6'7" 250 fat
+
+	.word  05,05,05,04     
+	.word  05,04,05,05,04 ;DEREK HARPER      6'4" 206 reg
+
+	.word  05,08,05,07 
+	.word  03,06,05,05,08 ;CHARLES OAKLEY    6'9" 245 fat
+
+	.word  06,06,05,06 
+	.word  06,05,05,05,04 ;JOHN STARKS       6'5" 185 thin
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;19 ORLANDO MAGIC
+
+	.word  07,06,06,08 
+	.word  06,06,06,07,06 ;ANFERNEE HARDAWAY  6'7"  200 ex thin
+
+	.word  05,06,05,06 
+	.word  04,06,05,04,06 ;HORACE GRANT       6'10" 220 reg
+
+	.word  05,06,06,05 
+	.word  04,05,05,06,05 ;NICK ANDERSON      6'6" 205  reg
+
+	.word  06,04,05,05 
+	.word  04,04,05,04,05 ;DENNIS SCOTT       6'8" 229  reg
+
+	.word  04,06,04,07 
+	.word  03,05,03,02,06 ;JON KONCAK         7'0" 250 reg
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;20 PHILADELPHIA  76ers
+
+	.word  05,06,06,06 
+	.word  04,06,05,07,06 ;CLARENCE WEATHERSPOON  6'7"  240 fat
+
+	.word  05,05,04,06 
+	.word  04,05,04,04,05 ;SHARONE WRIGHT         ______________
+
+	.word  06,05,05,06 
+	.word  05,04,05,05,05 ;JERRY STACKHOUSE       ______________
+
+	.word  05,07,07,06 
+	.word  03,05,03,06,06 ;DERRICK COLEMAN        6'10" 260 fat
+
+	.word  07,04,05,04 
+	.word  05,03,06,04,04 ;VERNON MAXWELL         6'4"  190 thin
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;21 PHOENIX SUNS
+
+	.word  06,04,06,05 
+	.word  05,04,05,06,04 ;KEVIN JOHNSON    6'1" 190  ex thin
+
+	.word  03,06,05,05 
+	.word  04,05,03,06,06 ;DANNY MANNING    6'10" 234 reg
+
+	.word  04,06,05,06 
+	.word  04,05,05,05,06 ;WAYMAN TISDALE   6'9" 260 fat
+
+	.word  05,05,07,04 
+	.word  04,03,04,05,05 ;WESLEY PERSON    ____________
+
+	.word  06,06,05,06 
+	.word  05,05,05,04,05 ;MICHAEL FINLEY   ____________
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;22 PORTLAND TRAILBLAZERS
+
+	.word  07,05,06,05 
+	.word  06,04,05,06,04 ;ROD STRICKLAND   6'3"   185  reg
+
+	.word  05,06,06,06 
+	.word  04,05,04,06,06 ;CLIFF ROBINSON   6'10"  225  thin
+
+	.word  04,07,06,05 
+	.word  03,06,04,04,06 ;ARVYDAS SABONIS  _______________
+
+	.word  06,05,04,06 
+	.word  04,05,04,04,06 ;BUCK WILLIAMS    _______________
+    
+	.word  08,03,05,04 
+	.word  06,03,06,04,04 ;RANDOLPH CHILDRESS  ____________
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;23 SACRAMENTO KINGS
+
+	.word  06,06,05,07 
+	.word  04,06,04,04,06 ;WALT WILLIAMS    6'8" 230  reg
+
+	.word  06,05,06,05 
+	.word  05,04,05,06,04 ;MITCH RICHMOND   6'5" 215   reg
+
+	.word  05,06,05,06 
+	.word  04,05,04,06,06 ;BRIAN GRANT      ______________
+
+	.word  04,05,06,05 
+	.word  04,04,05,06,05 ;SARUNAS MARCIULIONIS  6'5" 215 reg
+
+	.word  08,03,05,02 
+	.word  07,02,06,04,03 ;TYUS EDNEY      ______________
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;24 SAN ANTONIO SPURS
+
+	.word  07,04,05,06 
+	.word  04,05,05,06,05 ;SEAN ELLIOTT     6'8" 215  thin
+
+	.word  07,04,05,04 
+	.word  06,04,06,05,04 ;AVERY JOHNSON    5'11" 175 ex thin
+
+	.word  06,08,06,08 
+	.word  04,08,04,05,08 ;DAVID ROBINSON   7'1" 235  reg
+
+	.word  04,06,06,05 
+	.word  04,04,05,05,05 ;CHUCK PERSON     6'8" 225  reg
+
+	.word  05,05,05,04 
+	.word  04,05,06,06,05 ;VINNY DEL NEGRO  6'4"  200    thin
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;25 SEATTLE SUPERSONICS
+
+	.word  07,07,06,09 
+	.word  04,07,04,06,07 ;SHAWN KEMP       6'10" 245 reg
+
+	.word  05,06,06,05 
+	.word  04,05,05,06,05 ;DETLEF SCHREMPF  6'10' 230 thin
+
+	.word  06,04,05,05 
+	.word  06,04,05,05,04 ;HERSEY HAWKINS   6'3"  190 thin
+
+	.word  07,04,05,05 
+	.word  06,04,06,06,04 ;GARY PAYTON      6'4"  190 ex thin
+
+	.word  07,04,05,05 
+	.word  05,04,06,04,04 ;SHERELL FORD    6'6" 235  thin
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;26 TORONTO RAPTORS
+
+	.word  06,05,05,05 
+	.word  06,04,05,05,05 ;CARLOS ROGERS       ______________
+
+	.word  05,06,05,05 
+	.word  04,06,05,04,05 ;WILLIE ANDERSON     6'8" 200 reg
+
+	.word  08,03,06,03 
+	.word  06,04,06,06,04 ;DAMON STOUDAMIRE    _______________
+
+	.word  04,07,05,07 
+	.word  04,06,04,05,06 ;OLIVER MILLER       6'9" 290 ex fat
+
+	.word  06,05,05,05 
+	.word  05,04,05,05,05 ;TRACY MURRAY        6'7" 228 reg
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;27 UTAH JAZZ
+
+	.word  05,05,06,04 
+	.word  05,04,05,06,04 ;JEFF HORNACEK       6'4" 190 reg
+
+	.word  06,05,05,06 
+	.word  05,05,05,04,05 ;DAVID BENOIT        6'8" 220 thin
+
+	.word  06,04,07,04 
+	.word  06,04,08,08,04 ;JOHN STOCKTON       6'1" 175 ex thin
+        
+	.word  05,08,07,07 
+	.word  04,06,05,07,06 ;KARL MALONE         6'9" 256 fat
+
+	.word  05,06,05,06 
+	.word  04,06,04,05,08 ;CHRIS MORRIS        6'8" 220  reg
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;28 VANCOUVER GRIZZLIES
+
+	.word  07,04,05,04 
+	.word  06,04,06,05,04 ;GREG ANTHONY      6'2" 185  ex thin
+
+	.word  05,06,05,05 
+	.word  04,05,05,05,05 ;BLUE EDWARDS      6'4" 228  reg
+
+	.word  05,06,05,06 
+	.word  03,06,04,05,06 ;KENNY GATTISON    6'8" 252  fat
+
+	.word  04,07,05,07 
+	.word  03,06,04,04,07 ;BRYANT REEVES     _______________
+
+	.word  06,05,06,05 
+	.word  04,04,05,05,04 ;ERIC MURDOCK       _______________
+
+;Speed, Power, Shoot, Dunk
+;Steal, Block, Pass ability, Clutch, Rebounding
+
+;29 WASHINGTON BULLETS
+
+	.word  05,06,06,06        
+	.word  04,05,04,06,06 ;JUWAN HOWARD      _____________
+
+	.word  06,05,06,06 
+	.word  06,04,06,05,04 ;CALBERT CHEANEY   6'7" 209  reg
+
+	.word  06,08,05,08 
+	.word  04,07,04,06,07 ;CHRIS WEBBER      6'10" 260 fat
+
+	.word  05,05,05,05 
+	.word  05,05,05,05,05 ;ROBERT PACK       6'2" 180 thin
+
+	.word  04,07,04,07 
+	.word  02,08,03,04,08 ;GHEORGHE MURESAN  7'7" 315 thin
+

@@ -1,0 +1,354 @@
+**************************************************************************
+* game.equ - All .equ constants to be used throughout the game
+*
+*.Last mod - 3/16/93 16:42
+**************************************************************************
+
+QRTRTIME	.EQU	[300h,0h]	;Time of each quarter
+
+;PROCESS ID'S
+
+CYCPID		.equ	109
+BUYINPID	.equ	110
+GMEOVPID	.equ	113
+COLRPID		.equ    120             ;COLOR CYCLE FROM INTERRUPT
+DG1PID		.equ    121             ;CNTDWN DIGIT PROC
+DG2PID		.equ    122             ;CNTDWN DIGIT PROC
+FADEPID		.equ    123             ;SOUND FADER
+CP_PID1		.equ    124		;Credit page
+CP_PID2		.equ    125		;^
+LC_PID		.equ	126+8000h	;Left coin (Indestructible)
+RC_PID		.equ	127+8000h
+CC_PID		.equ	128+8000h
+SLAM_PID	.equ	129+8000h
+DIAG_PID	.equ	130
+PSWPID		.equ	131		;Plyr start switch
+
+clockid		.equ	132		;24 second shot clock proc & img id
+tvid		.equ	133		;tv score plate images
+gclockid	.equ	134		;game clock
+tvscrid		.equ	135		;big tv score images
+bclockid	.equ	136		;big game clock
+creditid	.equ	137		;credit info at top score board
+stickid		.equ	138		;cpu message stick procid
+qrtrid		.equ	139		;qrtr imgs at scorers table
+arwid		.equ	140		;Plyr arrow process
+
+p1stickid	.equ	141		;message stick on ids for p1
+p2stickid	.equ	142
+p3stickid	.equ	143
+p4stickid	.equ	144		;p4
+TIPID		.equ	145
+ARWPID		.equ	146
+adpid		.equ	147
+takepid		.equ	148
+
+AMODE_PID	.equ	100h		;Attract mode
+INTRO_PID	.equ    300h		;Intro/player selection
+HISC_PID	.equ	600h		;Hiscore table entry
+ENDQRTR_PID	.equ	800h		;Hint pages/Halftime pages
+
+P1_PID		.equ	1000h		;P1 main loop
+
+P2_PID		.equ	1100h
+
+P3_PID		.equ	1200h
+
+P4_PID		.equ	1300h
+
+JOY_PID		.equ	2000h		;Joystick scanner
+COLL_PID	.equ	2100h		;Collisions
+STAT_PID	.equ	2200h		;Status display
+HOOP_PID	.equ	2300h		;Backboard,net,rim
+TOB_PID		.equ	2400h		;Takeout ball
+CNTDWN_PID	.equ	2500h		;countdown timer
+NOG_PID		.equ	2600h		;no good (shots that don't go in)
+CYCPID2		.equ	2700h		;2nd cycler
+
+
+ANIMPID		.equ	4000h		;Animation PIDs (256)
+ANIMPID2	.equ	4100h		;Animation2 PIDs (256)
+ANIMPID3	.equ	4200h		;Animation3 PIDs (256)
+ANIMPID4	.equ	4300h		;Animation4 PIDs (256)
+
+
+;OBJECT ID'S
+
+;OBJECT IDENTIFIER FIELDS
+B_CLASS		.set	15
+F_CLASS		.set	0E000h
+
+CLSNEUT		.equ	0000h		;Neutral items
+CLSDEAD         .equ    2000h           ;Objects that delete themselves
+CLSANIM         .equ    3800h           ;Animation class objects
+CLSPLYR		.equ	4000h		;Players stuff
+CLSENMY		.equ	8000h		;Enemies
+
+TYPNEUT		.equ	0000h		;Type neutral
+TYPPLYR		.equ	0100h		;Player
+TYPBALL		.equ	0200h		;Basketball
+TYPTEXT		.equ	0700h		;Type text
+
+
+;TYPE NEUTRAL SUB TYPES
+SUBARW		.EQU	1		;ARROW ID
+SUBUP		.EQU	2		;OVERHEAD ITEMS
+SUBUP2		.EQU	3		;OVERHEAD ITEMS AFTER VEL SET
+
+;TYPE PLAYER SUB TYPES
+SUBPL1		.equ	1		;P1
+SUBPL2		.equ	2		;P2
+SUBPL3		.equ	3		;P3
+SUBPL4		.equ	4		;P4
+
+;TYPE TEXT SUB TYPES
+SUBTXT		.equ	1		;TEXT ID
+SUBP1TXT	.equ	2		;P1 TEXT
+SUBP2TXT	.equ	3		;P2 TEXT
+SUBP1LVS	.equ	4		;ID FOR P1 LIVES DIGIT
+SUBWNDW		.equ	5		;BIG BOX WINDOW ID
+SUBNEW		.equ	6		;NEWOID FOR WAVES
+SUBTIME		.equ	7		;BTIME ID
+SUBMES1		.equ	8		
+SUBMES2		.equ	9
+SUBGOTXT	.equ	0Ah		;GAME OVER TEXT
+SUBSCOR		.equ	0Bh		;SCORE ID
+SUBP2LVS	.equ	0Ch		;ID FOR P2 LIVES DIGIT
+SUBDG1I		.equ	0Dh		;CNTDWN PLYR1
+SUBDG2I		.equ	0Eh		;CNTDWN PLYR2
+
+
+
+B_TYPE		.set	12
+F_TYPE		.set	1F00h
+B_PLYR		.set	6
+F_PLYR		.set	00C0h
+B_PLYR1		.set	6
+B_PLYR2		.set	7
+
+B_SUBT		.set	5
+F_SUBT		.set	003Fh
+
+JOYLFT		.EQU	2
+JOYRGT		.EQU	3
+JOYUP		.EQU	0
+JOYDN		.EQU	1
+
+;BIT MASKS FOR PLAYER CONTROL TESTING
+
+BMPRYTE		.EQU	3  		;MOVE RIGHT,LEFT,DOWN,UP (LSB)
+BMPLEFT		.EQU	2
+BMPDOWN		.EQU	1
+BMPUP		.EQU	0
+
+;YUNIT EQUATES
+BMPFRYTE	.EQU	7		;FIRE RIGHT,LEFT,DOWN,UP (MSB)
+BMPFLEFT	.EQU	6
+BMPFDOWN	.EQU	5
+BMPFUP		.EQU	4
+
+;BITS USED IN PLAYER CONTROLS (1=ACTIVE)
+
+PRYTE		.EQU	8	
+PLEFT		.EQU	4
+PDOWN		.EQU	2
+PUP		.EQU	1
+
+;YUNIT EQUATES FOR JOYSTICK
+PFRYTE		.EQU	80H
+PFLEFT		.EQU	40H
+PFDOWN		.EQU	20H
+PFUP		.EQU	10H
+
+
+*GAME STATE CONSTANTS
+INAMODE		.equ	1
+ININTRO		.equ	2
+INGAME		.equ	3
+INPLYRINFO	.equ	4
+INHALFPRICE	.equ	5
+INFREEPRICE	.equ	6
+INGAMEOV	.equ	8
+INDIAG		.equ	-1		;Any neg
+
+*ASCII FONT MISCELLANEOUS EQUATES
+F15SP		.EQU    7EH		;FONT 15 SP CHARACTER, FOR HS ENTRY
+F15RUB		.EQU	F15SP+1		;FONT 15 RUB CHARACTER,FOR HS ENTRY
+F15END		.EQU	F15RUB+1	;FONT 15 END CHARACTER,FOR HS ENTRY
+F15RQUOT	.EQU	F15END+1	;FONT 15 RIGHT QUOTE
+
+* PLAYER DATA STRUCTURE
+
+ply_messages	.equ	00h		;img pntr for player buyin messages
+ply_stick	.equ	20h		;img pntr for stuck on me message
+ply_turbo	.equ	40h		;size of turbo meter remaining
+ply_turbo_dl	.equ	50h		;delay before shrinking ply_turbo
+ply_time	.equ	60h		;amount of play time remaining
+ply_points	.equ	70h		;points this plyr scored
+ply_meter_imgs	.equ	80h		;box,turbo meter,litup img needed for
+used_turbo	.equ	0e0h		;cntr used for replenishing meter
+crds_paid	.equ	0f0h		;For full game purchased
+head_arw_img	.equ	100h		;*Plyr arrow img
+ply_idiot_use	.equ	120h		;Has idiot used turbo?
+PDSIZE		.equ	130h		;size of player data block
+
+******************************************************************************
+;PDATA equates for name entry system
+
+PC_CURSPOS	equ	PDATA+00h	;word
+PC_OBJID	equ	PDATA+10h	;word
+PC_TABWIDTH	equ	PDATA+20h	;word
+PC_TABSIZE	equ	PDATA+30h	;word
+PC_TABLE	equ	PDATA+40h	;dword
+PC_STARTX	equ	PDATA+60h	;word
+PC_STARTY	equ	PDATA+70h	;word
+PC_MENUBASE	equ	PDATA+80h	;dword
+PC_MENULEVEL	equ	PDATA+0a0h	;word
+PC_CURSOBJ	equ	PDATA+0b0h	;dword
+
+PC_NAM1OBJ	equ	PDATA+0d0h	;dword
+PC_LOGOOBJ	equ	PC_NAM1OBJ
+PC_NAM2OBJ	equ	PDATA+0f0h	;dword
+PC_PNAME1	equ	PC_NAM2OBJ
+PC_NAM3OBJ	equ	PDATA+110h	;dword
+PC_PNAME2	equ	PC_NAM3OBJ
+
+PC_MONTHOBJ	equ	PDATA+130h	;dword
+PC_DAYOBJ	equ	PC_MONTHOBJ
+
+PC_CHARPOS	equ	PDATA+150h	;word
+PC_CENTERX	equ	PDATA+160h	;word
+PC_HEAD1OBJ	equ	PDATA+170h	;dword
+PC_HEAD2OBJ	equ	PDATA+190h	;dword
+PC_CREDOBJS	equ	PDATA+1b0h	;dword * 3
+
+PC_PLAYNUM	equ	PDATA+210h	;word
+PC_SPARE	equ	PDATA+220h	;word
+
+PC_FLASHCOUNT	equ	PDATA+230h	;word
+PC_DATADDR	equ	PDATA+240h	;dword
+PC_CENTERX2	equ	PDATA+260h	;word
+PC_ARROWOBJ	equ	PDATA+270h	;dword
+
+PC_CENTERXkit	equ	PDATA+290h	;word
+
+
+******************************************************************************
+* player stats (during game)
+
+PS_2PTS_TRY	equ	0
+PS_2PTS_MADE	equ	1
+PS_3PTS_TRY	equ	2
+PS_3PTS_MADE	equ	3
+PS_DUNKS_TRY	equ	4
+PS_DUNKS_MADE	equ	5
+PS_BLOCKS	equ	6
+PS_OFF_REB	equ	7
+PS_DEF_REB	equ	8
+PS_STEALS	equ	9
+PS_FREE_TRY	equ	10
+PS_FREE_MADE	equ	11
+PS_ASSISTS	equ	12
+PS_INJURY	equ	13
+PS_SIZE		equ	14
+
+******************************************************************************
+* player record (while in RAM)
+
+PR_COUNT	equ	0
+PR_WON		equ	PR_COUNT+16
+PR_LOST		equ	PR_WON+16
+PR_LASTPLAY	equ	PR_LOST+16
+PR_INIT1	equ	PR_LASTPLAY+16
+PR_INIT2	equ	PR_INIT1+16
+PR_INIT3	equ	PR_INIT2+16
+PR_MONTH	equ	PR_INIT3+16
+PR_DAY		equ	PR_MONTH+16
+PR_TMATEINIT1	equ	PR_DAY+16
+PR_TMATEINIT2	equ	PR_TMATEINIT1+16
+PR_TMATEINIT3	equ	PR_TMATEINIT2+16
+PR_OP1INIT1	equ	PR_TMATEINIT3+16
+PR_OP1INIT2	equ	PR_OP1INIT1+16
+PR_OP1INIT3	equ	PR_OP1INIT2+16
+PR_OP2INIT1	equ	PR_OP1INIT3+16
+PR_OP2INIT2	equ	PR_OP2INIT1+16
+PR_OP2INIT3	equ	PR_OP2INIT2+16
+PR_PTEAM	equ	PR_OP2INIT3+16
+PR_OTEAM	equ	PR_PTEAM+16
+PR_OSCORE	equ	PR_OTEAM+16
+PR_PSCORE	equ	PR_OSCORE+16
+PR_TEAMSDEF	equ	PR_PSCORE+16
+PR_NUMDEF	equ	PR_TEAMSDEF+32
+PR_NUMDEFOLD	equ	PR_NUMDEF+16
+PR_WINSTREAK	equ	PR_NUMDEFOLD+16
+PR_RANK		equ	PR_WINSTREAK+16
+PR_CHECKSUM	equ	PR_RANK+16
+PR_SIZE		equ	PR_CHECKSUM+16
+
+
+PKDPR_COUNT	equ	0			;11 bits
+PKDPR_WON	equ	PKDPR_COUNT+11		;10 bits
+PKDPR_LASTPLAY	equ	PKDPR_WON+10		;11 bits
+PKDPR_INIT1	equ	PKDPR_LASTPLAY+11	; 5 bits
+PKDPR_INIT2	equ	PKDPR_INIT1+5		; 5 bits
+PKDPR_INIT3	equ	PKDPR_INIT2+5		; 5 bits
+PKDPR_MONTH	equ	PKDPR_INIT3+5		; 4 bits
+PKDPR_DAY	equ	PKDPR_MONTH+4		; 5 bits
+PKDPR_TMATEINIT1 equ	PKDPR_DAY+5		; 5 bits
+PKDPR_TMATEINIT2 equ	PKDPR_TMATEINIT1+5	; 5 bits
+PKDPR_TMATEINIT3 equ	PKDPR_TMATEINIT2+5	; 5 bits
+PKDPR_OP1INIT1	equ	PKDPR_TMATEINIT3+5	; 5 bits
+PKDPR_OP1INIT2	equ	PKDPR_OP1INIT1+5	; 5 bits
+PKDPR_OP1INIT3	equ	PKDPR_OP1INIT2+5	; 5 bits
+PKDPR_OP2INIT1	equ	PKDPR_OP1INIT3+5	; 5 bits
+PKDPR_OP2INIT2	equ	PKDPR_OP2INIT1+5	; 5 bits
+PKDPR_OP2INIT3	equ	PKDPR_OP2INIT2+5	; 5 bits
+PKDPR_PTEAM	equ	PKDPR_OP2INIT3+5	; 5 bits
+PKDPR_OTEAM	equ	PKDPR_PTEAM+5		; 5 bits
+PKDPR_OSCORE	equ	PKDPR_OTEAM+5		; 8 bits
+PKDPR_PSCORE	equ	PKDPR_OSCORE+8		; 8 bits
+PKDPR_TEAMSDEF	equ	PKDPR_PSCORE+8		;27 bits
+PKDPR_WINSTREAK	equ	PKDPR_TEAMSDEF+27	; 6 bits
+PKDPR_CHECKSUM	equ	PKDPR_WINSTREAK+6	; 8 bits  (168 bits total)
+PKDPR_SIZE	equ	((PKDPR_CHECKSUM+8+7)/8)*8 ;must be on byte boundary
+
+RS_RECORD_NUM	equ	0
+RS_GAMES_PLAYED	equ	RS_RECORD_NUM+10h
+RS_WINS		equ	RS_GAMES_PLAYED+10h
+RS_AVERAGE	equ	RS_WINS+10h
+RS_TEAMSDEF	equ	RS_AVERAGE+10h
+RS_STREAK	equ	RS_TEAMSDEF+10h
+RS_SIZE		equ	RS_STREAK+10h
+
+NUM_PRECORDS	equ	290
+
+******************************************************************************
+* scroller equates
+
+MAX_VIEW1	equ	310
+MAX_VIEW2	equ	245+8
+SCROLL_BUFFER	equ	8
+DIVS_DELTA	equ	  48h
+DIVS_RATE1	equ	2400h
+DIVS_RATE2	equ	 800h
+DIVS_RATE3	equ	 500h
+SCRL_EDGE_OFF	equ	100	;90
+
+******************************************************************************
+* shot type equates (for play by play speech calls)
+
+DESPERATION	equ	0
+LONG_RANGE	equ	1
+_2_POINTS	equ	2
+_3_POINTS	equ	3
+HOOK_SHOT	equ	4
+LAY_UP		equ	5
+FINGER_ROLL	equ	6
+DUNK_SHORT	equ	7
+DUNK_MED	equ	8
+DUNK_LONG	equ	9
+
+
+******************************************************************************
+
+

@@ -1,0 +1,837 @@
+question1
+	.string	"WHAT COLLEGE DID SCOTTIE PIPPEN",1
+	.string	"ATTEND ?",0
+	.even
+question2
+	.string	"WHAT PLAYER'S DRAFT RIGHTS DID THE",1
+	.string	"SEATTLE SUPERSONICS TRADE FOR THE",1
+	.string "DRAFT RIGHTS OF OLDEN POLYNICE ?",0
+	.even
+question3
+	.string	"WHAT TEAM DID BOBBY PHILLS PLAY FOR",1
+	.string "DURING THE 1994-95 NBA SEASON ?",0
+	.even
+question4
+	.string	"WHO RECEIVED THE HIGHEST NUMBER OF FANS",1
+	.string "VOTES FOR THE 1995 NBA ALL-STAR GAME ?",0
+	.even
+question5
+	.string "WHO WAS SELECTED WITH THE FIRST OVERALL",1
+	.string "PICK IN THE 1984 NBA DRAFT ?",0
+	.even
+question6
+	.string "WHO WAS SELECTED WITH THE FIRST OVERALL",1
+	.string "PICK IN THE 1985 NBA DRAFT ?",0
+	.even
+question7
+	.string "WHAT TEAM ACQUIRED THE DRAFT RIGHTS TO",1
+	.string "CHARLES OAKLEY IN 1985 ?",0
+	.even
+question8
+	.string "WHAT NBA TEAM DRAFTED TWO PLAYERS FROM",1
+	.string "THE UNIVERSITY OF ARKANSAS IN 1992 ?",0
+	.even
+question9
+	.string "WHAT COLLEGE DID GLEN RICE ATTEND ?",0
+	.even
+question10
+	.string "WHAT NBA PLAYER HAS THE NICKNAMES",1
+	.string "THE 'WAITER' AND 'PINK PANTHER' ?",0
+	.even
+question11
+	.string "WHAT NBA PLAYER SURPASSED NATE ARCHIBALD",1
+	.string "AS THE ALL-TIME SCORING LEADER AT THE",1
+	.string "UNIVERSITY OF TEXAS-EL PASO ?",0
+	.even
+question12
+	.string "WHO WAS THE FIRST PLAYER IN NBA HISTORY",1
+	.string "TO IMPROVE HIS SCORING AVERAGE IN EACH",1
+	.string "OF HIS FIRST EIGHT YEARS IN THE LEAGUE ?",0
+	.even
+question13
+	.string "WHAT NBA PLAYER WAS NAMED PLAYER",1
+	.string "OF THE YEAR FOR THE ACC CONFERENCE",1
+	.string "DURING THE 1986-87 BASKETBALL SEASON ?",0
+	.even	  
+question14
+	.string "WHAT NBA PLAYER WAS NAMED PLAYER OF THE",1
+	.string "YEAR FOR THE SOUTHEASTERN CONFERENCE",1
+	.string "DURING THE 1987-88 BASKETBALL SEASON ?",0
+	.even
+question15
+	.string "WHAT NBA PLAYER WAS A MEMBER OF",1
+	.string "BACK-TO-BACK NCAA CHAMPIONSHIP TEAMS",1
+	.string "WITH BOBBY HURLEY AND GRANT HILL ?",0
+	.even	  
+question16
+	.string "WHAT NBA PLAYER WAS BORN IN TRINIDAD",1
+	.string "AND RAISED IN VENEZUELA ?",0
+	.even
+question17
+	.string "WHAT NBA PLAYER WAS SELECTED WITH",1
+	.string "THE FIRST OVERALL PICK IN THE 1995",1
+	.string "NBA DRAFT ?",0
+	.even
+question18
+	.string "WHAT NBA PLAYER WAS SELECTED WITH",1
+	.string "THE SECOND OVERALL PICK IN THE 1995",1
+	.string "NBA DRAFT ?",0
+	.even
+question19
+	.string "WHAT NBA PLAYER WAS SELECTED WITH",1
+	.string "THE THIRD OVERALL PICK IN THE 1995",1
+	.string "NBA DRAFT ?",0
+	.even
+question20
+	.string "WHAT NBA PLAYER WAS SELECTED WITH",1
+	.string "THE FOURTH OVERALL PICK IN THE 1995",1
+	.string "NBA DRAFT ?",0
+	.even
+question21
+	.string "WHAT NBA PLAYER WAS SELECTED WITH THE",1
+	.string "FIFTH OVERALL PICK IN THE 1995 NBA DRAFT ?",0
+	.even
+question22
+	.string "WHAT TEAM DRAFTED DAMON STOUDAMIRE IN",1
+	.string "THE 1995 NBA DRAFT ?",0
+	.even
+question23
+	.string "WHAT NBA TEAM DID OTIS THORPE PLAY FOR",1
+	.string "DURING THE 1993-94 SEASON ?",0
+	.even
+question24
+	.string "WHAT NBA PLAYER WAS THE SECOND OVERALL",1
+	.string "PICK IN THE 1988 NBA DRAFT ?",0
+	.even
+;question25
+;	.string "WHAT CHICAGO BULLS PLAYER WENT ON THE",1
+;	.string "INJURED LIST ON MARCH 18, 1995 WHEN",1
+;	.string "MICHAEL JORDAN CAME OUT OF RETIREMENT ?",0
+;	.even
+question26
+	.string "WHAT NBA PLAYER WAS AWARDED THE",1
+	.string "WOODEN AWARD IN 1990 AS COLLEGE ",1
+	.string "BASKETBALLS' PLAYER OF THE YEAR ?",0
+	.even
+question27
+	.string "WHAT NBA PLAYERS' NICKNAME IS",1
+	.string "'THE WORM' ?",0
+	.even
+question28
+	.string "WHAT NBA PLAYER CLINCHED THE SCORING",1
+	.string "TITLE FOR THE 1993-94 SEASON ?",0
+	.even
+;question29
+;	.string "WHO WAS THE ONLY ROOKIE TO PLAY IN",1
+;	.string "THE 1992 NBA ALL-STAR GAME ?",0
+;	.even
+question30
+	.string "WHAT NBA PLAYER WON THE SLAM DUNK",1
+	.string "CONTEST FOR THE SECOND TIME IN 1995 ?",0
+	.even
+question31
+	.string "WHAT NBA PLAYER WON THE NBA'S SIXTH",1
+	.string "MAN AWARD FOR THE 1994-95 SEASON ?",0
+	.even
+question32
+	.string "WHAT NBA PLAYER HAS THE NICKNAME",1
+	.string "'THE MAILMAN' ?",0
+	.even
+question33
+	.string "WHAT NBA PLAYER WAS SELECTED 10TH",1
+	.string "OVERALL IN THE 1993 NBA DRAFT ?",0
+	.even
+question34
+	.string "WHICH OF THE FOLLOWING NBA PLAYERS WAS",1
+	.string "BORN IN 1975 ?",0
+	.even
+question35
+	.string "WHICH OF THE FOLLOWING NBA PLAYERS WAS",1
+	.string "NOT SELECTED IN THE FIRST ROUND OF",1
+	.string "THE NBA DRAFT ?",0
+	.even
+question36
+	.string "WHICH PLAYER PLAYED IN THE CONTINENTIAL",1
+	.string "BASKETBALL ASSOCIATION AND THE WORLD",1
+	.string "BASKETBALL LEAGUE BEFORE JOINING THE NBA ?",0
+	.even
+question37
+	.string "WHICH OF THE FOLLOWING NBA PLAYERS HAS",1
+	.string "THE NICKNAME 'WOOKIE' ?",0
+	.even
+question38
+	.string "WHAT COLLEGE DID SARUNAS MARCIULIONIS",1
+	.string "ATTEND ?",0
+	.even
+question39
+	.string "WHAT NBA PLAYER LED THE DENVER NUGGETS",1
+	.string "IN ASSISTS DURING THE 1994-95 SEASON ?",0
+	.even
+;question40
+;	.string "WHAT NBA CENTER WAS A TEAMMATE OF",1
+;	.string "SHAQUILLE O'NEAL IN COLLEGE ?",0
+;	.even
+question41
+	.string "WHAT PLAYER WAS THE NBA LEAGUE LEADER",1
+	.string "IN BLOCKED SHOTS FOR THE 1994-95 SEASON ?",0
+	.even
+question42
+	.string "WHAT PLAYER WAS THE NBA LEAGUE LEADER",1
+	.string "IN REBOUNDS FOR THE 1994-95 NBA SEASON ?",0
+	.even
+question43
+	.string "WHAT PLAYER WAS THE NBA LEAGUE LEADER",1
+	.string "IN ASSISTS FOR THE 1994-95",1
+	.string "NBA SEASON ?",0
+	.even
+question44
+	.string "WHAT NBA TEAM ALLOWED THE FEWEST POINTS",1
+	.string "PER GAME DURING THE 1994-95 SEASON ?",0
+	.even
+question45
+	.string "WHAT NBA TEAM SCORED THE MOST POINTS",1
+	.string "PER GAME DURING THE 1994-95 SEASON ?",0
+	.even
+question46
+	.string "WHAT NBA TEAM SCORED THE FEWEST POINTS",1
+	.string "PER GAME DURING THE 1994-95 SEASON ?",0
+	.even
+question47
+	.string "WHAT IS RIK SMITS' NATIVE COUNTRY ?",0
+	.even
+question48
+	.string "WHAT IS HAKEEM OLAJUWONS' NATIVE",1
+	.string "COUNTRY ?",0
+	.even
+question49
+	.string "WHAT IS GHEORGHE MURESANS' NATIVE",1
+	.string "COUNTRY ?",0
+	.even
+question50
+	.string "WHAT IS TONI KUKOCS' NATIVE",1
+	.string "COUNTRY ?",0
+	.even
+question51
+	.string "WHERE WAS PATRICK EWING BORN ?",0
+	.even
+question52
+	.string "WHAT IS VLADE DIVACS' NATIVE",1
+	.string "COUNTRY ?",0
+	.even
+question53
+	.string "WHAT IS DIKEMBE MUTOMBOS' NATIVE",1
+	.string "COUNTRY ?",0
+	.even
+question54
+	.string "WHAT IS DETLEF SCHREMPFS' NATIVE",1
+	.string "COUNTRY ?",0
+	.even
+question55
+	.string "WHAT IS DINO RADJAS' NATIVE",1
+	.string "COUNTRY ?",0
+	.even
+question56
+	.string "WHAT IS SARUNAS MARCIULIONIS' NATIVE",1
+	.string "COUNTRY ?",0
+	.even
+question57
+	.string "WHAT IS ARVYDAS SABONIS' NATIVE",1
+	.string "COUNTRY ?",0
+	.even
+question58
+	.string "WHAT IS LUC LONGLEYS' NATIVE",1
+	.string "COUNTRY ?",0
+	.even
+question59
+	.string "WHAT IS BILL WENNINGTONS' NATIVE",1
+	.string "COUNTRY ?",0
+	.even
+question60
+	.string "WHAT IS GEORGE ZIDEKS' NATIVE",1
+	.string "COUNTRY ?",0
+	.even
+question61
+	.string "WHAT IS BRYANT REEVES' NICKNAME ?",0
+	.even
+;question62
+;	.string "WHAT ORLANDO MAGIC PLAYER ALSO HAS",1
+;	.string "RELEASED A CD WITH RAP MUSIC ?",0
+;	.even
+question63
+	.string "WHAT NBA PLAYER WAS THE NUMBER TWO",1
+	.string "OVERALL PICK IN THE 1992 NBA DRAFT ?",0
+	.even
+question64
+	.string "HOW MANY NBA CHAMPIONSHIP TITLES",1
+	.string "HAVE THE BOSTON CELTICS WON ?",0
+	.even
+question65
+	.string "WHAT JERSEY NUMBER DOES ANFERNEE",1
+	.string "HARDAWAY WEAR ?",0
+	.even
+question66
+	.string "WHAT NBA PLAYER ALSO WON THE",1
+	.string "HEISMAN TROPHY ?",0
+	.even
+question67
+	.string "WHICH ONE OF THE BULLETS' PLAYERS",1
+	.string "WAS ALSO A MEMBER OF THE 'FAB FIVE'",1
+	.string "TEAM AT THE UNIVERSITY OF MICHIGAN ?",0
+	.even
+question68
+	.string "WHICH NBA PLAYER WAS SELECTED IN THE",1
+	.string "FIRST ROUND OF THE NBA DRAFT BY THE",1
+	.string "NEW JERSEY NETS IN 1995 ?",0
+	.even
+question69
+	.string "ON WHICH NBA TEAM DID DANNY MANNING",1
+	.string "BEGIN HIS CAREER ?",0
+	.even
+question70
+	.string "WHICH OF THE FOLLOWING NBA PLAYERS",1
+	.string "WON THE NBA SLAM DUNK CONTEST AS A",1
+	.string "MEMBER OF THE BOSTON CELTICS ?",0
+	.even
+;question71
+;	.string "WHAT JERSEY NUMBER DID MICHAEL JORDAN ",1
+;	.string "WEAR DURING THE FIRST GAME BACK IN THE",1
+;	.string "NBA AFTER ENDING HIS RETIREMENT ?",0
+;	.even
+question72
+	.string "WHO IS THE ALL-TIME LEADING SCORER IN",1
+	.string "THE HISTORY OF THE INDIANA PACERS ?",0
+	.even
+question73
+	.string "WHAT JERSEY NUMBER IS WORN BY",1
+	.string "SCOTTIE PIPPEN ?",0
+	.even
+question74
+	.string "WHICH OF THE FOLLOWING NBA PLAYERS",1
+	.string "IS AMBIDEXTROUS ?",0
+	.even
+question75
+	.string "WHICH PLAYER IS THE NBA ALL-TIME",1
+	.string "LEADER IN ASSISTS ?",0
+	.even
+question76
+	.string "WHICH PLAYER WAS SELECTED IN THE",1
+	.string "FIRST ROUND OF THE 1995 NBA DRAFT BY",1
+	.string "THE CHICAGO BULLS ?",0
+	.even
+question77
+	.string "WHAT NBA TEAM DID KEVIN JOHNSON PLAY",1
+	.string "FOR DURING HIS ROOKIE SEASON ?",0
+	.even
+question78
+	.string "WHICH OF THE NBA PLAYERS WAS A MEMBER",1
+	.string "OF THE 1988 NCAA MEN'S BASKETBALL",1
+	.string "CHAMPIONSHIP TEAM ?",0
+	.even
+question79
+	.string "WHAT NBA PLAYER WAS PLAYING HIGH",1
+	.string "SCHOOL BASKETBALL DURING THE 1994-95",1
+	.string "BASKETBALL SEASON ?",0
+	.even
+question80
+	.string "WHAT PORTLAND TRAIL BLAZERS PLAYER",1
+	.string "WEARS A HEADBAND DURING GAMES ?",0
+	.even
+question81
+	.string "WHAT CITY IS HOME TO THE NBA TEAM",1
+	.string "WITH THE NAME 'HORNETS' ?",0
+	.even
+question82
+	.string "WHAT TEAM WON TWO NBA TITLES WITH",1
+	.string "JOE DUMARS AS A STARTING GUARD ?",0
+	.even
+question83
+	.string "WHAT CITY IS HOME TO THE NBA TEAM",1
+	.string "WITH THE NAME 'MAVERICKS' ?",0
+	.even
+;question84
+;	.string "WITH WHICH SELECTION IN THE FIRST ROUND",1
+;	.string "DID THE CHICAGO BULLS DRAFT",1
+;	.string "MICHAEL JORDAN IN 1984 ?",0
+;	.even
+question85
+	.string "WHAT CITY IS HOME TO THE NBA TEAM",1
+	.string "WITH THE NAME 'JAZZ' ?",0
+	.even
+question86
+	.string "WHAT NBA PLAYER WAS ROOKIE OF THE",1
+	.string "YEAR FOR THE 1981-82 NBA SEASON ?",0
+	.even
+question87
+	.string "WHAT NBA TEAM WON A RECORD EIGHT",1
+	.string "STRAIGHT NBA CHAMPIONSHIPS ?",0
+	.even
+question88
+	.string "WHAT TEAM WON THE NBA CHAMPIONSHIP",1
+	.string "TITLE FOR THE 1990-91 SEASON ?",0
+	.even
+question89
+	.string "WHO WAS THE NBA ROOKIE OF THE YEAR",1
+	.string "FOR THE 1993-94 SEASON ?",0
+	.even
+question90
+	.string "WHO WAS THE NBA ROOKIE OF THE YEAR",1
+	.string "FOR THE 1989-90 SEASON ?",0
+	.even
+;question91
+;	.string "WHO WAS THE NBA ROOKIE OF THE YEAR",1
+;	.string "FOR THE 1992-93 SEASON ?",0
+;	.even
+question92
+	.string "WHAT CITY IS HOME TO THE NBA TEAM",1
+	.string "WITH THE NAME 'BUCKS' ?",0
+	.even
+question93
+	.string "WHO WAS THE NUMBER ONE OVERALL DRAFT",1
+	.string "PICK IN THE 1985 NBA DRAFT ?",0
+	.even
+question94
+	.string "WHO WAS THE NUMBER ONE OVERALL PICK",1
+	.string "IN THE 1987 NBA DRAFT ?",0
+	.even
+question95
+	.string "WHO WAS THE NUMBER ONE OVERALL PICK",1
+	.string "IN THE 1988 NBA DRAFT ?",0
+	.even
+question96
+	.string "WHO WAS THE NUMBER ONE OVERALL PICK",1
+	.string "IN THE 1990 NBA DRAFT ?",0
+	.even
+question97
+	.string "WHO WAS THE NUMBER ONE OVERALL PICK",1
+	.string "IN THE 1991 NBA DRAFT ?",0
+	.even
+question98
+	.string "WHO WAS THE NUMBER ONE OVERALL PICK",1
+	.string "IN THE 1994 NBA DRAFT ?",0
+	.even
+question99
+	.string "WHAT CITY IS HOME TO THE NBA TEAM",1
+	.string "WITH THE NAME 'RAPTORS' ?",0
+	.even
+question100
+	.string "WHAT PLAYER WON THE NBA'S 6TH MAN",1
+	.string "AWARD FOR THE 1990-91 SEASON ?",0
+	.even
+question101
+	.string "WHAT PLAYER WON THE NBA'S 6TH MAN",1
+	.string "AWARD FOR THE 1992-93 SEASON ?",0
+	.even
+question102
+	.string "WHAT PLAYER WON THE NBA'S 6TH MAN",1
+	.string "AWARD FOR THE 1993-94 SEASON ?",0
+	.even
+question103
+	.string "WHAT PLAYER WON THE NBA'S 6TH MAN",1
+	.string "AWARD FOR THE 1994-95 SEASON ?",0
+	.even
+question104
+	.string "WHAT PLAYER WAS THE NBA'S DEFENSIVE",1
+	.string "PLAYER OF THE YEAR FOR THE 1987-88",1
+	.string "SEASON ?",0
+	.even
+question105
+	.string "WHAT PLAYER WAS THE NBA'S DEFENSIVE",1
+	.string "PLAYER OF THE YEAR FOR THE 1989-90",1
+	.string "SEASON ?",0
+	.even
+question106
+	.string "WHAT PLAYER WAS THE NBA'S DEFENSIVE",1
+	.string "PLAYER OF THE YEAR FOR THE 1990-91",1
+	.string "SEASON ?",0
+	.even
+;question107
+;	.string "WHAT PLAYER WAS THE NBA'S DEFENSIVE",1
+;	.string "PLAYER OF THE YEAR FOR THE 1991-92",1
+;	.string "SEASON ?",0
+;	.even
+question108
+	.string "WHAT PLAYER WAS THE NBA'S DEFENSIVE",1
+	.string "PLAYER OF THE YEAR FOR THE 1993-94",1
+	.string "SEASON ?",0
+	.even
+question109
+	.string "WHAT PLAYER WAS THE NBA'S DEFENSIVE",1
+	.string "PLAYER OF THE YEAR FOR THE 1994-95",1
+	.string "SEASON ?",0
+	.even
+question110
+	.string "WHAT PLAYER WON THE NBA'S MOST",1
+	.string "IMPROVED PLAYER OF THE YEAR AWARD",1
+	.string "FOR THE 1994-95 SEASON ?",0
+	.even
+question111
+	.string "WHAT PLAYER WON THE NBAS' MOST",1
+	.string "IMPROVED PLAYER OF THE YEAR AWARD",1
+	.string "FOR THE 1993-94 SEASON ?",0
+	.even
+question112
+	.string "WHAT PLAYER WON THE NBAS' MOST",1
+	.string "IMPROVED PLAYER OF THE YEAR AWARD",1
+	.string "FOR THE 1989-90 SEASON ?",0
+	.even
+question113
+	.string "WHAT NBA PLAYER LEAD THE LEAGUE IN",1
+	.string "ASSISTS DURING THE 1989-90 SEASON ?",0
+	.even
+question114
+	.string "WHAT NBA PLAYER LEAD THE LEAGUE IN",1
+	.string "ASSISTS DURING THE 1991-92 SEASON ?",0
+	.even
+;question115
+;	.string "WHAT NBA PLAYER LEAD THE LEAGUE IN",1
+;	.string "STEALS DURING THE 1989-90 SEASON ?",0
+;	.even
+question116
+	.string "WHAT NBA PLAYER LEAD THE LEAGUE IN",1
+	.string "ASSISTS DURING THE 1994-95 SEASON ?",0
+	.even
+question117
+	.string "WHAT NBA PLAYER LEAD THE LEAGUE IN",1
+	.string "BLOCKED SHOTS DURING THE 1989-90",1
+	.string "SEASON ?",0
+	.even
+question118
+	.string "WHAT NBA PLAYER LEAD THE LEAGUE IN",1
+	.string "BLOCKED SHOTS DURING THE 1993-94",1
+	.string "SEASON ?",0
+	.even
+;question119
+;	.string "WHAT NBA PLAYER LEAD THE LEAGUE IN",1
+;	.string "REBOUNDING DURING THE 1987 SEASON ?",0
+;	.even
+question120
+	.string "WHAT CITY HOSTED THE 1983 NBA",1
+	.string "ALL-STAR GAME ?",0
+	.even
+question121
+	.string "WHAT WAS THE HOST CITY FOR THE 1988",1
+	.string "NBA ALL-STAR GAME ?",0
+	.even
+question122
+	.string "WHO WAS NAMED MVP OF THE 1994 NBA",1
+	.string "ALL-STAR GAME IN MINNEAPOLIS ?",0
+	.even
+question123
+	.string "WHAT CITY WAS HOME TO THE JAZZ",1
+	.string "BEFORE UTAH ?",0
+	.even
+question124
+	.string "WHAT WAS THE FIRST SEASON THE",1
+	.string "ORLANDO MAGIC COMPETED IN THE NBA ?",0
+	.even
+question125
+	.string "WHEN THE WARRIORS FRANCHISE ENTERED",1
+	.string "THE NBA, WHAT CITY WAS THEIR HOME ?",0
+	.even
+question126
+	.string "WHEN THE LAKERS FRANCHISE ENTERED",1
+	.string "THE NBA, WHAT CITY WAS THEIR HOME ?",0
+	.even
+question127
+	.string "WHEN THE PISTONS FRANCHISE ENTERED",1
+	.string "THE NBA, WHAT CITY WAS THEIR HOME ?",0
+	.even
+question128
+	.string "WHEN THE CLIPPERS FRANCHISE ENTERED",1
+	.string "THE NBA, WHAT CITY WAS THEIR HOME ?",0
+	.even
+question129
+	.string "WHAT PLAYER LED THE NBA IN PERSONAL",1
+	.string "FOULS DURING THE 1994-95 SEASON ?",0
+	.even
+question130
+	.string "WHAT PLAYER LED THE ATLANTA HAWKS IN",1
+	.string "SCORING FOR THE 1994-95 SEASON ?",0
+	.even
+question131
+	.string "WHAT PLAYER LEAD THE BOSTON CELTICS IN",1
+	.string "REBOUNDS FOR THE 1994-95 SEASON ?",0
+	.even
+question132
+	.string "WHO IS THE SHORTEST PLAYER EVER TO WIN",1
+	.string "AN NBA SLAM-DUNK TITLE ?",0
+	.even
+question133
+	.string "WHAT PLAYER LED THE CHARLOTTE HORNETS",1
+	.string "IN SCORING FOR THE 1994-95 NBA SEASON ?",0
+	.even
+question134
+	.string "WHAT TEAM DID HORACE GRANT PLAY FOR",1
+	.string "DURING THE 1993-94 NBA SEASON ?",0
+	.even
+question135
+	.string "WHAT TEAM DID HORACE GRANT PLAY FOR",1
+	.string "DURING THE 1994-95 NBA SEASON ?",0
+	.even
+question136
+	.string "WHAT TEAM DID DINO RADJA PLAY FOR",1
+	.string "DURING THE 1993-94 NBA SEASON ?",0
+	.even
+question137
+	.string "WHAT TEAM DID B.J. TYLER PLAY FOR",1
+	.string "DURING THE 1994-95 NBA SEASON ?",0
+	.even
+question138
+	.string "WHAT TEAM DID HAROLD MINER PLAY FOR",1
+	.string "DURING THE 1992-1993 NBA SEASON ?",0
+	.even
+question139
+	.string "WHAT TEAM DID MARK MACON PLAY FOR",1
+	.string "DURING THE 1992-1993 NBA SEASON ?",0
+	.even
+question140
+	.string "WHAT NBA TEAM SELECTED BYRON HOUSTON",1
+	.string "IN THE 1992 NBA DRAFT ?",0
+	.even
+;question141
+;	.string "WHO WAS NAMED NBA COACH OF THE YEAR",1
+;	.string "FOR THE 1993-1994 NBA SEASON ?",0
+;	.even
+;question142
+;	.string "WHAT CURRENT NBA COACH WAS NAMED",1
+;	.string "COACH OF THE YEAR FOR THE 1970-1971",1
+;	.string "NBA SEASON ?",0
+;	.even
+;question143
+;	.string "WHAT TEAM DID DICK MOTTA COACH WHEN",1
+;	.string "HE WAS NAMED COACH OF THE YEAR ?",0
+;	.even
+;question144
+;	.string "WHAT POSITION DOES CHARLES BARKLEY",1
+;	.string "PLAY ?",0
+;	.even
+;question145
+;	.string "WHAT POSITION DOES MICHAEL JORDAN",1
+;	.string "PLAY ?",0
+;	.even
+question146
+	.string "WHAT POSITION DOES PATRICK EWING",1
+	.string "PLAY ?",0
+	.even
+question147
+	.string "WHAT POSITION DOES DAVID ROBINSON",1
+	.string "PLAY ?",0
+	.even
+;question148
+;	.string "WHAT YEAR WAS MICHAEL JORDAN BORN ?",1
+;	.even
+;
+;Add more birthday questions...
+;
+question149
+	.string "FOR WHICH BRANCH OF THE UNITED STATES",1
+	.string "ARMED FORCES DID DAVID ROBINSON SERVE ?",0
+	.even
+question150
+	.string "WHAT POSITION DOES LATRELL SPREWELL",1
+	.string "PLAY ?",0
+	.even
+question151
+	.string "WHAT POSITION DOES ANFERNEE HARDAWAY",1
+	.string "PLAY ?",0
+	.even
+question152
+	.string "WHAT POSITION DOES MATT GEIGER",1
+	.string "PLAY ?",0
+	.even
+question153
+	.string "WHAT TEAM DID CLYDE DREXLER PLAY FOR",1
+	.string "DURING THE 1992-93 NBA SEASON ?",0
+	.even
+question154
+	.string "WHAT TEAM DID KEITH JENNINGS PLAY FOR",1
+	.string "DURING THE 1994-95 NBA SEASON ?",0
+	.even
+question155
+	.string "WHAT TEAM DID LUCIOUS HARRIS PLAY FOR",1
+	.string "DURING THE 1994-95 NBA SEASON ?",0
+	.even
+question156
+	.string "WHICH OF THE FOLLOWING TEAMS WAS AN",1
+	.string "EXPANSION TEAM DURING THE 1990-91",1
+	.string "NBA SEASON ?",0
+	.even
+question157
+	.string "WHAT IS THE NAME OF THE NBA",1
+	.string "FRANCHISE IN TORONTO ?",0
+	.even
+question158
+	.string "WHAT WAS THE FIRST COUNTRY OTHER THAN",1
+	.string "THE UNITED STATES TO HAVE AN NBA",1
+	.string "FRANCHISE ?",0
+	.even
+question159
+	.string "WHAT IS THE NAME OF THE NBA",1
+	.string "FRANCHISE IN PORTLAND ?",0
+	.even
+question160
+	.string "WHAT IS THE NAME OF THE NBA",1
+	.string "FRANCHISE IN NEW JERSEY ?",0
+	.even
+question161
+	.string "WHAT POSITION DOES DEREK STRONG",1
+	.string "PLAY ?",0
+	.even
+question162
+	.string "WHAT POSITION DOES CHARLES SMITH",1
+	.string "PLAY ?",0
+	.even
+question163
+	.string "WHAT POSITION DOES MALIK SEALY",1
+	.string "PLAY ?",0
+	.even
+question164
+	.string "WHAT POSITION DOES TIM PERRY",1
+	.string "PLAY ?",0
+	.even
+question165
+	.string "WHAT POSITION DOES ALONZO MOURNING",1
+	.string "PLAY ?",0
+	.even
+question166
+	.string "WHAT POSITION DOES STEVE KERR",1
+	.string "PLAY ?",0
+	.even
+question167
+	.string "WHAT POSITION DOES JAMAL MASHBURN",1
+	.string "PLAY ?",0
+	.even
+question168
+	.string "WHAT POSITION DOES SAM MITCHELL",1
+	.string "PLAY ?",0
+	.even
+question169
+	.string "WHAT POSITION DOES JIM MCILVAINE",1
+	.string "PLAY ?",0
+	.even
+question170
+	.string "WHAT IS THE NAME OF THE NBA",1
+	.string "FRANCHISE IN MILWAUKEE ?",0
+	.even
+question171
+	.string "WHAT IS THE NAME OF THE NBA",1
+	.string "FRANCHISE IN MIAMI ?",0
+	.even
+question172
+	.string "WHAT IS THE NAME OF THE NBA",1
+	.string "FRANCHISE IN ORLANDO ?",0
+	.even
+question173
+	.string "WHO WAS THE FIRST PICK OVERALL IN",1
+	.string "THE 1994 NBA DRAFT ?",0
+	.even
+question174
+	.string "WHAT NBA PLAYER HAS THE NICKNAME",1
+	.string "THE 'POLISH RIFLE' ?",0
+	.even
+question175
+	.string "WHAT NBA PLAYER HAS THE NICKNAME",1
+	.string "'THE RIFLEMAN' ?",0
+	.even
+question176
+	.string "WHAT NBA TEAM DID ANTHONY PEELER PLAY",1
+	.string "FOR DURING THE 1994-95 SEASON ?",0
+	.even
+question177
+	.string "WHAT IS THE NAME OF THE NBA",1
+	.string "FRANCHISE IN HOUSTON ?",0
+	.even
+question178
+	.string "WHAT IS THE NAME OF THE NBA",1
+	.string "FRANCHISE IN SAN ANTONIO ?",0
+	.even
+question179
+	.string "WHAT YEAR DID THE CHICAGO BULLS JOIN",1
+	.string "THE NBA ?",0
+	.even
+question180
+	.string "WHAT NBA TEAM DID SEAN ELLIOTT PLAY",1
+	.string "FOR IN THE 1994-95 SEASON ?",0
+	.even
+question181
+	.string "WHAT NBA TEAM DID ERIC LECKNER PLAY",1
+	.string "FOR DURING THE 1994-95 NBA SEASON ?  ",0
+	.even
+question182
+	.string "WHAT TEAM DID NEGELE KNIGHT PLAY FOR",1
+	.string "DURING THE 1990-1991 NBA SEASON ?",0
+	.even
+;question183
+;	.string "WHAT NBA PLAYER WAS IN THE CHICAGO",1
+;	.string "WHITESOX MINOR LEAGUE BASEBALL SYSTEM",1
+;	.string "IN 1994 ?",0
+;	.even
+question184
+	.string "WHAT NBA PLAYER'S FATHER PLAYED IN",1
+	.string "THE NATIONAL FOOTBALL LEAGUE ?",0
+	.even
+question185
+	.string "WHAT TEAM DID JOHN CROTTY PLAY FOR",1
+	.string "DURING THE 1994-95 NBA SEASON ?",0
+	.even
+question186
+	.string "WHAT POSITION DOES JOHN CROTTY",1
+	.string "PLAY ?",0
+	.even
+question187
+	.string "WHAT POSITION DOES CHRISTIAN LAETTNER",1
+	.string "PLAY ?",0
+	.even
+question188
+	.string "WHAT POSITION DOES ELLIOT PERRY",1
+	.string "PLAY ?",0
+	.even
+question189
+	.string "WHAT POSITION DOES STACEY KING",1
+	.string "PLAY ?",0
+	.even
+question190
+	.string "WHAT POSITION DOES CHRIS DUDLEY",1
+	.string "PLAY ?",0
+	.even
+question191
+	.string "WHAT POSITION DOES CEDRIC CEBALLOS",1
+	.string "PLAY ?",0
+	.even
+question192
+	.string "WHAT POSITION DOES B.J. TYLER",1
+	.string "PLAY ?",0
+	.even
+question193
+	.string "WHAT POSITION DOES JOHN STARKS",1
+	.string "PLAY ?",0
+	.even
+question194
+	.string "WHAT POSITION DOES BRIAN SHAW",1
+	.string "PLAY ?",0
+	.even
+question195
+	.string "WHAT POSITION DOES HERSEY HAWKINS",1
+	.string "PLAY ?",0
+	.even
+question196
+	.string "WHAT POSITION DOES DANNY FERRY",1
+	.string "PLAY ?",0
+	.even
+question197
+	.string "WHAT POSITION DOES WINSTON GARLAND",1
+	.string "PLAY ?",0
+	.even
+question198
+	.string "WHAT POSITION DOES HARVEY GRANT",1
+	.string "PLAY ?",0
+	.even
+question199
+	.string "WHAT POSITION DOES ROBERT PACK",1
+	.string "PLAY ?",0
+	.even
+question200
+	.string "WHAT POSITION DOES RYAN LORTHRIDGE",1
+	.string "PLAY ?",0
+	.even
+

@@ -1,0 +1,367 @@
+	.INCLUDE	"AUDIT.EQU"	 ;AUDIT NAMES!
+*
+CHUTES   EQU     5                    ;MAXIMUM COIN CHUTES IN GAME.
+*
+*MISC BUTTON EQUATES
+	.if	TUNIT	;      |       |       |
+UP_BITS   	equ	00000000000000000000000100000001b
+DOWN_BITS	equ	00000000000000000000001000000010b
+BUTTONS   	equ	00000000010100001111000011110000b
+ACTION_BITS	equ	00000000010100000111000001110000b
+START_BITS	equ	00000110001001000000000000000000b
+DIAG_BITS	EQU	00000000000100000000000000000000B
+
+;UP_BITS   	equ	00000001000000010000000100000001b
+;DOWN_BITS	equ	00000010000000100000001000000010b
+;BUTTONS   	equ	11110000111100001111000011110000b
+;ACTION_BITS	equ	01110000011100000111000001110000b
+;START_BITS	equ	00000110001001000000000000000000b
+;DIAG_BITS	EQU	00000000000100000000000000000000B
+
+;UP_BITS   	equ	00000000000000000000000100000001b
+;DOWN_BITS	equ	00000000000000000000001000000010b
+;BUTTONS   	equ	00000000000000001111000011110000b
+;ACTION_BITS	equ	00000000000000000111000001110000b
+;START_BITS	equ	00000110001001000000000000000000b
+;DIAG_BITS	EQU	00000000000100000000000000000000B
+	.else
+UP_BITS		equ	00000001000000000000000100000001b
+DOWN_BITS	equ	00000010000000000000001000000010b
+BUTTONS		equ	010110000101001000111000001110000b
+ACTION_BITS	equ	010110000000000000111000001110000b
+START_BITS	equ	0101001000000000000000000b
+	.endif
+
+*****************************
+*****************************  GET OFFICIAL PID FROM GEORGE ******************
+MENU_PID         EQU      0AC1H   ;GET_MENU SLAVE
+MDUN_PID         EQU      0AC2H   ;MENU SLAVE CHANGES TO THIS WHEN DONE
+OPMES_PID        EQU      0AC3H   ;OPERATOR ENTER INITIALS
+*****************************  GET OFFICIAL PID FROM GEORGE ******************
+*****************************
+LONG_SIZE	EQU	32
+WORD_SIZE	EQU	16
+BYTE_SIZE	EQU	8
+
+C_LONG_SIZE	EQU	64
+C_WORD_SIZE	EQU	32
+C_BYTE_SIZE	EQU	16
+
+BYTE_MASK	EQU	0FFH
+WORD_MASK	EQU	0FFFFH
+
+SX_MASK		EQU	0FFFFH
+SY_MASK		EQU	0FFFF0000H
+
+**************************************************************************
+*                                                                        *
+*          ASCII STUFF                                                   *
+*                                                                        *
+**************************************************************************
+SPACE    EQU     20H
+EX_PT    EQU     21H
+LET_0    EQU     30H
+LET_A    EQU     41H
+LET_Z    EQU     5AH
+UNDERSCORE EQU   5FH
+FONT_SPACE  EQU     7EH
+FONT_RUB EQU     FONT_SPACE+1
+FONT_END EQU     FONT_RUB+1
+FONT_RQUOTE EQU  FONT_END+1
+FONT_EPOUND equ  FONT_RQUOTE+1
+FONT_CR     equ  FONT_EPOUND+1
+ASCII_COMMA EQU  2CH
+RIGHT_PAREN EQU  29H
+ASCII_DQ EQU     22H
+
+**************************************************************************
+*                                                                        *
+*          SCREEN STUFF                                                  *
+*                                                                        *
+**************************************************************************
+*
+SCREEN_X_UNIT    EQU     8            ;THESE ARE FOR PACKED LINEAR ADDRESS
+SCREEN_Y_UNIT    EQU     1000H        ;FORMAT
+*
+STRUCT_X_UNIT    EQU     1000H        ;X UNIT IN SPR DATA STRUCTURE
+STRUCT_Y_UNIT    EQU     1000H        ;Y UNIT IN SPR DATA STRUCTURE
+*
+TABLE_UNIT       EQU     10000H       ;16 BIT FRACTION IN HSTD COORDINATES
+*
+EVEN_X_MASK      EQU     0FF8H        ;X MASK TO EVEN PIXEL
+X_MASK           EQU     0FF8H        ;MASK TO HOLD JUST X
+Y_MASK           EQU     1FF000H      ;MASK TO HOLD JUST Y
+*
+Y_MAX            EQU     256
+SCREEN_PITCH     EQU     400
+
+**************************************************************************
+*                                                                        *
+*          COLOR STUFF                                                   *
+*                                                                        *
+**************************************************************************
+
+
+
+ROBO_GREY       EQU     0101H	;[0E0H-223,0E0H-223]
+ROBO_WHITE      EQU     0202H	;[0E1H-223,0E1H-223]
+ROBO_RED        EQU     0303H	;[0E2H-223,0E2H-223]
+ROBO_ORANGE     EQU     0404H	;[0E3H-223,0E3H-223]
+ROBO_YELLOW     EQU     0505H	;[0E4H-223,0E4H-223]
+ROBO_GREEN      EQU     0606H	;[0E5H-223,0E5H-223]
+ROBO_BLUE       EQU     0707H	;[0E6H-223,0E6H-223]
+ROBO_LF         EQU     03E3EH 
+ROBO_CYAN       EQU     0E0EH	;[0EDH-223,0EDH-223]
+ROBO_DECAY      EQU     03D3DH
+ROBO_RGOLD      EQU     0A0AH	;[0E9H-223,0E9H-223]
+ROBO_LASER      EQU     03E3EH
+ROBO_LASER2	EQU	03F3FH
+ROBO_BLUWH      EQU     0C0CH	;[0EBH-223,0EBH-223]
+ROBO_PINK       EQU     0303H	;[0E2H-223,0E2H-223]
+ROBO_SKY        EQU     0D0DH	;[0ECH-223,0ECH-223]  ;LAST COLOR IN ROBO IS "SKY" COLOR
+ROBO_PURPLE     EQU     ROBO_SKY     ;PURPLE FOR TEST MODE
+ROBO_BLACK	EQU	1414H	;BLACK AS COAL
+
+COLOR_GREY	EQU	ROBO_GREY      
+COLOR_WHITE	EQU	ROBO_WHITE     
+COLOR_RED	EQU	ROBO_RED       
+COLOR_ORANGE	EQU	ROBO_ORANGE    
+COLOR_YELLOW	EQU	ROBO_YELLOW    
+COLOR_GREEN	EQU	ROBO_GREEN     
+COLOR_BLUE	EQU	ROBO_BLUE      
+COLOR_LF	EQU	ROBO_LF        
+COLOR_CYAN	EQU	ROBO_CYAN      
+COLOR_DECAY	EQU	ROBO_DECAY     
+COLOR_PURPLE	EQU	ROBO_PURPLE    
+COLOR_BLACK	EQU	ROBO_BLACK
+COLOR_BPR	EQU	3C3CH
+COLOR_RGB	EQU	3D3DH
+
+LOG_PAL_SIZE     EQU     12      ;SHIFT 12 BITS TO TURN NUMBER INTO OFFSET
+*                                ;IN PALETTE MEMORY
+*
+MAX_PAL_MASK     EQU     3FH     ;THIS IS MASK FOR NUMBER OF PALETTES.
+*
+*
+ALL_BLUE         equ     1fh
+ALL_GREEN        equ     3e0h
+ALL_RED          equ     7c00h
+ALL_PURPLE       EQU     ALL_RED+ALL_BLUE
+LIGHT_PURPLE     EQU     701CH
+*
+ONE_BLUE         EQU     1
+ONE_GREEN        EQU     20H
+ONE_RED          EQU     400H
+*
+THIRD_GREEN      EQU     140H    ;1/3TH GREEN ON
+THIRD_RED        EQU     2800H   ;1/3 RED ON
+
+**************************************************************************
+*
+* AUDIT STRUCTURE
+*
+**************************************************************************
+AUD_DATA	EQU	0	;THE COUNTER IS 4 BYTES STARTING AT ZERO
+AUD_CKSUM	EQU	AUD_DATA+(4*C_BYTE_SIZE)	;CHECKSUM = 2 BYTES
+AUD_SIZE	EQU	AUD_CKSUM+C_WORD_SIZE
+AUD_BYTES_TO_CHECK EQU    (AUD_SIZE/C_BYTE_SIZE)-2	;# TO ADD FOR CHECKSUM
+
+N_AUDITS	EQU	108
+
+	.IF     (LAST_AUDIT+1)>N_AUDITS
+	XXX     NOT ENOUGH RAM ALLOCATED FOR AUDITS!
+	.ENDIF
+
+**************************************************************************
+*
+* ADJUSTMENTS
+*
+**************************************************************************
+ADJ_SIZE	EQU	C_LONG_SIZE
+N_ADJUSTS	EQU	39		;# OF ADJUSTS
+
+	.IF     (LAST_ADJUST+1)>N_ADJUSTS
+	XXX     NOT ENOUGH RAM ALLOCATED FOR ADJUSTMENTS!
+	.ENDIF
+
+**************************************************************************
+* CMOS STUFF FOR HSTD
+**************************************************************************
+* High Score table (CMOS) entry data structure
+
+NUM_INITS        EQU     3          ;INITIALS IN EACH ENTRY..THIS MUST BE ODD
+*
+HS_SCORE         EQU     0                        ;LONG WORD.....8 DIGIT SCORE
+HS_INITS         EQU     HS_SCORE+C_LONG_SIZE     ;BYTE FOR FIRST INITIAL
+HS_CKBYTE        EQU     HS_INITS+(NUM_INITS*C_BYTE_SIZE)  ;BYTE FOR CHECKSUM
+HS_SIZE          EQU     HS_CKBYTE+C_BYTE_SIZE    ;SIZE OF STRUCTURE
+HS_BYTES_TO_CHECK EQU    (HS_SIZE/C_BYTE_SIZE)-1  ;# TO ADD FOR CHECKSUM
+HS_SIZE_IN_WORDS  EQU    HS_SIZE/C_WORD_SIZE      ;SIZE OF ENTRY IN WORDS
+HS_SIZE_IN_BYTES  EQU    HS_SIZE/C_BYTE_SIZE      ;SIZE OF ENTRY IN BYTES
+HS_ROM_SIZE       equ    HS_SIZE/2                ;address size of rom entry
+*
+**************************************************************************
+*
+*         A HIGH SCORE TABLE IS DEFINED IN ROM BY THE FOLLOWING          *
+*         STRUCTURE (THERE ARE AT LEAST 2 TABLES....ALL TIME             *
+*         AND "TODAYS")                                                  *
+*
+**************************************************************************
+TB_POINTER       EQU	0			;LONG-POINTER TO BEGINNING OF TABLE
+TB_COUNT         EQU	TB_POINTER+LONG_SIZE	;WORD....# IN THE TABLE.
+TB_VISIBLE       EQU	TB_COUNT+WORD_SIZE	;WORD....NUMBER DISPLAYED
+TB_PAGE_BITS     EQU	TB_VISIBLE+WORD_SIZE	;WORD....STATUS WORD FOR CMOS PAGE
+TB_FACTORY       EQU	TB_PAGE_BITS+WORD_SIZE	;LONG....ROM STARTUP TABLE
+TB_ERROR_COUNT   EQU	TB_FACTORY+LONG_SIZE	;WORD....NUM ERRORS TO RE-INIT
+
+WPCMOS	EQU	CMOS+4000H	;WRITE PROTECTED CMOS
+HALF_PAGE	EQU	4000h
+;WP_READ	EQU	1C00010H	;PLACE TO READ WRITE PROTECT STATUS
+;WP_BIT	EQU	800H		;BIT WHERE WRITE ENABLE LIVES  0=NO WRITES
+
+*
+* JBJ start
+*
+	.if WWFUNIT
+CMOS_PAGE_SELECT_BITS EQU 03H	;BITS 0 AND 1 OF SYSCTRL SELECT CMOS PAGE
+CMOS_PAGE_SELECT_UNIT EQU 01H	;4 PAGES USE MULTIPLES OF THIS
+	.else
+CMOS_PAGE_SELECT_BITS EQU 0C0H	;BITS 6 AND 7 OF SYSCTRL SELECT CMOS PAGE
+CMOS_PAGE_SELECT_UNIT EQU 040H	;4 PAGES USE MULTIPLES OF THIS
+	.endif
+
+
+**************************************************************************
+* CMOS ALLOCATION
+* old way
+*	4 PAGES OF 2K
+*
+*	EACH PAGE....LOW 1K = READ/WRITE
+*		HIGH 1K = WRITE PROTECTED Z-UNIT ONLY
+*		PROTECTION ON ALL 2K Y-UNIT
+**************************************************************************
+*new way
+*	8k * 8 bits mapped as 8k * 16 bits.
+*
+*	No hardware pages anymore, but software still pretends that there
+*	are four pages of 2k.
+*
+*        PAGE 0        LOW HALF = HSTD TODAY
+*
+AUDIT_SELECT	EQU     CMOS_PAGE_SELECT_UNIT*0
+HSR_SELECT	EQU     AUDIT_SELECT                ;HIGH SCORE RESET COUNTER
+COIN_SELECT	EQU     AUDIT_SELECT                ;COINS AND CREDITS
+ADJUST_SELECT	EQU     CMOS_PAGE_SELECT_UNIT*0
+*
+*        PAGE 1       LOW HALF = AUDITS
+*                     HIGH HALF = ADJUSTMENTS
+*
+;;;;RECORD_ORIGIN	EQU	CMOS
+RECORD_ORIGIN	EQU	WPCMOS+HALF_PAGE
+RECORD_SELECT	EQU	CMOS_PAGE_SELECT_UNIT*1
+*
+*
+*	PAGE 2		records cont...
+*
+*
+*	PAGE 3		records cont...
+*
+*DUMP_SELECT	EQU     CMOS_PAGE_SELECT_UNIT*3
+*DUMP_ORG	EQU     CMOS
+*DUMP_PTR	EQU     DUMP_ORG               ;WORD....NUMBER OF ENTRIES!
+*DUMP_DATA	EQU     DUMP_PTR+C_WORD_SIZE   ;DUMPS GO HERE!
+*
+* JBJ end
+******************************************************************************
+*        AUDIT PAGE AUDIT DATA AND CREDITS
+*
+AUDITORG	EQU     CMOS                             ;AUDITS LIVE HERE
+CREDITS		EQU     AUDITORG+(N_AUDITS*AUD_SIZE)     ;BYTE FOR CREDITS
+CUNITS		EQU     CREDITS+C_BYTE_SIZE              ;WORD
+BUNITS		EQU     CUNITS+C_WORD_SIZE               ;WORD
+MINUNITS	EQU     BUNITS+C_WORD_SIZE               ;WORD
+COIN_CKSUM	EQU     MINUNITS+C_WORD_SIZE             ;BYTE
+HSR_C		EQU     COIN_CKSUM+C_BYTE_SIZE           ;LONG = HIGH SCORE RESET COUNTER
+*
+*        NEXT TWO ARE ASSUMED TO BE BACK TO BACK
+*
+HRESET_COUNTER	EQU     HSR_C+C_LONG_SIZE                ;LONG = HIGH SCORE RESET COUNTER
+HRESET_VERIFY	EQU     HRESET_COUNTER+C_LONG_SIZE       ;LONG = 2ND COPY INVERTED.
+
+COIN_CKSUM_START EQU     CREDITS
+COIN_CKSUM_SIZE	 EQU     COIN_CKSUM-COIN_CKSUM_START      ;SIZE OF REGION TO CHECK
+COIN_CKSUM_BYTES EQU     COIN_CKSUM_SIZE/C_BYTE_SIZE      ;NUMBER OF BYTES TO ADD
+
+CMESS_CHARS	EQU	26		;25 CHARS/LINE OF CUSTOM MESSAGE
+CMESS_LINES	EQU	3		;3 LINES
+CMESS_LINE_SIZE	EQU	CMESS_CHARS*C_BYTE_SIZE
+CMESS_SIZE	EQU	CMESS_LINES*CMESS_LINE_SIZE
+
+VALID_VALUE	EQU     0EABCH                 ;STORED AT "VALID_CUSTOM" IF OK!
+
+NAME_REV_SIZE	EQU     30                     ;NAME AND REV DATA
+
+; JBJ start
+;;;;ADJUSTORG	EQU     WPCMOS                 ;FIRST ADJUSTMENT HERE
+ADJUSTORG	EQU     CMOS+HALF_PAGE		;FIRST ADJUSTMENT HERE
+; JBJ end
+CUSTOM_MESSAGE	EQU     ADJUSTORG+(N_ADJUSTS*ADJ_SIZE)
+VALID_CUSTOM	EQU     CUSTOM_MESSAGE+CMESS_SIZE        ;WORD = EABC IF OK.
+END_CK_REGION	EQU     VALID_CUSTOM+C_WORD_SIZE
+ADJ_AREA_SIZE	EQU     END_CK_REGION-ADJUSTORG          ;ADJUSTS+CUSTOM MESSAGE
+ADJ_CKSUM	EQU     END_CK_REGION                    ;WORD CHECK FOR ADJUSTS
+ADJ_BYTES_TO_CHECK EQU   ADJ_AREA_SIZE/C_BYTE_SIZE        ;NUMBER OF BYTES IN CHECKSUM.
+NAME_REV	EQU     ADJ_CKSUM+C_WORD_SIZE
+END_ADJ		EQU     NAME_REV+(NAME_REV_SIZE*C_BYTE_SIZE)
+*
+*PSYCHO_BOX_NUMBER  EQU   ALL_TIME_VISIBLE-3    ;ON THE WAY TO 17 IF NO BOXES IS TIME FOR BACKGROUND
+*PSYCHO_FRACTION	EQU   11        ;NUMBER OF SCROLLS BETWEEN NUMBERS FOR BACKGROUND 
+
+**************************************************************************
+*
+*        FOR COIN PAGE MESSAGES.....WE HAVE UP TO 3 LINES ABOVE
+*        THE CREDITS MESSAGE.
+*
+CP_13    EQU     101-35                 ;LINE 1 OF 3
+CP_23    EQU     120-35                 ;LINE 2 OF 3
+CP_33    EQU     139-35                 ;LINE 3 OF 3
+
+CP_DELTA3        EQU     CP_23-CP_13        ;AMOUNT TO STEP FROM LINE TO LINE
+
+CP_12	EQU	130-35		;LINE 1 OF 2
+CP_22	EQU	150-35		;LINE 2 OF 2
+
+CP_11	EQU	130-35		;SINGLE HELP LINE
+
+CP_CX	EQU	200		;CENTER X FOR CREDITS SCREEN STUFF!
+
+**************************************************************************
+*                                                                        *
+*          MESS_MAC                                                      *
+*                                                                        *
+*          THIS MACRO IS USED TO SETUP AN "L_MESS" MESSAGE.              *
+*          THE MESSAGE FOLLOWS THE MACRO.                                *
+*          ZERO TERMINATES THE MESSAGE.                                  *
+*          ANOTHER ZERO TERMINATES L_MESS.                               *
+*                                                                        *
+*          A "1" AFTER THE TERMINATING "0" WILL CAUSE                    *
+*          L_MESS TO PRINT OUT ANOTHER MESSAGE.                          *
+*                                                                        *
+**************************************************************************
+
+MESS_MAC .MACRO	FONT,SPACING,X,Y,COLOR,ROUTINE,SLEEP
+	.LONG   :FONT:
+	.LONG   :SPACING:
+	.LONG   ((:Y:)*10000H)+:X:
+	.LONG   :COLOR:
+	.LONG   :ROUTINE:
+;	.LONG   :SLEEP:
+	.ENDM
+
+SPACING20	EQU	2
+SPACING07	EQU	1
+
+*******************************************************************************
+
+
+

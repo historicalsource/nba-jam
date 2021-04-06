@@ -1,0 +1,45 @@
+#
+.SUFFIXES : .EXE .ASM .OBJ .C
+#
+O =	NDSP1.OBJ MAIN.OBJ UTIL.OBJ PAL.OBJ MPROC.OBJ\
+	BAKGND.OBJ BGNDTBL.OBJ BGNDPAL.OBJ IMGTBL.OBJ IMGPAL.OBJ\
+	BB.OBJ PLYR.OBJ PLYR2.OBJ PLYRAT.OBJ PLYRSEQ.OBJ PLYRDSEQ.OBJ\
+	PLYRSEQ2.OBJ SCORE.OBJ SCORE2.OBJ BB2.OBJ\
+	DRONE.OBJ DRONE2.OBJ\
+	SOUNDS.OBJ PATCH.OBJ TEXT.OBJ PLYR3.OBJ PLYRAT2.OBJ PLYRLSEQ.OBJ\
+	ATTRACT.OBJ PLYRSTND.OBJ SELECT.OBJ\
+	SELECT2.OBJ STRING.OBJ RECORD.OBJ SPEECH.OBJ\
+	ADJUST.OBJ AUDIT.OBJ TEST.OBJ DIAG.OBJ MENU.OBJ HSTD.OBJ
+
+
+bb.out: $(O)
+	d:\gsplnk bb.cmd
+	copy d:\bb.out c:\video\bball
+	copy d:\bb.map c:\video\bball
+	tv bb /v
+$(O): $*.asm
+
+ndsp1.obj: disp.equ court.tbl
+bb.obj: court.tbl
+plyr.obj: court.tbl plyr.equ disp.equ
+plyr2.obj: ball.tbl plyr.equ
+plyr3.obj: plyr.equ plyrhd2.tbl
+plyrat.obj: plyrhd.tbl plyr.equ
+plyrat2.obj: plyrhd.tbl plyr.equ
+plyrseq.obj: plyrseq.tbl plyr.equ stand.tbl
+plyrseq2.obj: plyrseq2.tbl plyr.equ
+plyrdseq.obj: plyrdseq.tbl plyr.equ
+plyrlseq.obj: layup.tbl plyr.equ plyrd2seq.tbl
+plyrstnd.obj: stand.tbl
+score.obj: leds.tbl arrow.tbl
+select.obj: mugshot.tbl
+select2.obj: mugshot.tbl
+attract.obj: imgtbl.asm
+mproc.obj: mproc.equ
+text.obj: text.tbl
+menu.obj: link.equ menu.equ
+test.obj: link.equ menu.equ
+audit.obj: link.equ menu.equ
+hstd.obj: link.equ
+adjust.obj: menu.equ
+
